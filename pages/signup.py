@@ -28,9 +28,9 @@ def signup():
     password = st.text_input("New Password", type='password')
     hashed_passwords = []
     
-    secret_key = st.secrets('SECRET_KEY')
-    api_url =  st.secrets('URL')
-    header =  st.secrets('HEADER')
+    secret_key = st.secrets['SECRET_KEY']
+    api_url =  st.secrets['URL']
+    header =  st.secrets['HEADER']
     
     # Check if the user clicked the "Sign Up" button
     if st.button("Sign Up"):

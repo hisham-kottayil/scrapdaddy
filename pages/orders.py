@@ -7,9 +7,9 @@ from constants import background_image_path, category_logos, clickable_image, li
 from dotenv import load_dotenv
 
 
-secret_key = st.secrets('SECRET_KEY')
-api_url =  st.secrets('URL')
-header =  st.secrets('HEADER')
+secret_key = st.secrets['SECRET_KEY']
+api_url =  st.secrets['URL']
+header =  st.secrets['HEADER']
 
 # Function to fetch user data
 # @st.cache_data(ttl=3600)  # Cache for 1 hour
