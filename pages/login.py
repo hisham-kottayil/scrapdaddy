@@ -22,8 +22,8 @@ def main():
     
 
     secret_key = st.secrets['SECRET_KEY']
-    api_url =  st.secrets('URL')
-    header =  st.secrets('HEADER')
+    api_url =  st.secrets['URL']
+    header =  st.secrets['HEADER']
     
     def fetch_user_data(query):
         url = api_url
