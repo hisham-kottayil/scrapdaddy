@@ -21,7 +21,7 @@ def main():
     # @st.cache_data(ttl=3600)  # Cache for 1 hour
     
 
-    secret_key = st.secrets('SECRET_KEY')
+    secret_key = st.secrets['SECRET_KEY']
     api_url =  st.secrets('URL')
     header =  st.secrets('HEADER')
     

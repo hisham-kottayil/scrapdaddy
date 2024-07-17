@@ -18,7 +18,7 @@ show_pages(
     [
         Page("scrapdaddy_2.py", "Home"),
         Page("pages/login.py", "Login"),
-        Page("pages/signup.py", "Sign Up!!"),
+        Page("pages/signup.py", "Sign Up!"),
         Page("pages/materials.py", "Materials"),
         Page("pages/vehicles.py", "Vehicle"),
         Page("pages/address.py", "Address"),
