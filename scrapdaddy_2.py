@@ -38,7 +38,8 @@ def main():
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
     
-    hide_pages_dynamically(authentication_status)
+    # hide_pages_dynamically(authentication_status)
+    st.set_page_config(layout="wide")
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
 
