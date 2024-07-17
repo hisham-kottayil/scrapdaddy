@@ -5,14 +5,11 @@ from datetime import datetime
 from pages.styles import load_sidebar_styles
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 from dotenv import load_dotenv
-import os
 
 
-load_dotenv()
-secret_key = os.getenv('SECRET_KEY')
-api_url = os.getenv('URL')
-header = os.getenv('HEADER')
-
+secret_key = st.secrets('SECRET_KEY')
+api_url =  st.secrets('URL')
+header =  st.secrets('HEADER')
 
 # Function to fetch user data
 # @st.cache_data(ttl=3600)  # Cache for 1 hour
