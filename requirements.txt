@@ -1,0 +1,10 @@
+streamlit
+pandas
+altair
+opencv-python
+streamlit-navigation-bar
+requests
+streamlit-authenticator
+streamlit-option-menu
+st-pages
+python-dotenv
