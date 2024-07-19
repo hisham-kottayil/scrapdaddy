@@ -17,16 +17,6 @@ def load_sidebar_styles():
             border-radius: 10px;
             font-size: 16px;
         }
-        [data-testid="stSidebarNav"]::before {
-            content: "SCRAPDADDY";
-            font-size: 30px;
-            position: relative;
-            margin-left: 1rem;
-            font-family: 'Chalkduster', fantasy; /* Add your desired font family here */
-            font-weight: bold; /* Make the text bold */
-            display: block;
-            padding-bottom: 20px;
-        }  
         [data-testid="stSidebarHeader"] {
         /* Add your desired styles here */
         padding: 2px;
