@@ -129,7 +129,7 @@ def main():
         .container-box h2 {
             margin-bottom: 18px;
             font-size: 25px;
-            color: #ffffff;
+            color: #a86f3b;
         }
         </style>
         """,
