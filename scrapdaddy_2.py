@@ -130,28 +130,16 @@ def main():
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             width: 300px;
-            height: 300px;
+            height: 250px;
             border-radius: 8px;
             background-color: #ffffff;
             text-align: center;
             margin: 0 auto;
         }
         .container-box h2 {
-            margin-bottom: 10px;
+            margin-bottom: 18px;
             font-size: 25px;
             color: #333333;
-        }
-        .category-button {
-            display: inline-block;
-            padding: 10px;
-            margin: 10px 0;
-            text-decoration: none;
-            color: #333333;
-            font-weight: bold;
-        }
-        .category-button img {
-            vertical-align: middle;
-            margin-right: 10px;
         }
         </style>
         """,

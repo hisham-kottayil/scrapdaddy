@@ -42,13 +42,14 @@ def load_home_button_styles():
             display: flex;
             align-items: center;
             justify-content: center; /* Center the text and image */
-            background-color: rgb(135, 206, 235);
+            background-color: rgb(35, 172, 160);
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             margin: 10px 0;
             font-size: 10px; /* Adjust font size */
             font-family: Arial, sans-serif;
-            color: black;
+            color: white !important;
+            margin-left: 20px; /* Add margin to the left */
             text-decoration: none;
             width: 200px; /* Adjust width */
             height: 40px; /* Adjust height */
