@@ -141,7 +141,7 @@ def main():
         st.write("")
 
     # Adjust columns to move the buttons to the right
-    empty_col, col = st.columns([1, 2])
+    empty_col, col = st.columns([1, 1.5])
 
     categories = ['Individual', 'Enterprises']
 
