@@ -20,7 +20,7 @@ def load_sidebar_styles():
         [data-testid="stSidebarHeader"] {
         /* Add your desired styles here */
         padding: 20px;
-        height: 50px;
+        height: 100px;
         }      
         </style>
         """
