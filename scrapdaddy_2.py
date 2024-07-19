@@ -18,7 +18,7 @@ show_pages(
     [
         Page("scrapdaddy_2.py", "Home"),
         Page("pages/login.py", "Login"),
-        Page("pages/signup.py", "Sign Up!"),
+        Page("pages/signup.py", "Sign Up"),
         Page("pages/materials.py", "Materials"),
         Page("pages/vehicles.py", "Vehicle"),
         Page("pages/address.py", "Address"),
@@ -27,22 +27,24 @@ show_pages(
         Page("pages/about.py", "About us"),
     ]
 )
+if 'authentication_status' not in st.session_state:
+    st.session_state['authentication_status'] = ''
+if 'authenticator_object' not in st.session_state:
+    st.session_state['authenticator_object'] = '' 
+    
+authentication_status = st.session_state['authentication_status']
+authenticator = st.session_state['authenticator_object']
+
+# hide_pages_dynamically(authentication_status)
+
+
 
 def main():
 
-    if 'authentication_status' not in st.session_state:
-        st.session_state['authentication_status'] = ''
-    if 'authenticator_object' not in st.session_state:
-        st.session_state['authenticator_object'] = '' 
-        
-    authentication_status = st.session_state['authentication_status']
-    authenticator = st.session_state['authenticator_object']
-    
-    hide_pages_dynamically(authentication_status)
-    # st.set_page_config(layout="wide")
+
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
-
+    st.set_page_config(layout="wide")
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
 
@@ -116,29 +118,66 @@ def main():
         with open(image_path, "rb") as img_file:
             return base64.b64encode(img_file.read()).decode()
 
-    def generate_button_html(label, logo_path, link):
+    def generate_logo_html(label, logo_path):
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{label} logo'>" if logo_path else ""
-        return f"""
-            <a href="{link}" target="_self" class="category-button">{label} {logo_img_tag}</a>
+        return logo_img_tag
+
+    # Add custom CSS for the container box with shadow
+    st.markdown(
         """
+        <style>
+        .container-box {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container-box h2 {
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: #333333;
+        }
+        .category-button {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+        }
+        .category-button img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Create empty rows for spacing
-    for _ in range(18):
+    for _ in range(12):
         st.write("")
 
     # Adjust columns to move the buttons to the right
-    empty_col, col = st.columns([0.0001, 1])
+    empty_col, col = st.columns([1, 1.5])
 
     categories = ['Individual', 'Enterprises']
 
-    # Generate HTML buttons
+    container_html = '<div class="container-box">'
+    container_html += '<h2>Choose Category</h2>'
+    for cat in categories:
+        link = "/Login"
+        logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
+        container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} {cat}</a>'
+    container_html += '</div>'
+
+    # Generate HTML buttons inside a container
     with empty_col:
-        for cat in categories:
-            logo_path = category_logos[cat]
-            link = f"/Login"
-            button_html = generate_button_html(cat, logo_path, link)
-            with col:
-                st.markdown(button_html, unsafe_allow_html=True)
+        st.markdown(container_html, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
