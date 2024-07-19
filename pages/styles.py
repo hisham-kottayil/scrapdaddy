@@ -50,7 +50,7 @@ def load_home_button_styles():
         .category-button img {
             width: 25px;
             height: auto;
-            margin-left: 10px;
+            margin-left: 5px;
         }
         </style>
     """
