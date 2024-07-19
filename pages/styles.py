@@ -8,7 +8,7 @@ def load_sidebar_styles():
             width: 200px;
             font-color: #ffffff;
             border-radius: 0.25rem;
-            background-color: rgba(201, 233, 250, 1);
+            background-color: rgba(218, 247, 241, 1);
             /* border: 1px solid lightgrey; */
         }
         [data-testid="stSidebarContent"] {
