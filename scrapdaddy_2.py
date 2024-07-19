@@ -132,7 +132,7 @@ def main():
             width: 300px;
             height: 250px;
             border-radius: 8px;
-            background-color: #bad9d6;
+            background-color: #daf7f1;
             text-align: center;
             margin: 0 auto;
         }
@@ -151,7 +151,7 @@ def main():
         st.write("")
 
     # Adjust columns to move the buttons to the right
-    empty_col, col = st.columns([1, 1.2])
+    empty_col, col = st.columns([1, 2])
 
     categories = ['Individual', 'Enterprises']
 
