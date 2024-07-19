@@ -21,7 +21,7 @@ vehicle_logos = {
     'Tata 407': './logos/truck.png'
 }
 
-logo = './images/logo_2.png'
+logo = './images/recycling_4.png'
 link_url = "/About%20us"
 def clickable_image(image_path, link_url, width, height):
     with open(image_path, "rb") as image_file:
