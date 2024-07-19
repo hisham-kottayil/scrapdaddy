@@ -44,6 +44,9 @@ def load_home_button_styles():
             width: 200px; /* Adjust width */
             height: 40px; /* Adjust height */
         }
+        .category-button span {
+            padding-left: 5px; /* Add padding to the text */
+        }
         .category-button img {
             width: 25px;
             height: auto;

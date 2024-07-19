@@ -150,7 +150,7 @@ def main():
     for cat in categories:
         link = "/Login"
         logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
-        container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} {cat}</a>'
+        container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
 
     # Generate HTML buttons inside a container
