@@ -36,7 +36,7 @@ def load_home_button_styles():
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             margin: 10px 0;
-            font-size: 10px; /* Adjust font size */
+            font-size: 15px; /* Adjust font size */
             font-family: Arial, sans-serif;
             color: white !important;
             margin-left: 20px; /* Add margin to the left */
