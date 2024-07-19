@@ -133,7 +133,7 @@ def main():
     <style>
     /* Style for the form */
     [data-testid="stForm"] {
-        background-color: #eef7ed; /* Alice green background color */
+        background-color: rgb(35, 172, 160); /* Alice green background color */
     }
     </style>
     """,
