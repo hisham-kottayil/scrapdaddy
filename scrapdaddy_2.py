@@ -35,7 +35,7 @@ if 'authenticator_object' not in st.session_state:
 authentication_status = st.session_state['authentication_status']
 authenticator = st.session_state['authenticator_object']
 
-# hide_pages_dynamically(authentication_status)
+hide_pages_dynamically(authentication_status)
 
 
 
@@ -44,7 +44,7 @@ def main():
 
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
-    st.set_page_config(layout="wide")
+    # st.set_page_config(layout="wide")
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
 
