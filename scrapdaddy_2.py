@@ -132,7 +132,7 @@ def main():
             width: 300px;
             height: 250px;
             border-radius: 8px;
-            background-color: #ffffff;
+            background-color: #ccf4ec;
             text-align: center;
             margin: 0 auto;
         }
