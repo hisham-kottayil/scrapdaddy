@@ -27,17 +27,6 @@ show_pages(
         Page("pages/about.py", "About us"),
     ]
 )
-if 'authentication_status' not in st.session_state:
-    st.session_state['authentication_status'] = ''
-if 'authenticator_object' not in st.session_state:
-    st.session_state['authenticator_object'] = '' 
-    
-authentication_status = st.session_state['authentication_status']
-authenticator = st.session_state['authenticator_object']
-
-# hide_pages_dynamically(authentication_status)
-
-
 
 def main():
 
@@ -55,7 +44,8 @@ def main():
         
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-
+    hide_pages_dynamically(authentication_status)
+    
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
 
