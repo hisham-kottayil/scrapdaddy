@@ -117,7 +117,7 @@ def main():
         """
         <style>
         .container-box {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
             padding: 20px;
             width: 300px;
             height: 250px;
