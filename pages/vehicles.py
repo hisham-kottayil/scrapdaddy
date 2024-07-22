@@ -98,7 +98,8 @@ def main():
         st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
     option = st.selectbox(
             'Time slot',
-            ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'))
+            ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'),
+            placeholder='7 AM - 11 AM')
 
 
     if st.button('Proceed to Add Address'):
