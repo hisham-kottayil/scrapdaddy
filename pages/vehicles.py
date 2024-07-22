@@ -85,7 +85,10 @@ def main():
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
     try:
-        st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {selected["vehicle"]} ✅')
+        st.markdown(
+            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {selected["maximum_load"]} ✔️</span>',
+            unsafe_allow_html=True
+        )
     except KeyError:
         pass
     
