@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 import streamlit.components.v1 as components
 from datetime import date, datetime
-from pages.styles import load_sidebar_styles, clicked_button_style
+from pages.styles import load_sidebar_styles
 from constants import vehicles, limits, vehicle_logos
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 
@@ -47,22 +47,18 @@ def main():
                 var elements = window.parent.document.querySelectorAll('button');
                 for (var i = 0; i < elements.length; ++i) {{ 
                     if (elements[i].innerText.includes('{widget_label}')) {{ 
-                        elements[i].style.fontSize = '15px';  
-                        elements[i].style.padding = '10px 65px';  
-                        elements[i].style.whiteSpace = 'nowrap';  
+                        elements[i].style.fontSize = '15px';  // Adjust size as needed
+                        elements[i].style.padding = '10px 65px';  // Adjust padding as needed
+                        elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
                         elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
-                        elements[i].onclick = function() {{
-                            this.classList.toggle('clicked-button');
-                        }};
                     }}
                 }}
             </script>
         """
         components.html(f"{htmlstr}", height=0, width=0)
 
-    st.markdown(clicked_button_style, unsafe_allow_html=True)
     # Layout in 2x2 grid
     cols = st.columns(2)
     selected = {}
