@@ -85,7 +85,7 @@ def main():
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
     try:
-        st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {selected["vehicle"]}')
+        st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {selected["vehicle"]} ✅')
     except KeyError:
         pass
     
