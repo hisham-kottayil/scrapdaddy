@@ -50,7 +50,7 @@ def main():
                         elements[i].style.fontSize = '15px';  // Adjust size as needed
                         elements[i].style.padding = '10px 65px';  // Adjust padding as needed
                         elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
-                        elements[i].style.alignItems = 'center';
+                        elements[i].style.display = 'flex';
                         elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
                     }}
                 }}
