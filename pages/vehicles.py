@@ -84,13 +84,13 @@ def main():
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
-    try:
-        st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {selected["maximum_load"]} ✔️</span>',
-            unsafe_allow_html=True
-        )
-    except KeyError:
-        pass
+    # try:
+    st.markdown(
+        f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {selected["maximum_load"]} ✔️</span>',
+        unsafe_allow_html=True
+    )
+    # except KeyError:
+    #     pass
     
     # Add a continue button
     
