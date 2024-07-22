@@ -48,7 +48,7 @@ def main():
                         elements[i].style.whiteSpace = 'nowrap';
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
-                        elements[i].innerHTML = `{logo_img_tag} {widget_label} {limit_text} {tick_mark}`;
+                        elements[i].innerHTML = `{logo_img_tag} {widget_label} {limit_text} `;
                     }}
                 }}
             </script>
