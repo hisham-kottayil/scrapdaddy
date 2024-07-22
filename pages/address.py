@@ -30,10 +30,10 @@ def main():
     # Input fields for address information
     name = st.text_input('Name')
     contact = st.text_input('Contact')
-    house_number = st.text_input('House Number')
+    # house_number = st.text_input('House Number')
     address = st.text_area('Address')
-    city = st.text_input('City')
-    state = st.text_input('State')
+    region = st.text_input('City')
+    district = st.text_input('State')
     pincode = st.text_input('Pincode')
 
 
@@ -43,7 +43,7 @@ def main():
         st.session_state['addess'] = f"""
         Name: {name}\n
         Contact Number: {contact}\n
-        Address: {house_number}, {city}, {state}, {pincode}
+        Address: {address}, {region}, {district}, {pincode}
         """
         st.session_state.page = 'Checkout'
         st.switch_page("pages/checkout.py")
