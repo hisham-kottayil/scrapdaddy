@@ -81,6 +81,10 @@ def main():
                 selected = {}
                 selected['vehicle'] = vehicle
     if selected:
+        st.markdown(
+            f'<span style="color:gray;">Vehicle: {selected}, maximum load: {limits[selected]} kgs ✔️</span>',
+            unsafe_allow_html=True
+        )
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
