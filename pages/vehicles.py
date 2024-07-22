@@ -82,7 +82,7 @@ def main():
                 selected['vehicle'] = vehicle
     if selected:
         st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected}, maximum load: {limits[selected]} kgs ✔️</span>',
+            f'<span style="color:gray;">Vehicle: {selected['vehicle']}, maximum load: {selected['vehicle']} kgs ✔️</span>',
             unsafe_allow_html=True
         )
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
