@@ -40,18 +40,22 @@ def main():
 
     st.markdown(
         """
-        **Name**<span style="color:red;">*</span>
+        <style>
+        .mandatory::after {
+            content: '*';
+            color: red;
+            padding-left: 5px;
+        }
+        </style>
         """,
         unsafe_allow_html=True
     )
+
+    # Labels with red asterisks
+    st.markdown('<label class="mandatory">Name</label>', unsafe_allow_html=True)
     name = st.text_input("", max_chars=50)
-    
-    st.markdown(
-        """
-        **Contact**<span style="color:red;">*</span>
-        """,
-        unsafe_allow_html=True
-    )
+
+    st.markdown('<label class="mandatory">Contact</label>', unsafe_allow_html=True)
     contact = st.text_input("", max_chars=15)
     
     st.markdown("**Address**")
@@ -69,6 +73,8 @@ def main():
             st.write("Name:", name)
             st.write("Contact:", contact)
             st.write("Address:", address)
+            
+            
 
     # Display the entered information
     if st.button('Proceed'):
