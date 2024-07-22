@@ -48,7 +48,7 @@ def main():
                 for (var i = 0; i < elements.length; ++i) {{ 
                     if (elements[i].innerText.includes('{widget_label}')) {{ 
                         elements[i].style.fontSize = '15px';  // Adjust size as needed
-                        elements[i].style.padding = '10px 65px';  // Adjust padding as needed
+                        elements[i].style.padding = '100px 65px';  // Adjust padding as needed
                         elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
