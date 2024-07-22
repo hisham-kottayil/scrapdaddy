@@ -26,7 +26,7 @@ def main():
 
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key = '1')
-    st.header('Confirm Your Order')
+    st.title('Confirm Your Order')
     st.write("")
     st.write("")
     st.write("")

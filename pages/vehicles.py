@@ -23,7 +23,7 @@ def main():
 
     # st.write(st.session_state)
 
-    st.subheader('Choose your vehicle')
+    st.title('Choose your vehicle')
     
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''

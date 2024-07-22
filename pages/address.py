@@ -7,7 +7,7 @@ from constants import background_image_path, category_logos, clickable_image, li
 def main():
     
     # st.write(st.session_state)
-    st.header('Address Information Form')
+    st.title('Address Information Form')
     st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
     
     # Inject the CSS into the Streamlit app
