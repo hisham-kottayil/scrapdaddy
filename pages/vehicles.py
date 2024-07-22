@@ -89,13 +89,13 @@ def main():
     st.subheader('Please choose preferred slot')
     today = date.today()
     date_chosen = st.date_input('Choose preferred Date', min_value = today)
-    current_time = datetime.now().time()
-    time_chosen = st.time_input('Choose preferred Time', value = 'now')
-    # Check if chosen time is valid
-    if time_chosen and (date_chosen == today) and (time_chosen < current_time):
-        st.error("Please select a valid time!")
-    else:
-        st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
+    # current_time = datetime.now().time()
+    # time_chosen = st.time_input('Choose preferred Time', value = 'now')
+    # # Check if chosen time is valid
+    # if time_chosen and (date_chosen == today) and (time_chosen < current_time):
+    #     st.error("Please select a valid time!")
+    # else:
+    #     st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
     option = st.selectbox(
             'Time slot',
             ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'),
