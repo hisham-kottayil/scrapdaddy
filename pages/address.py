@@ -35,6 +35,22 @@ def main():
     state = st.text_input('State')
     pincode = st.text_input('Pincode')
 
+    name = st.text_input("Name", max_chars=50)
+    contact = st.text_input("Contact", max_chars=15)
+    address = st.text_area("Address")
+
+    if st.button("Submit"):
+        if not name:
+            st.error("Name is required.")
+        elif not contact:
+            st.error("Contact is required.")
+        elif not contact.isdigit():
+            st.error("Contact must contain only numbers.")
+        else:
+            st.success("Form submitted successfully!")
+            st.write("Name:", name)
+            st.write("Contact:", contact)
+            st.write("Address:", address)
 
     # Display the entered information
     if st.button('Proceed'):
