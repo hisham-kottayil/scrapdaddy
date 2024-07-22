@@ -38,7 +38,7 @@ def main():
     if 'authenticator_object' not in st.session_state:
         st.session_state['authenticator_object'] = ''
 
-    st.title('### Choose material(s) - <span style="color:grey">optional</span>', unsafe_allow_html=True)
+    st.markdown('### Choose material(s) - <span style="color:grey">optional</span>', unsafe_allow_html=True)
 
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
