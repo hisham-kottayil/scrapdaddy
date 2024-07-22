@@ -84,13 +84,17 @@ def main():
     st.write(limits)
     
     if selected:
-        st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
-            unsafe_allow_html=True
-        )
+        st.session_state['selected_vehicle'] = selected["vehicle"]
+        try:
+            st.markdown(
+                f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
+                unsafe_allow_html=True
+            )
+        except:
+            pass
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
-        st.session_state['selected_vehicle'] = selected["vehicle"]
+        
     # Add a continue button
     
     st.subheader('Please choose preferred slot')
