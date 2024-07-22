@@ -84,6 +84,7 @@ def main():
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
+    st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {selected["vehicle"]}')
     # Add a continue button
     
     st.subheader('Please choose preferred slot')
