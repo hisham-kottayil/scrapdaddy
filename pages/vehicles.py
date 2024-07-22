@@ -18,18 +18,15 @@ def main():
 
     # Inject the CSS into the Streamlit app
     st.markdown(image_css, unsafe_allow_html=True)
-    # Display the clickable image in the sidebar
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
-    # st.write(st.session_state)
-
     st.subheader('Choose your vehicle')
-    
+
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
         st.session_state['authenticator_object'] = '' 
-        
+
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
 
@@ -47,9 +44,9 @@ def main():
                 var elements = window.parent.document.querySelectorAll('button');
                 for (var i = 0; i < elements.length; ++i) {{ 
                     if (elements[i].innerText.includes('{widget_label}')) {{ 
-                        elements[i].style.fontSize = '15px';  // Adjust size as needed
-                        elements[i].style.padding = '10px 65px';  // Adjust padding as needed
-                        elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
+                        elements[i].style.fontSize = '15px';  
+                        elements[i].style.padding = '10px 65px';  
+                        elements[i].style.whiteSpace = 'nowrap';  
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
                         elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
@@ -66,32 +63,20 @@ def main():
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
         ChangeButtonAppearance(vehicle, logo_path, max_limit)
-        button_html = f"""
-            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
-                <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
-                {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
-            </button>
-        """
+        
         with cols[i % 2]:
-            selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-            
-            if selected_vehicle:
-                # st.text(vehicle)
-                # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
-                selected = {}
+            if st.button(vehicle, key=f"{vehicle}_button"):
                 selected['vehicle'] = vehicle
+
     if selected:
-    #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
-    #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
-    try:
-        # st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs')
-        st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
-            unsafe_allow_html=True
-        )
-    except KeyError:
-        pass
+        try:
+            st.markdown(
+                f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
+                unsafe_allow_html=True
+            )
+        except KeyError:
+            pass
     
     # Add a continue button
     
