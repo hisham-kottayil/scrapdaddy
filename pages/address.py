@@ -35,9 +35,27 @@ def main():
     state = st.text_input('State')
     pincode = st.text_input('Pincode')
 
-    name = st.text_input("Name", max_chars=50)
-    contact = st.text_input("Contact", max_chars=15)
-    address = st.text_area("Address")
+
+
+
+    st.markdown(
+        """
+        **Name**<span style="color:red;">*</span>
+        """,
+        unsafe_allow_html=True
+    )
+    name = st.text_input("", max_chars=50)
+    
+    st.markdown(
+        """
+        **Contact**<span style="color:red;">*</span>
+        """,
+        unsafe_allow_html=True
+    )
+    contact = st.text_input("", max_chars=15)
+    
+    st.markdown("**Address**")
+    address = st.text_area("")
 
     if st.button("Submit"):
         if not name:
