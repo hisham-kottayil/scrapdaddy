@@ -86,7 +86,7 @@ def main():
         st.session_state['selected_vehicle'] = selected["vehicle"]
     try:
         st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {selected["vehicle"]}')
-    except NameError:
+    except KeyError:
         pass
     
     # Add a continue button
