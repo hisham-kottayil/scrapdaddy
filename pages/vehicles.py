@@ -85,6 +85,7 @@ def main():
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
                 selected['vehicle'] = vehicle
+    st.write(selected)
     if selected:
     #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
