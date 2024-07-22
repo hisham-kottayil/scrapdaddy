@@ -31,7 +31,7 @@ def main():
     name = st.text_input('Name')
     contact = st.text_input('Contact')
     house_number = st.text_input('House Number')
-    address = st.text_arae('Address')
+    address = st.text_area('Address')
     city = st.text_input('City')
     state = st.text_input('State')
     pincode = st.text_input('Pincode')
