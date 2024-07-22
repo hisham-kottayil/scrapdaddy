@@ -32,8 +32,8 @@ def main():
     contact = st.text_input('Contact')
     # house_number = st.text_input('House Number')
     address = st.text_area('Address')
-    region = st.text_input('City')
-    district = st.text_input('State')
+    region = st.text_input('Region')
+    district = st.text_input('District')
     pincode = st.text_input('Pincode')
 
 
