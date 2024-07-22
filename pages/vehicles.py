@@ -42,7 +42,7 @@ def main():
     def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None, active=False):
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""
         limit_text = f"&nbsp;<span style='color: grey;'>(max: {max_limit} kgs)</span>" if max_limit else ""
-        active_style = "background-color: #4CAF50; color: white;" if active else ""
+        active_style = "background-color: #23aca0; color: white;" if active else ""
         htmlstr = f"""
             <script>
                 var elements = window.parent.document.querySelectorAll('button');
