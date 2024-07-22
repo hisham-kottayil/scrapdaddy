@@ -77,10 +77,10 @@ def main():
         """
         
         with cols[i % 2]:
-            if st.button(button_html, key=f"{vehicle}_button"):
-                st.session_state['selected_vehicle'] = vehicle
-            
+            selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+                                            
             if selected_vehicle:
+                st.session_state['selected_vehicle'] = vehicle
                 # st.text(vehicle)
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
