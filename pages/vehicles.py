@@ -96,7 +96,11 @@ def main():
         st.error("Please select a valid time!")
     else:
         st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
-    
+    option = st.selectbox(
+            'Time slot',
+            ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'))
+
+
     if st.button('Proceed to Add Address'):
         st.session_state.page = 'Address'
         st.switch_page("pages/address.py")
