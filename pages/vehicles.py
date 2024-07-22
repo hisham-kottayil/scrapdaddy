@@ -21,15 +21,13 @@ def main():
     # Display the clickable image in the sidebar
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
-    # st.write(st.session_state)
-
     st.subheader('Choose your vehicle')
     
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
         st.session_state['authenticator_object'] = '' 
-        
+
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
 
@@ -39,9 +37,10 @@ def main():
     if not authentication_status:
         st.switch_page('scrapdaddy_2.py')
 
-    def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None):
+    def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None, selected=False):
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""
         limit_text = f"&nbsp;<span style='color: grey;'>(max: {max_limit} kgs)</span>" if max_limit else ""
+        selected_style = "background-color: lightblue;" if selected else ""
         htmlstr = f"""
             <script>
                 var elements = window.parent.document.querySelectorAll('button');
@@ -52,22 +51,27 @@ def main():
                         elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
-                        elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
+                        elements[i].innerHTML = `{logo_img_tag} {widget_label} {limit_text}`;
+                        elements[i].style.cssText += '{selected_style}';
                     }}
                 }}
             </script>
         """
         components.html(f"{htmlstr}", height=0, width=0)
 
+    # Initialize session state for selected vehicle
+    if 'selected_vehicle' not in st.session_state:
+        st.session_state['selected_vehicle'] = None
+
     # Layout in 2x2 grid
     cols = st.columns(2)
-    selected = {}
     for i, vehicle in enumerate(vehicles):
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
-        ChangeButtonAppearance(vehicle, logo_path, max_limit)
+        selected = (st.session_state['selected_vehicle'] == vehicle)
+        ChangeButtonAppearance(vehicle, logo_path, max_limit, selected)
         button_html = f"""
-            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
+            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap; background-color: {'lightblue' if selected else 'transparent'};">
                 <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
                 {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
             </button>
@@ -76,6 +80,7 @@ def main():
             selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
             
             if selected_vehicle:
+                st.session_state['selected_vehicle'] = vehicle            
                 # st.text(vehicle)
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
