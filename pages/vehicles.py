@@ -85,9 +85,9 @@ def main():
     #     st.query_params['selected_vehicle'] = selected["vehicle"]
         st.session_state['selected_vehicle'] = selected["vehicle"]
     try:
-        st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {max_limit[selected["vehicle"]]} kgs')
+        st.write(f'Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs')
         st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {max_limit[selected["vehicle"]]} ✔️</span>',
+            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} ✔️</span>',
             unsafe_allow_html=True
         )
     except KeyError:
