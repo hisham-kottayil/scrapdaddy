@@ -31,50 +31,12 @@ def main():
     name = st.text_input('Name')
     contact = st.text_input('Contact')
     house_number = st.text_input('House Number')
+    address = st.text_arae('Address')
     city = st.text_input('City')
     state = st.text_input('State')
     pincode = st.text_input('Pincode')
 
 
-
-
-    st.markdown(
-        """
-        <style>
-        .mandatory::after {
-            content: '*';
-            color: red;
-            padding-left: 5px;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Labels with red asterisks
-    st.markdown('<label class="mandatory">Name</label>', unsafe_allow_html=True)
-    name = st.text_input("", max_chars=50)
-
-    st.markdown('<label class="mandatory">Contact</label>', unsafe_allow_html=True)
-    contact = st.text_input("", max_chars=15)
-    
-    st.markdown("**Address**")
-    address = st.text_area("")
-
-    if st.button("Submit"):
-        if not name:
-            st.error("Name is required.")
-        elif not contact:
-            st.error("Contact is required.")
-        elif not contact.isdigit():
-            st.error("Contact must contain only numbers.")
-        else:
-            st.success("Form submitted successfully!")
-            st.write("Name:", name)
-            st.write("Contact:", contact)
-            st.write("Address:", address)
-            
-            
 
     # Display the entered information
     if st.button('Proceed'):
