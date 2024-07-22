@@ -74,3 +74,23 @@ def load_normal_button_style():
         }
         </style>
     """
+    
+    
+def clicked_button_style():
+    return """
+        <style>
+        .clicked-button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* Remove border */
+            padding: 10px 65px; /* Adjust padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px; /* Rounded corners */
+        }
+        </style>
+        """
