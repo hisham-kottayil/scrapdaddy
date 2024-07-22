@@ -5,10 +5,10 @@ from time import sleep
 from pages.styles import load_sidebar_styles, load_normal_button_style
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 from helper import hide_pages_dynamically
-
+import time
 
 def main():
-    
+    start  = time.start()
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
@@ -57,6 +57,7 @@ def main():
             "password": user["password"]
         }
 
+    st.write(f'{time.time() - start} secs')
     authenticator = stauth.Authenticate(credentials, "scrapdaddy_dashboard", "abcdef", cookie_expiry_days=1)
 
     st.query_params['authenticator_object'] = authenticator
