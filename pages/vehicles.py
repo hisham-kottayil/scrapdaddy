@@ -80,8 +80,6 @@ def main():
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
                 selected['vehicle'] = vehicle
-    st.write(selected['vehicle'])
-    st.write(limits)
     
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
