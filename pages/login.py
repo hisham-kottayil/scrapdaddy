@@ -8,7 +8,7 @@ from helper import hide_pages_dynamically
 import time
 
 def main():
-    start  = time.start()
+    start  = time.time()
     st.write('Here')
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
