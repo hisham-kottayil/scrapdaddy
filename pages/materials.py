@@ -1,6 +1,6 @@
 import streamlit as st
 from pages.styles import load_sidebar_styles
-from st_pages import Page, add_page_title
+from st_pages import Page, show_pages, add_page_title
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 
 
