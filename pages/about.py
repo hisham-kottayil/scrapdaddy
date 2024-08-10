@@ -1,7 +1,7 @@
 import streamlit as st
 from pages.styles import load_sidebar_styles
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically
+from helper import hide_pages_dynamically, hide_pages_extras
 
 
 
@@ -14,7 +14,7 @@ authentication_status = st.session_state['authentication_status']
 authenticator = st.session_state['authenticator_object']
 
 hide_pages_dynamically(authentication_status)
-
+hide_pages_extras()
 if authentication_status and authentication_status != '':
     authenticator.logout('Logout!', 'sidebar', key = '1')
 st.title("About Us!")

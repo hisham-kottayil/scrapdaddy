@@ -4,7 +4,7 @@ import streamlit_authenticator as stauth
 from time import sleep
 from pages.styles import load_sidebar_styles, load_normal_button_style
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically
+from helper import hide_pages_dynamically, hide_pages_extras
 import time
 
 def main():
@@ -18,6 +18,7 @@ def main():
     authenticator = st.session_state['authenticator_object']
 
     hide_pages_dynamically(authentication_status)
+    hide_pages_extras()
     # Function to fetch user data
     # @st.cache_data(ttl=3600)  # Cache for 1 hour
     

@@ -4,7 +4,7 @@ from st_pages import Page, add_page_title, hide_pages
 from pages.styles import load_sidebar_styles, load_home_button_styles
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically
+from helper import hide_pages_dynamically, hide_pages_extras
 from dotenv import load_dotenv
 import os
 
@@ -45,7 +45,7 @@ def main():
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
     hide_pages_dynamically(authentication_status)
-    
+    hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
 

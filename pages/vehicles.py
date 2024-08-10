@@ -5,7 +5,7 @@ from datetime import date, datetime
 from pages.styles import load_sidebar_styles
 from constants import vehicles, limits, vehicle_logos
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-
+from helper import hide_pages_extras
 
 
 def load_image(image_path):
@@ -32,7 +32,7 @@ def main():
         
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-
+    hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
 

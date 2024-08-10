@@ -5,7 +5,7 @@ from datetime import datetime
 from pages.styles import load_sidebar_styles
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 from dotenv import load_dotenv
-
+from helper import hide_pages_extras
 
 secret_key = st.secrets['SECRET_KEY']
 api_url =  st.secrets['URL']
@@ -80,7 +80,7 @@ def main():
         st.session_state['authenticator_object'] = '' 
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-
+    hide_pages_extras()
     if not authentication_status:
         st.switch_page('Enviro.py')
 
