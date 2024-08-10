@@ -60,7 +60,7 @@ def main():
 
     authenticator = stauth.Authenticate(credentials, "scrapdaddy_dashboard", "abcdef", cookie_expiry_days=1)
 
-    st.write(f'{time.time() - start} secs')
+    # st.write(f'{time.time() - start} secs')
 
     st.query_params['authenticator_object'] = authenticator
 
