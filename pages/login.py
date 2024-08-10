@@ -103,7 +103,7 @@ def main():
         # authenticator.logout()
         st.write(f"Logged in successfully as {st.query_params['user_name']}!")
         authenticator.logout('Logout!', 'sidebar', key = '1')
-        st.switch_page("pages/Materials.py")
+        st.switch_page("pages/materials.py")
         st.session_state.page = 'Material'
 
     # Add a signup button
@@ -120,7 +120,7 @@ def main():
     
 
     # Create a button using HTML
-    st.markdown('<a href="/Sign Up" target="_self" class="button">Does not have an account? Sign Up!</a>', unsafe_allow_html=True)
+    st.markdown('<a href="/signup" target="_self" class="button">Does not have an account? Sign Up!</a>', unsafe_allow_html=True)
 
     # Inject the CSS into the Streamlit app
     st.markdown(image_css, unsafe_allow_html=True)

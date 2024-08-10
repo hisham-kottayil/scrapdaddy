@@ -94,7 +94,7 @@ def main():
     )
 
     if st.button('Continue'):
-        st.switch_page("pages/Vehicles.py")
+        st.switch_page("pages/vehicles.py")
 
     # # Include the CSS in your Streamlit app
     # st.markdown(button_style, unsafe_allow_html=True)
