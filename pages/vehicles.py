@@ -37,7 +37,7 @@ def main():
         authenticator.logout('Logout!', 'sidebar', key='1')
 
     if not authentication_status:
-        st.switch_page('scrapdaddy_2.py')
+        st.switch_page('Enviro.py')
 
     def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None):
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""

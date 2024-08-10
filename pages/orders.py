@@ -82,7 +82,7 @@ def main():
     authenticator = st.session_state['authenticator_object']
 
     if not authentication_status:
-        st.switch_page('scrapdaddy_2.py')
+        st.switch_page('Enviro.py')
 
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key = '1')
