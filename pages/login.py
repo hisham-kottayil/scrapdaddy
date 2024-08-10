@@ -103,7 +103,7 @@ def main():
         # authenticator.logout()
         st.write(f"Logged in successfully as {st.query_params['user_name']}!")
         authenticator.logout('Logout!', 'sidebar', key = '1')
-        st.switch_page("pages/materials.py")
+        st.switch_page("pages/Materials.py")
         st.session_state.page = 'Material'
 
     # Add a signup button
