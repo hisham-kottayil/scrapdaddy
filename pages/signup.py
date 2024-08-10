@@ -22,7 +22,7 @@ def signup():
     authenticator = st.session_state['authenticator_object']
 
     hide_pages_dynamically(authentication_status)
-    hide_pages_extras()
+    # hide_pages_extras()
     st.title("Sign Up")
     name = st.text_input("Enter Username")
     email = st.text_input("New Email")

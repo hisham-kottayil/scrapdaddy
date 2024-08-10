@@ -18,7 +18,7 @@ def main():
     authenticator = st.session_state['authenticator_object']
 
     hide_pages_dynamically(authentication_status)
-    hide_pages_extras()
+    # hide_pages_extras()
     # Function to fetch user data
     # @st.cache_data(ttl=3600)  # Cache for 1 hour
     
