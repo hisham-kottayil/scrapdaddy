@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-from st_pages import Page, show_pages, add_page_title, hide_pages
+from st_pages import Page, add_page_title, hide_pages
 from pages.styles import load_sidebar_styles, load_home_button_styles
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
@@ -14,19 +14,19 @@ import os
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 # should be
 
-show_pages(
-    [
-        Page("scrapdaddy_2.py", "Home"),
-        Page("pages/login.py", "Login"),
-        Page("pages/signup.py", "Sign Up"),
-        Page("pages/materials.py", "Materials"),
-        Page("pages/vehicles.py", "Vehicle"),
-        Page("pages/address.py", "Address"),
-        Page("pages/checkout.py", "Checkout"),
-        Page("pages/orders.py", "My Orders"),
-        Page("pages/about.py", "About us"),
-    ]
-)
+# show_pages(
+#     [
+#         Page("scrapdaddy_2.py", "Home"),
+#         Page("pages/login.py", "Login"),
+#         Page("pages/signup.py", "Sign Up"),
+#         Page("pages/materials.py", "Materials"),
+#         Page("pages/vehicles.py", "Vehicle"),
+#         Page("pages/address.py", "Address"),
+#         Page("pages/checkout.py", "Checkout"),
+#         Page("pages/orders.py", "My Orders"),
+#         Page("pages/about.py", "About us"),
+#     ]
+# )
 
 def main():
 
