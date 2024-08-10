@@ -1,7 +1,7 @@
 import base64
 
 # background_image_path = '/Users/hishammohammed/Desktop/personal_project/scrapdaddy/hackathon/images/bg_20.jpg'
-background_image_path = './images/bg_23.jpg'
+background_image_path = './images/bg_4.jpg'
 
 category_logos = {
     'Individual': './logos/avatar.png',
@@ -21,7 +21,7 @@ vehicle_logos = {
     'Tata 407': './logos/truck.png'
 }
 
-logo = './images/recycling_4.png'
+logo = './images/recycling_5.png'
 link_url = "/About%20us"
 def clickable_image(image_path, link_url, width, height):
     with open(image_path, "rb") as image_file:
