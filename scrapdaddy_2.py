@@ -3,9 +3,10 @@ import base64
 from pages.styles import load_sidebar_styles, load_home_button_styles
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically
 from dotenv import load_dotenv
 from st_pages import Page, show_pages
+from helper import hide_pages_dynamically
+
 
 # Optional -- adds the title and icon to the current page
 # add_page_title()
