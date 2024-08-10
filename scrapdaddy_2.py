@@ -1,12 +1,12 @@
 import streamlit as st
 import base64
+from st_pages import Page, show_pages, add_page_title, hide_pages
 from pages.styles import load_sidebar_styles, load_home_button_styles
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from dotenv import load_dotenv
-from st_pages import Page, show_pages
 from helper import hide_pages_dynamically
-
+from dotenv import load_dotenv
+import os
 
 # Optional -- adds the title and icon to the current page
 # add_page_title()
