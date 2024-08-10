@@ -9,7 +9,7 @@ import time
 
 def main():
     start  = time.time()
-    st.write('Here')
+    # st.write('Here')
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
