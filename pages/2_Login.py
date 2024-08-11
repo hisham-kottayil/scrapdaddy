@@ -20,8 +20,6 @@ def main():
     # hide_pages_extras()
     # Function to fetch user data
     # @st.cache_data(ttl=3600)  # Cache for 1 hour
-    st.sidebar.page_link('Enviro.py', label='Enviro')
-    st.sidebar.page_link('pages/2_Login.py', label='Login')
 
     secret_key = st.secrets['SECRET_KEY']
     api_url =  st.secrets['URL']
