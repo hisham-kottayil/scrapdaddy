@@ -43,8 +43,8 @@ def main():
 
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-    st.write("Hi")
-    st.write(authentication_status)
+    # st.write("Hi")
+    # st.write(authentication_status)
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
