@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import os
 
 
+
 def main():
     st.set_page_config(layout="wide")
 
@@ -40,15 +41,12 @@ def main():
     # Encode the background image
     background_image = load_image(background_image_path)
 
-    # Background image with dynamic position
     background_style = f"""
                         <style>
                             .stApp {{
                                 background-image: url("data:image/png;base64,{background_image}");
                                 background-size: cover;
                                 background-repeat: no-repeat;
-                                background-position: top;  /* Start from the top */
-                                transition: background-position 0.1s linear;  /* Smooth transition */
                                 opacity: 0.99;
                             }}
                             .css-1v3fvcr {{
@@ -98,9 +96,8 @@ def main():
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #f7f7f7;  /* Background color for the Enviro section */
+            background-color: #f7f7f7;
             padding: 50px;
-            background-attachment: fixed;
         }
         .enviro-section h1 {
             font-size: 40px;
@@ -145,19 +142,15 @@ def main():
     st.markdown("<ul><li>Sustainable</li><li>Zero Waste</li><li>Fair Trade</li></ul>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    # JavaScript to handle the scroll-triggered background movement and transition
+    # JavaScript to handle the scroll-triggered transition
     st.markdown(
         """
         <script>
         window.addEventListener('scroll', function() {
             const enviroSection = document.getElementById('enviro-section');
-            const stApp = document.querySelector('.stApp');
             const scrollY = window.scrollY;
             const triggerPoint = 300; // Adjust this value to control when the transition starts
             
-            // Adjust background position
-            stApp.style.backgroundPositionY = `${scrollY * 0.5}px`;
-
             if (scrollY > triggerPoint) {
                 enviroSection.style.opacity = '1';
             } else {
