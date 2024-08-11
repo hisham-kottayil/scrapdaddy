@@ -143,29 +143,6 @@ def main():
 
     # Add image to the right column
     home_page_icon_base64 = load_image(home_page_icon)
-    img_html = f"""
-    <div style="
-        width: 1000px;
-        height: 1000px;  /* Set container size */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;       /* Remove any default margin */
-        padding: 0;      /* Remove any default padding */
-        overflow: hidden; /* Hide any overflow */
-    ">
-        <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 100%;      /* Ensure the image width fills the container */
-            height: 100%;     /* Ensure the image height fills the container */
-            object-fit: cover; /* Cover the entire container */
-            margin: 0;        /* Remove any default margin */
-            padding: 0;       /* Remove any default padding */
-        " alt="Home Page Icon">
-    </div>
-    """
-
-    with img_col:
-        st.markdown(img_html, unsafe_allow_html=True)
 
     for _ in range(12):
         st.write("")
