@@ -59,36 +59,11 @@ def main():
                         """
 
     st.markdown(background_style, unsafe_allow_html=True)
-
-    # Add horizontal colored strip
-    st.markdown(
-        """
-        <style>
-        .horizontal-strip {
-            width: 100%;
-            height: 50px; /* Height of the strip */
-            background-color: #ff5733; /* Change to your desired color */
-            position: absolute;
-            top: 0; /* Adjust to position strip where needed */
-            left: 0;
-            z-index: 10; /* Ensure it's above other content */
-        }
-        .content {
-            padding-top: 60px; /* Ensure content is below the strip */
-        }
-        </style>
-        <div class="horizontal-strip"></div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # The main content of the app
-    st.markdown('<div class="content">', unsafe_allow_html=True)
-
     empty_col, col = st.columns([1, 1])
 
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
+
     st.markdown(image_css, unsafe_allow_html=True)
 
     def generate_logo_html(label, logo_path):
@@ -125,7 +100,7 @@ def main():
             padding: 50px;
         }
         .enviro-section.active {
-            background-color: #d4edda !important;
+            background-color: #d4edda !important; /* Ensure background color applies */
         }
         .enviro-section h1 {
             font-size: 40px;
@@ -146,6 +121,7 @@ def main():
         unsafe_allow_html=True
     )
 
+    # Create the container with category buttons
     for _ in range(12):
         st.write("")
 
@@ -192,8 +168,6 @@ def main():
         """,
         unsafe_allow_html=True
     )
-
-    st.markdown('</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
