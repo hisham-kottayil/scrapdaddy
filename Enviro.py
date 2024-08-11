@@ -282,7 +282,7 @@ def main():
     hiw_html = f"""
         <div class="scroll-section">
             <div class="hiw-section">
-                <h2>How it works</h2>
+                <h2>How it works?</h2>
                 <div class="hiw-items">
                     <div class="hiw-item">
                         <img src="{sustainable_logo}" alt="Signup" class="hiw-logo">
