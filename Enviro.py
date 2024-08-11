@@ -3,7 +3,7 @@ import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, load_sidebar_styles_test
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
 
@@ -99,7 +99,7 @@ def main():
     # Add custom CSS to style the buttons
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     # Add custom CSS to style the sidebar
-    # st.markdown(load_sidebar_styles_test(), unsafe_allow_html=True)
+    st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
 
 
 
