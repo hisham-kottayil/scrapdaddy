@@ -33,7 +33,28 @@ def main():
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
     st.set_page_config(layout="wide")
-
+    st.markdown(
+        """
+        <style>
+        /* Style the sidebar buttons */
+        .css-1d391kg {  /* this is the class for the sidebar links */
+            background-color: #4CAF50; /* Green background */
+            color: white;  /* White text */
+            padding: 10px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the links appear side by side */
+            border-radius: 12px; /* Rounded corners */
+        }
+        /* Hover effects */
+        .css-1d391kg:hover {
+            background-color: #45a049; /* Darker green */
+            color: white; /* Keep text white */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.sidebar.page_link('Enviro.py', label='Enviro')
     st.sidebar.page_link('pages/2_Login.py', label='Login')
     
