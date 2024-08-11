@@ -44,6 +44,13 @@ def main():
 
     background_style = f"""
                         <style>
+                            .stApp {{
+                                background-image: url("data:image/png;base64,{background_image}");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                opacity: 0.99;
+                                scroll-behavior: smooth;
+                            }}
                             .css-1v3fvcr {{
                                 background: none;
                             }}
