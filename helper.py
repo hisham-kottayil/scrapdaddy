@@ -36,6 +36,7 @@ def load_sidebar_styles():
             margin-left: 1rem;
             padding: 0.5rem;
             width: 200px;
+            font-size: 160px;
             font-color: #ffffff;
             border-radius: 0.25rem;
             background-color: rgba(218, 247, 241, 1);
