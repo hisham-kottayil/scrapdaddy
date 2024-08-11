@@ -12,7 +12,6 @@ def signup():
     # Inject the CSS into the Streamlit app
     st.markdown(image_css, unsafe_allow_html=True)
     # Display the clickable image in the sidebar
-    st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
@@ -21,6 +20,8 @@ def signup():
     authenticator = st.session_state['authenticator_object']
 
     hide_pages_dynamically(authentication_status)
+    st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
+
     # hide_pages_extras()
     st.title("Sign Up")
     name = st.text_input("Enter Username")
