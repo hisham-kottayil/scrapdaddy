@@ -5,6 +5,7 @@ background_image_path = './images/bg_25.jpg'
 sustainable_logo_path = './images/sustainable.png'
 recyclable_logo_path = './images/recyclable.png'
 zero_waste_logo_path = './images/zero_waste.png'
+home_page_icon = './images/home_page_icon.png'
 
 
 category_logos = {
