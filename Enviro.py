@@ -41,11 +41,10 @@ def main():
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
         st.session_state['authenticator_object'] = '' 
-    hide_pages(
-        ["styles", "Test"]
-        )
+
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
+    st.write("Hi")
     st.write(authentication_status)
     hide_pages_dynamically(authentication_status)
     # hide_pages_extras()
