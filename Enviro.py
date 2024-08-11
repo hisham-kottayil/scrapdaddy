@@ -82,7 +82,6 @@ def main():
     # Existing content
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
-
     st.markdown(image_css, unsafe_allow_html=True)
 
     def generate_logo_html(label, logo_path):
@@ -205,6 +204,64 @@ def main():
     """
 
     st.markdown(mission_html, unsafe_allow_html=True)
+
+    # New section for "Our Services"
+    services_html = """
+        <div class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <h3>Recycling & Waste Management</h3>
+                    <p>Our comprehensive recycling services cater to both residential and commercial clients, ensuring that your waste is collected, processed, and transformed into reusable materials efficiently and responsibly.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Pickup & Drop-off</h3>
+                    <p>Convenience is key. Schedule a pickup through our user-friendly app, or drop off your recyclable materials at one of our designated locations. We operate on your schedule, making recycling easier than ever.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Monetization of Scrap</h3>
+                    <p>Why throw it away when you can get paid for it? We offer competitive rates for a wide range of recyclable materials, including metals, paper, and electronics. Turn your waste into wealth with our seamless process.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .services-section {{
+                padding: 50px 0;
+                text-align: center;
+                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
+            }}
+            .services-section h2 {{
+                font-size: 36px;
+                color: #2a5d2b; /* Dark green */
+                margin-bottom: 20px;
+            }}
+            .services-container {{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 20px;
+            }}
+            .service-box {{
+                background-color: #daf7f1;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+                padding: 20px;
+                width: 300px;
+                border-radius: 8px;
+                text-align: left;
+            }}
+            .service-box h3 {{
+                margin-bottom: 15px;
+                font-size: 24px;
+                color: #422c17;
+            }}
+            .service-box p {{
+                font-size: 16px;
+                color: #422c17;
+            }}
+        </style>
+    """
+
+    st.markdown(services_html, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
