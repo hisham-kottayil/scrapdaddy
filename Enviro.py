@@ -146,14 +146,15 @@ def main():
     img_html = f"""
     <div style="
         width: 100%;
-        height: 400px;  /* Increase height as needed */
+        height: 500px;  /* Increase container height as needed */
         display: flex;
         align-items: center;
         justify-content: center;
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 1000px;  /* Adjust width to make the image larger or smaller */
-            height: 1000px;
+            max-width: 100%;  /* Ensure the image fits within the container */
+            height: 100%;     /* Set image height to fill the container height */
+            object-fit: contain;  /* Maintain aspect ratio while fitting the container */
         " alt="Home Page Icon">
     </div>
     """
