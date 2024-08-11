@@ -157,15 +157,15 @@ def main():
                 <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
                 <div class="mission-items">
                     <div class="mission-item">
-                        <img src="{sustainable_logo_path}" alt="Sustainable" class="mission-logo">
+                        <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
                         <p>Sustainable</p>
                     </div>
                     <div class="mission-item">
-                        <img src="{zero_waste_logo_path}" alt="Zero Waste" class="mission-logo">
+                        <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
                         <p>Zero Waste</p>
                     </div>
                     <div class="mission-item">
-                        <img src="{recyclable_logo_path}" alt="Recyclable" class="mission-logo">
+                        <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
                         <p>Recyclable</p>
                     </div>
                 </div>
