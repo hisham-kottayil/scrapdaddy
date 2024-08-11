@@ -32,7 +32,7 @@ def hide_pages_extras():
 def load_sidebar_styles():
     return """
         <style>
-        div[data-testid="stSidebarUserContent"] li div a {
+        div[data-testid="stSidebarNav"] li div a {
             margin-left: 1rem;
             padding: 0.5rem;
             width: 200px;
