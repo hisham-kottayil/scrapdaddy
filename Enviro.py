@@ -74,6 +74,18 @@ def main():
                                 color: #2a5d2b; /* Dark green */
                                 margin-bottom: 20px;
                             }}
+                            .hiw-section {{
+                                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
+                                width: 100%;
+                                margin: 0;
+                                padding: 50px 0; /* Padding to add space within the section */
+                                text-align: center;
+                            }}
+                            .hiw-section h2 {{
+                                font-size: 36px;
+                                color: #2a5d2b; /* Dark green */
+                                margin-bottom: 20px;
+                            }}
                         </style>
                         """
 
