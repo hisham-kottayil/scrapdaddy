@@ -132,8 +132,12 @@ def main():
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
 
-    # Add the home page icon
-    container_html += f'<div style="margin-left: 20px;"><img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="width: 3000px; height: 300px;"></div>'
+    # Add the home page icon with increased size and additional styling
+    container_html += f'''
+    <div style="margin-left: 20px; width: 200px; height: 200px; display: flex; justify-content: center; align-items: center;">
+        <img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+    </div>
+    '''
     container_html += '</div>'
 
     with empty_col:
