@@ -4,7 +4,7 @@ from st_pages import Page, add_page_title, hide_pages
 
 def hide_pages_dynamically(authentication_status):
     if not authentication_status:
-        st.write("Here")
+        st.write("Here1")
         hide_pages(
             ["4_Materials", "Vehicle", "Address", "Checkout", "Orders"]
             )
