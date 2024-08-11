@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -122,12 +122,21 @@ def main():
 
     categories = ['Individual', 'Enterprises']
 
-    container_html = '<div class="container-box">'
+    # Encode the home page icon
+    home_page_icon_encoded = load_image(home_page_icon)
+
+    # Create the container with category buttons and the icon
+    container_html = '<div style="display: flex; align-items: center;">'
+    container_html += '<div class="container-box">'
     container_html += '<h2>Choose Category</h2>'
     for cat in categories:
         link = "/Login"
         logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
+    container_html += '</div>'
+
+    # Add the home page icon
+    container_html += f'<div style="margin-left: 20px;"><img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="width: 150px; height: 150px;"></div>'
     container_html += '</div>'
 
     with empty_col:
