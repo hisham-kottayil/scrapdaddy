@@ -42,6 +42,9 @@ def load_sidebar_styles():
             /* border: 1px solid lightgrey; */
         }
 
+        div[data-testid="stVerticalBlock"] li div a {
+            color: rgb(218, 247, 200);
+        }
         [data-testid="stSidebarContent"] {
             background-color: #f7f8fa;
             padding: 20px;
