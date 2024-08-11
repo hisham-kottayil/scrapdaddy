@@ -58,7 +58,7 @@ def main():
                         </style>
                         """
 
-    # st.markdown(background_style, unsafe_allow_html=True)
+    st.markdown(background_style, unsafe_allow_html=True)
     empty_col, col = st.columns([1, 1])
 
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
@@ -151,11 +151,11 @@ def main():
         """
         <script>
         window.addEventListener('scroll', function() {
-            console.log('Scroll event triggered'); // Debugging line
             const enviroSection = document.getElementById('enviro-section');
             const scrollY = window.scrollY;
             const triggerPoint = 300; // Adjust this value to control when the transition starts
             
+            console.log('Scroll event triggered', scrollY); // Debugging line
             if (scrollY > triggerPoint) {
                 enviroSection.style.opacity = '1';
                 enviroSection.classList.add('active');
