@@ -62,10 +62,14 @@ def main():
                                 margin: 0;
                                 transition: background-color 1s ease;
                             }}
-                            .mission-section {{
-                                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
-                                width: 100%;
+                            .mission-wrapper {{
+                                width: 100vw; /* Full viewport width */
                                 margin: 0;
+                                padding: 0;
+                                background-color: #d0f4de; /* Light green background */
+                                overflow: hidden; /* Ensure no horizontal scroll */
+                            }}
+                            .mission-section {{
                                 padding: 50px 0; /* Padding to add space within the section */
                                 text-align: center;
                             }}
@@ -142,19 +146,18 @@ def main():
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
-    for _ in range(12):
-        st.write("")
-        
     # New section for "The Enviro Mission"
     mission_html = """
     <div class="scroll-section">
-        <div class="mission-section">
-            <h2>The Enviro Mission</h2>
-            <ul>
-                <li>Sustainable</li>
-                <li>Zero Waste</li>
-                <li>Recyclable</li>
-            </ul>
+        <div class="mission-wrapper">
+            <div class="mission-section">
+                <h2>The Enviro Mission</h2>
+                <ul>
+                    <li>Sustainable</li>
+                    <li>Zero Waste</li>
+                    <li>Recyclable</li>
+                </ul>
+            </div>
         </div>
     </div>
     """
