@@ -159,6 +159,10 @@ def main():
             max-width: 100%;  /* Ensure the image fits within the container */
             height: 100%;     /* Set image height to fill the container height */
             object-fit: contain;  /* Maintain aspect ratio while fitting the container */
+            padding-left: 1 px;
+            padding-right: 1 px;
+            margin-left: 1 px;
+            margin-right: 1 px;
         " alt="Home Page Icon">
     </div>
     """
