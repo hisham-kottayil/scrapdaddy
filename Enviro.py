@@ -45,7 +45,7 @@ def main():
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
     hide_pages_dynamically(authentication_status)
-    hide_pages_extras()
+    # hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
 
