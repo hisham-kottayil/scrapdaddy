@@ -45,6 +45,9 @@ def main():
     authenticator = st.session_state['authenticator_object']
     st.write("Hi")
     st.write(authentication_status)
+    hide_pages(
+        ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
+        )
     hide_pages_dynamically(authentication_status)
     # hide_pages_extras()
     if authentication_status and authenticator != '':
