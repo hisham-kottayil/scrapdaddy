@@ -48,6 +48,32 @@ def main():
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
+    st.markdown(
+        """
+        <style>
+        /* Style for stPageLink-NavLink elements */
+        .stPageLink-navLink {
+            background-color: #4CAF50; /* Green background */
+            color: white;  /* White text */
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 16px;
+        }
+
+        /* Hover effects */
+        .stPageLink-navLink:hover {
+            background-color: #45a049; /* Darker green */
+            color: white;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     hide_pages_dynamically(authentication_status)
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
@@ -98,7 +124,7 @@ def main():
     # Add custom CSS to style the buttons
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     # Add custom CSS to style the sidebar
-    st.markdown(load_sidebar_styles_test(), unsafe_allow_html=True)
+    # st.markdown(load_sidebar_styles_test(), unsafe_allow_html=True)
 
 
 
