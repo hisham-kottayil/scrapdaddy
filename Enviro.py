@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -39,9 +39,8 @@ def main():
             encoded_image = base64.b64encode(image_file.read()).decode()
         return encoded_image
 
-    # Encode the background image and home page icon
+    # Encode the background image
     background_image = load_image(background_image_path)
-    home_page_icon_encoded = load_image(home_page_icon)
 
     background_style = f"""
                         <style>
@@ -115,7 +114,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    # Create the container with category buttons and the home page icon
+    # Create the container with category buttons
     for _ in range(12):
         st.write("")
 
@@ -123,8 +122,7 @@ def main():
 
     categories = ['Individual', 'Enterprises']
 
-    container_html = '<div style="display: flex; align-items: center;">'
-    container_html += '<div class="container-box">'
+    container_html = '<div class="container-box">'
     container_html += '<h2>Choose Category</h2>'
     for cat in categories:
         link = "/Login"
@@ -132,16 +130,12 @@ def main():
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
 
-    # Add the home page icon
-    container_html += f'<div style="margin-left: 20px;"><img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="width: 150px; height: 150px;"></div>'
-    container_html += '</div>'
-
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
     for _ in range(12):
         st.write("")
-
+        
     # Define the paths to the logos
     sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
     zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
