@@ -135,7 +135,7 @@ def main():
     # Add the home page icon with increased size and additional styling
     container_html += f'''
     <div style="margin-left: 20px; width: 200px; height: 200px; display: flex; justify-content: center; align-items: center;">
-        <img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="max-width: 100%; max-height: 100%; width: 2000px; height: auto;">
+        <img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="max-width: 100%; max-height: 100%; width: 2000px; height: 2000px;">
     </div>
     '''
     container_html += '</div>'
