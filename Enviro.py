@@ -146,7 +146,7 @@ def main():
         <div class="scroll-section">
             <div class="mission-section">
                 <h2>The Enviro Mission</h2>
-                <p>At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future</p>
+                <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
                 <div class="mission-items">
                     <div class="mission-item">
                         <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
@@ -183,10 +183,11 @@ def main():
                 font-size: 24px;
                 color: #2a5d2b;
             }}
-            .mission-section p {{
+            .mission-paragraph {{
                 font-size: 20px;
                 color: #2a5d2b;
                 margin: 20px 0;
+                padding: 0 20px; /* Adds padding to the left and right */
             }}
         </style>
     """
