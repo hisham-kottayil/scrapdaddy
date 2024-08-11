@@ -142,6 +142,8 @@ def main():
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
+    for _ in range(12):
+        st.write("")
     # New section for "The Enviro Mission"
     mission_html = """
     <div class="scroll-section">
