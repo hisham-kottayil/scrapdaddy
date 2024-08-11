@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -276,7 +276,9 @@ def main():
 
     signup_logo = f"data:image/png;base64,{load_image(signup_logo_path)}"
     materials_logo = f"data:image/png;base64,{load_image(materials_logo_path)}"
-    recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
+    pickup_logo = f"data:image/png;base64,{load_image(pickup_logo_path)}"
+    money_logo = f"data:image/png;base64,{load_image(money_logo_path)}"
+    
 
     # New section for "The Enviro Mission"
     hiw_html = f"""
@@ -293,11 +295,11 @@ def main():
                         <p>Select Materials</p>
                     </div>
                     <div class="hiw-item">
-                        <img src="{recyclable_logo}" alt="Schedule Pickup" class="hiw-logo">
+                        <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
                         <p>Schedule Pickup</p>
                     </div>
                     <div class="hiw-item">
-                        <img src="{recyclable_logo}" alt="Get Paid" class="hiw-logo">
+                        <img src="{money_logo}" alt="Get Paid" class="hiw-logo">
                         <p>Get Paid</p>
                     </div>
                 </div>

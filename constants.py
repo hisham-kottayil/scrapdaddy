@@ -8,6 +8,9 @@ zero_waste_logo_path = './images/zero_waste.png'
 home_page_icon = './images/home_page_icon.png'
 signup_logo_path = './images/signup.png'
 materials_logo_path = './images/materials.png'
+pickup_logo_path = './images/pickup.png'
+money_logo_path = './images/money.png'
+
 
 
 
