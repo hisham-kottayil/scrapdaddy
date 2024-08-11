@@ -46,7 +46,7 @@ def main():
     st.write("Hi")
     st.write(authentication_status)
     hide_pages(
-        ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
+        ["3_Signup", "Signup", "3_Signup.py", "Signup.py", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
         )
     hide_pages_dynamically(authentication_status)
     # hide_pages_extras()
