@@ -155,8 +155,6 @@ def main():
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
             width: 100%;
             height: auto;
-            object-fit: cover;
-            max-height: 100%; /* Ensure it does not exceed the container */
         " alt="Home Page Icon">
     </div>
     """
