@@ -10,13 +10,7 @@ import os
 
 
 def main():
-
-
-    # st.set_page_config(initial_sidebar_state="collapsed")
-    # page = st_navbar(["ScrapDaddy"])
     st.set_page_config(layout="wide")
-    
-
 
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
@@ -25,27 +19,18 @@ def main():
 
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-    # st.write("Hi")
-    # st.write(authentication_status)
-    # hide_pages(
-    #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
-    #     )
 
     hide_pages_dynamically(authentication_status)
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
-    # hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
 
-    # Initialize session state for page
     if 'page' not in st.session_state:
         st.session_state.page = 'Home'
 
-
     if 'logged_in' not in st.session_state:
         st.session_state['logged_in'] = False
-
 
     # Function to load images and encode them to base64
     def load_image(image_path):
@@ -74,34 +59,17 @@ def main():
                         """
 
     st.markdown(background_style, unsafe_allow_html=True)
-    # st.markdown(custom_font_css, unsafe_allow_html=True)
-    empty_col, col = st.columns([ 1, 1])  # Adjust ratio to move the elements to the right
+    empty_col, col = st.columns([1, 1])
 
-
-    # Add custom CSS to style the buttons
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
-    # Add custom CSS to style the sidebar
     st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
 
-
-
-    # Inject the CSS into the Streamlit app
     st.markdown(image_css, unsafe_allow_html=True)
-
-    # Display the clickable image in the sidebar
-
-
-
-    def load_image(image_path):
-        import base64
-        with open(image_path, "rb") as img_file:
-            return base64.b64encode(img_file.read()).decode()
 
     def generate_logo_html(label, logo_path):
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{label} logo'>" if logo_path else ""
         return logo_img_tag
 
-    # Add custom CSS for the container box with shadow
     st.markdown(
         """
         <style>
@@ -120,16 +88,39 @@ def main():
             font-size: 25px;
             color: #422c17;
         }
+        .enviro-section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f7f7f7;
+            padding: 50px;
+        }
+        .enviro-section h1 {
+            font-size: 40px;
+            color: #2e7d32;
+            margin-bottom: 40px;
+        }
+        .enviro-section ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 20px;
+            color: #555;
+        }
+        .enviro-section ul li {
+            margin-bottom: 20px;
+        }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # Create empty rows for spacing
     for _ in range(12):
         st.write("")
 
-    # Adjust columns to move the buttons to the right
     empty_col, col = st.columns([1, 1.5])
 
     categories = ['Individual', 'Enterprises']
@@ -142,11 +133,34 @@ def main():
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
 
-    # Generate HTML buttons inside a container
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
+    # The Enviro Mission section
+    st.markdown("<div class='enviro-section' id='enviro-section'>", unsafe_allow_html=True)
+    st.markdown("<h1>The Enviro Mission</h1>", unsafe_allow_html=True)
+    st.markdown("<ul><li>Sustainable</li><li>Zero Waste</li><li>Fair Trade</li></ul>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # JavaScript to handle the scroll-triggered transition
+    st.markdown(
+        """
+        <script>
+        window.addEventListener('scroll', function() {
+            const enviroSection = document.getElementById('enviro-section');
+            const scrollY = window.scrollY;
+            const triggerPoint = 300; // Adjust this value to control when the transition starts
+            
+            if (scrollY > triggerPoint) {
+                enviroSection.style.opacity = '1';
+            } else {
+                enviroSection.style.opacity = '0';
+            }
+        });
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
 
 if __name__ == "__main__":
-    
     main()
