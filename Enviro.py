@@ -100,7 +100,7 @@ def main():
             padding: 50px;
         }
         .enviro-section.active {
-            background-color: #d4edda; /* Background color when active */
+            background-color: #d4edda !important; /* Ensure background color applies */
         }
         .enviro-section h1 {
             font-size: 40px;
@@ -151,6 +151,7 @@ def main():
         """
         <script>
         window.addEventListener('scroll', function() {
+            console.log('Scroll event triggered'); // Debugging line
             const enviroSection = document.getElementById('enviro-section');
             const scrollY = window.scrollY;
             const triggerPoint = 300; // Adjust this value to control when the transition starts
