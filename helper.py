@@ -5,7 +5,7 @@ from st_pages import Page, add_page_title, hide_pages
 def hide_pages_dynamically(authentication_status):
     if not authentication_status:
         st.write("Here1")
-        st.sidebar.page_link('Enviro.py', label='Enviro')
+        st.sidebar.page_link('Enviro.py', label='Enviro', background_color="#007BFF")
         st.sidebar.page_link('pages/2_Login.py', label='Login')
         st.sidebar.page_link('pages/3_Signup.py', label='Signup')
         st.sidebar.page_link('pages/9_About.py', label='About')

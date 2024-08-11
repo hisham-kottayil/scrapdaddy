@@ -48,25 +48,7 @@ def main():
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
-    st.sidebar.markdown(
-        """
-        <style>
-        /* Custom styles for sidebar page link */
-        .sidebar .stLink {
-            color: #ff6347; /* Text color */
-            font-size: 18px; /* Font size */
-            font-weight: bold; /* Font weight */
-            text-decoration: none; /* No underline */
-        }
-        
-        .sidebar .stLink:hover {
-            color: #ffa07a; /* Hover color */
-            text-decoration: underline; /* Underline on hover */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+
     hide_pages_dynamically(authentication_status)
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
