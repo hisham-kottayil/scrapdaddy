@@ -119,7 +119,7 @@ def main():
     
 
     # Create a button using HTML
-    st.markdown('<a href="/signup" target="_self" class="button">Does not have an account? Sign Up!</a>', unsafe_allow_html=True)
+    st.markdown('<a href="/Signup" target="_self" class="button">Does not have an account? Sign Up!</a>', unsafe_allow_html=True)
 
     # Inject the CSS into the Streamlit app
     st.markdown(image_css, unsafe_allow_html=True)

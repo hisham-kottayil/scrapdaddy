@@ -7,25 +7,7 @@ from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_style
 from dotenv import load_dotenv
 import os
 
-# Optional -- adds the title and icon to the current page
-# add_page_title()
 
-# Specify what pages should be shown in the sidebar, and what their titles and icons
-# should be
-
-# show_pages(
-#     [
-#         Page("scrapdaddy_2.py", "Home"),
-#         Page("pages/login.py", "Login"),
-#         Page("pages/signup.py", "Sign Up"),
-#         Page("pages/materials.py", "Materials"),
-#         Page("pages/vehicles.py", "Vehicle"),
-#         Page("pages/address.py", "Address"),
-#         Page("pages/checkout.py", "Checkout"),
-#         Page("pages/orders.py", "My Orders"),
-#         Page("pages/about.py", "About us"),
-#     ]
-# )
 
 def main():
 
