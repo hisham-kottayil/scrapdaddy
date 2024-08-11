@@ -32,7 +32,7 @@ def hide_pages_extras():
 def load_sidebar_styles():
     return """
         <style>
-        div[data-testid="stSidebarNav"] li div a {
+        div[data-testid="stSidebarUserContent"] li div a {
             margin-left: 1rem;
             padding: 0.5rem;
             width: 200px;
@@ -41,17 +41,7 @@ def load_sidebar_styles():
             background-color: rgba(218, 247, 241, 1);
             /* border: 1px solid lightgrey; */
         }
-        div[data-testid="stMarkdownContainer"] li div a {
-            margin-left: 1rem;
-            padding: 0.5rem;
-            width: 200px;
-            font-size: 160px;
-            font-color: rgba(218, 247, 241);
-            color: rgba(218, 247, 241);
-            border-radius: 0.25rem;
-            background-color: rgba(218, 247, 241, 1);
-            /* border: 1px solid lightgrey; */
-        }
+
         [data-testid="stSidebarContent"] {
             background-color: #f7f8fa;
             padding: 20px;
