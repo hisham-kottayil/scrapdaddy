@@ -145,8 +145,8 @@ def main():
     home_page_icon_base64 = load_image(home_page_icon)
     img_html = f"""
     <div style="
-        width: 100%;
-        height: 1000px;  /* Increase container height as needed */
+        width: 2000px;
+        height: 2000px;  /* Increase container height as needed */
         display: flex;
         align-items: center;
         justify-content: center;
