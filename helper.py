@@ -47,7 +47,7 @@ def load_sidebar_styles():
             width: 200px;
             font-size: 160px;
             font-color: #ffffff;
-            color: #ffffff;
+            color: rgba(218, 247, 241);
             border-radius: 0.25rem;
             background-color: rgba(218, 247, 241, 1);
             /* border: 1px solid lightgrey; */
