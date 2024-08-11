@@ -2,10 +2,9 @@ import streamlit as st
 import requests
 import pandas as pd
 from datetime import datetime
-from pages.styles import load_sidebar_styles
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 from dotenv import load_dotenv
-from helper import hide_pages_extras
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 
 secret_key = st.secrets['SECRET_KEY']
 api_url =  st.secrets['URL']

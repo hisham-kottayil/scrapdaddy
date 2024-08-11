@@ -1,10 +1,9 @@
 import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
-from pages.styles import load_sidebar_styles, load_home_button_styles
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
-from helper import hide_pages_dynamically, hide_pages_extras
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
 
