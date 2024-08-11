@@ -80,6 +80,8 @@ def main():
     st.markdown(background_style, unsafe_allow_html=True)
 
     # Existing content
+    empty_col, col = st.columns([1, 1])
+
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
 
@@ -96,7 +98,7 @@ def main():
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
             padding: 20px;
             width: 300px;
-            height: 250px; /* Fixed height for the div */
+            height: 250px;
             border-radius: 8px;
             background-color: #daf7f1;
             text-align: center;
@@ -107,16 +109,6 @@ def main():
             font-size: 25px;
             color: #422c17;
         }
-        .category-button {{
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #422c17;
-            font-size: 20px;
-        }}
-        .category-button:hover {{
-            background-color: #d2e8e3;
-        }}
         </style>
         """,
         unsafe_allow_html=True
@@ -126,7 +118,7 @@ def main():
     for _ in range(12):
         st.write("")
 
-    empty_col, img_col = st.columns([1, 1.5])
+    empty_col, col = st.columns([1, 1.5])
 
     categories = ['Individual', 'Enterprises']
 
@@ -140,27 +132,6 @@ def main():
 
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
-
-    # Add image to the right column
-    home_page_icon_base64 = load_image(home_page_icon)
-    img_html = f"""
-    <div style="
-        width: 100%;
-        height: 350px; /* Larger height for the image */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden; /* Hide overflow if the image is larger */
-    ">
-        <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 500px;
-            height: 500px;
-        " alt="Home Page Icon">
-    </div>
-    """
-
-    with img_col:
-        st.markdown(img_html, unsafe_allow_html=True)
 
     for _ in range(12):
         st.write("")
