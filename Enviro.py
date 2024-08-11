@@ -48,7 +48,7 @@ def main():
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
-    st.markdown(
+    st.sidebar.markdown(
         """
         <style>
         /* Custom styles for sidebar page link */
@@ -68,7 +68,7 @@ def main():
         unsafe_allow_html=True
     )
     hide_pages_dynamically(authentication_status)
-    # st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
+    st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
     # hide_pages_extras()
     if authentication_status and authenticator != '':
