@@ -90,7 +90,7 @@ def main():
         }
         .enviro-section {
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -98,6 +98,9 @@ def main():
             flex-direction: column;
             background-color: #f7f7f7;
             padding: 50px;
+        }
+        .enviro-section.active {
+            background-color: #d4edda; /* Background color when active */
         }
         .enviro-section h1 {
             font-size: 40px;
@@ -118,6 +121,7 @@ def main():
         unsafe_allow_html=True
     )
 
+    # Create the container with category buttons
     for _ in range(12):
         st.write("")
 
@@ -153,8 +157,10 @@ def main():
             
             if (scrollY > triggerPoint) {
                 enviroSection.style.opacity = '1';
+                enviroSection.classList.add('active');
             } else {
                 enviroSection.style.opacity = '0';
+                enviroSection.classList.remove('active');
             }
         });
         </script>
