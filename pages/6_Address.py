@@ -47,7 +47,7 @@ def main():
         Address: {address}, {region}, {district}, {pincode}
         """
         st.session_state.page = 'Checkout'
-        st.switch_page("pages/checkout.py")
+        st.switch_page("pages/7_Checkout.py")
 
 if __name__ == "__main__":
     main()

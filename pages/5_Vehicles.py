@@ -113,7 +113,7 @@ def main():
 
     if st.button('Proceed to Add Address'):
         st.session_state.page = 'Address'
-        st.switch_page("pages/address.py")
+        st.switch_page("pages/6_Address.py")
         
 
 if __name__ == "__main__":
