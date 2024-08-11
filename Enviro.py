@@ -150,6 +150,10 @@ def main():
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 1 px;
+        padding-right: 1 px;
+        margin-left: 1 px;
+        margin-right: 1 px;
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
             max-width: 100%;  /* Ensure the image fits within the container */
