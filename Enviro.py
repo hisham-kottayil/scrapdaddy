@@ -36,27 +36,31 @@ def main():
     st.markdown(
         """
         <style>
-        /* Style the sidebar buttons */
-        .css-1d391kg {  /* this is the class for the sidebar links */
+        /* Style for sidebar buttons */
+        .sidebar .button {
             background-color: #4CAF50; /* Green background */
             color: white;  /* White text */
-            padding: 10px; /* Some padding */
-            text-align: center; /* Centered text */
-            text-decoration: none; /* Remove underline */
-            display: inline-block; /* Make the links appear side by side */
-            border-radius: 12px; /* Rounded corners */
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: block; /* Full-width buttons */
+            border-radius: 12px;
+            margin: 5px 0; /* Some space between buttons */
+            font-size: 16px;
         }
         /* Hover effects */
-        .css-1d391kg:hover {
+        .sidebar .button:hover {
             background-color: #45a049; /* Darker green */
-            color: white; /* Keep text white */
+            color: white;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
-    st.sidebar.page_link('Enviro.py', label='Enviro')
-    st.sidebar.page_link('pages/2_Login.py', label='Login')
+
+    # Custom HTML for sidebar buttons
+    st.sidebar.markdown('<a href="Enviro.py" class="button">Enviro</a>', unsafe_allow_html=True)
+    st.sidebar.markdown('<a href="pages/2_Login.py" class="button">Login</a>', unsafe_allow_html=True)
     
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
