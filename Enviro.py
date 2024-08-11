@@ -152,7 +152,7 @@ def main():
         justify-content: center;
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 100%;
+            width: 2000px;
             height: auto;
             object-fit: cover;
         " alt="Home Page Icon">
