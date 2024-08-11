@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -74,15 +74,6 @@ def main():
                                 color: #2a5d2b; /* Dark green */
                                 margin-bottom: 20px;
                             }}
-                            .mission-section ul {{
-                                list-style-type: none;
-                                padding: 0;
-                                font-size: 24px;
-                                color: #2a5d2b;
-                            }}
-                            .mission-section li {{
-                                margin: 10px 0;
-                            }}
                         </style>
                         """
 
@@ -145,18 +136,53 @@ def main():
     for _ in range(12):
         st.write("")
         
+    # Define the paths to the logos
+    sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
+    zero_waste_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
+    recyclable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
+
     # New section for "The Enviro Mission"
-    mission_html = """
-    <div class="scroll-section">
-        <div class="mission-section">
-            <h2>The Enviro Mission</h2>
-            <ul>
-                <li>Sustainable</li>
-                <li>Zero Waste</li>
-                <li>Recyclable</li>
-            </ul>
+    mission_html = f"""
+        <div class="scroll-section">
+            <div class="mission-section">
+                <h2>The Enviro Mission</h2>
+                <div class="mission-items">
+                    <div class="mission-item">
+                        <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
+                        <p>Sustainable</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
+                        <p>Zero Waste</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
+                        <p>Recyclable</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <style>
+            .mission-items {{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }}
+            .mission-item {{
+                text-align: center;
+                width: 200px;
+            }}
+            .mission-logo {{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }}
+            .mission-item p {{
+                font-size: 24px;
+                color: #2a5d2b;
+            }}
+        </style>
     """
 
     st.markdown(mission_html, unsafe_allow_html=True)
