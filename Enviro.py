@@ -58,7 +58,7 @@ def main():
                         </style>
                         """
 
-    st.markdown(background_style, unsafe_allow_html=True)
+    # st.markdown(background_style, unsafe_allow_html=True)
     empty_col, col = st.columns([1, 1])
 
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
