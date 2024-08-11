@@ -168,6 +168,23 @@ def main():
         """,
         unsafe_allow_html=True
     )
+    strip_css = """
+        <style>
+        .horizontal-strip {
+            height: 50px; /* Height of the strip */
+            background-color: #3498db; /* Color of the strip */
+            width: 100%; /* Full width of the strip */
+            position: relative;
+            z-index: 1;
+        }
+        </style>
+    """
+
+    # Add the CSS to the app
+    st.markdown(strip_css, unsafe_allow_html=True)
+
+    # Add the horizontal strip to the app
+    st.markdown('<div class="horizontal-strip"></div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
