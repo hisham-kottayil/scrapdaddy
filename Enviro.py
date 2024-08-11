@@ -45,17 +45,17 @@ def main():
     background_style = f"""
                         <style>
                             .stApp {{
+                                scroll-behavior: smooth;
+                            }}
+                            .background-section {{
                                 background-image: url("data:image/png;base64,{background_image}");
                                 background-size: cover;
                                 background-repeat: no-repeat;
-                                opacity: 0.99;
-                                scroll-behavior: smooth;
-                            }}
-                            .css-1v3fvcr {{
-                                background: none;
-                            }}
-                            .css-12ttj6m {{
-                                background: none;
+                                background-attachment: fixed; /* Creates parallax effect */
+                                height: 100vh; /* Full viewport height */
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             }}
                             .scroll-section {{
                                 padding: 0;
@@ -92,37 +92,14 @@ def main():
 
     st.markdown(background_style, unsafe_allow_html=True)
 
-    # Existing content
-    empty_col, col = st.columns([1, 1])
-
-    st.markdown(load_home_button_styles(), unsafe_allow_html=True)
-    st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
-
-    st.markdown(image_css, unsafe_allow_html=True)
-
-    def generate_logo_html(label, logo_path):
-        logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{label} logo'>" if logo_path else ""
-        return logo_img_tag
-
+    # First section with background image
     st.markdown(
         """
-        <style>
-        .container-box {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-            padding: 20px;
-            width: 300px;
-            height: 250px;
-            border-radius: 8px;
-            background-color: #daf7f1;
-            text-align: center;
-            margin: 0 auto;
-        }
-        .container-box h2 {
-            margin-bottom: 18px;
-            font-size: 25px;
-            color: #422c17;
-        }
-        </style>
+        <div class="background-section">
+            <div>
+                <h1 style="color: white;">Welcome to Our Homepage</h1>
+            </div>
+        </div>
         """,
         unsafe_allow_html=True
     )
