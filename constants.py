@@ -6,6 +6,8 @@ sustainable_logo_path = './images/sustainable.png'
 recyclable_logo_path = './images/recyclable.png'
 zero_waste_logo_path = './images/zero_waste.png'
 home_page_icon = './images/home_page_icon.png'
+signup_logo_path = './images/signup.png'
+
 
 
 category_logos = {
