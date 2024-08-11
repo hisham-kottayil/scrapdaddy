@@ -58,17 +58,21 @@ def main():
                                 background: none;
                             }}
                             .scroll-section {{
-                                padding: 50px;
+                                padding: 0;
+                                margin: 0;
                                 transition: background-color 1s ease;
                             }}
                             .mission-section {{
                                 background-color: #d0f4de; /* Light green background */
-                                padding: 50px;
+                                width: 100%;
+                                margin: 0;
+                                padding: 50px 0; /* Padding to add space within the section */
                                 text-align: center;
                             }}
                             .mission-section h2 {{
                                 font-size: 36px;
                                 color: #2a5d2b; /* Dark green */
+                                margin-bottom: 20px;
                             }}
                             .mission-section ul {{
                                 list-style-type: none;
