@@ -186,8 +186,8 @@ def main():
             .mission-paragraph {{
                 font-size: 20px;
                 color: #2a5d2b;
-                margin: 10px 0;
-                padding-left: 100px;
+                margin-left: 50px;
+                padding: 20px 20px; /* Adds padding to the left and right */
             }}
         </style>
     """
