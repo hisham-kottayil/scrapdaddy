@@ -289,7 +289,7 @@ def main():
                     <div class="hiw-item">
                         <img src="{signup_logo}" alt="Signup" class="hiw-logo">
                         <p>Signup</p>
-                        <h4>Here</h4>
+                        <h7>Here</h7>
                     </div>
                     <div class="hiw-item">
                         <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
