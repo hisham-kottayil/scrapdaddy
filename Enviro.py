@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -138,7 +138,7 @@ def main():
         
     # Define the paths to the logos
     sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
-    zero_waste_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
+    zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
     recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
     # New section for "The Enviro Mission"

@@ -4,6 +4,8 @@ import base64
 background_image_path = './images/bg_24.jpg'
 sustainable_logo_path = './images/sustainable.png'
 recyclable_logo_path = './images/recyclable.png'
+zero_waste_logo_path = './images/zero_waste.png'
+
 
 category_logos = {
     'Individual': './logos/avatar.png',
