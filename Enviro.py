@@ -205,7 +205,62 @@ def main():
     """
 
     st.markdown(mission_html, unsafe_allow_html=True)
+    # New section for "Our Services"
+    services_html = """
+        <div class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-items">
+                <div class="service-item">
+                    <h3>Recycling & Waste Management</h3>
+                    <p>Our comprehensive recycling services cater to both residential and commercial clients, ensuring that your waste is collected, processed, and transformed into reusable materials efficiently and responsibly.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Pickup & Drop-off</h3>
+                    <p>Convenience is key. Schedule a pickup through our user-friendly app, or drop off your recyclable materials at one of our designated locations. We operate on your schedule, making recycling easier than ever.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Monetization of Scrap</h3>
+                    <p>Why throw it away when you can get paid for it? We offer competitive rates for a wide range of recyclable materials, including metals, paper, and electronics. Turn your waste into wealth with our seamless process.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .services-section {
+                padding: 50px 0;
+                background-color: #f5f5f5;
+                text-align: center;
+            }
+            .services-section h2 {
+                font-size: 36px;
+                color: #2a5d2b;
+                margin-bottom: 20px;
+            }
+            .services-items {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .service-item {
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 20px;
+                width: 30%;
+                margin: 10px;
+            }
+            .service-item h3 {
+                font-size: 24px;
+                color: #422c17;
+                margin-bottom: 10px;
+            }
+            .service-item p {
+                font-size: 18px;
+                color: #555555;
+            }
+        </style>
+    """
 
+    st.markdown(services_html, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
