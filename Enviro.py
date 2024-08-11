@@ -113,7 +113,7 @@ def main():
     # Add custom CSS to style the buttons
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
     # Add custom CSS to style the sidebar
-    # st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
+    st.markdown(load_sidebar_styles(), unsafe_allow_html=True)
 
 
 
