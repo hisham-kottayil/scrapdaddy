@@ -150,19 +150,11 @@ def main():
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 1 px;
-        padding-right: 1 px;
-        margin-left: 1 px;
-        margin-right: 1 px;
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
             max-width: 1000px;  /* Ensure the image fits within the container */
             height: 1000px;     /* Set image height to fill the container height */
             object-fit: contain;  /* Maintain aspect ratio while fitting the container */
-            padding-left: 1 px;
-            padding-right: 1 px;
-            margin-left: 1 px;
-            margin-right: 1 px;
         " alt="Home Page Icon">
     </div>
     """
