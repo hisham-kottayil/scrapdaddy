@@ -63,7 +63,7 @@ def main():
                                 transition: background-color 1s ease;
                             }}
                             .mission-section {{
-                                background-color: #B2D281; /* Light green background */
+                                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
                                 width: 100%;
                                 margin: 0;
                                 padding: 50px 0; /* Padding to add space within the section */
