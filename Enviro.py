@@ -122,8 +122,11 @@ def main():
         unsafe_allow_html=True
     )
 
-    # Create the container with category buttons and image side by side
-    empty_col, button_col, img_col = st.columns([1, 2, 1.5])
+    # Create the container with category buttons
+    for _ in range(12):
+        st.write("")
+
+    empty_col, img_col = st.columns([1, 1.5])
 
     categories = ['Individual', 'Enterprises']
 
@@ -135,21 +138,21 @@ def main():
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
 
-    with button_col:
+    with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
     # Add image to the right column
     home_page_icon_base64 = load_image(home_page_icon)
-    home_page_icon_html = f"<img src='data:image/png;base64,{home_page_icon_base64}' alt='Home Page Icon' style='width: 100%; max-width: 200px;'>"
-    
-    with img_col:
-        st.markdown(home_page_icon_html, unsafe_allow_html=True)
 
-    # New section for "The Enviro Mission"
+    for _ in range(12):
+        st.write("")
+        
+    # Define the paths to the logos
     sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
     zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
     recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
+    # New section for "The Enviro Mission"
     mission_html = f"""
         <div class="scroll-section">
             <div class="mission-section">
