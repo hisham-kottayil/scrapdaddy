@@ -153,8 +153,8 @@ def main():
         overflow: hidden; /* Hide overflow if the image is larger */
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 1000px;
-            height: 1000px;
+            width: 500px;
+            height: 500px;
         " alt="Home Page Icon">
     </div>
     """
