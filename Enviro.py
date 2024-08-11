@@ -48,7 +48,7 @@ def main():
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
-    hide_pages_dynamically(authentication_status)
+    # hide_pages_dynamically(authentication_status)
     # hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
