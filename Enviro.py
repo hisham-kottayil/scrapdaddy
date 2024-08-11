@@ -241,7 +241,7 @@ def main():
                 flex-wrap: wrap;
             }
             .service-item {
-                background-color: #f5f5f5;
+                background-color: #E8F1DA;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 padding: 20px;
