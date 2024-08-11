@@ -12,5 +12,5 @@ def hide_pages_dynamically(authentication_status):
     
 def hide_pages_extras():
     hide_pages(
-        ["Styles", "Test"]
+        ["styles", "Test"]
         )
