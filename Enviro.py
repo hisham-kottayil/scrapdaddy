@@ -63,7 +63,7 @@ def main():
                                 transition: background-color 1s ease;
                             }}
                             .mission-section {{
-                                background-color: #d0f4de; /* Light green background */
+                                background-color: #B2D281; /* Light green background */
                                 width: 100%;
                                 margin: 0;
                                 padding: 50px 0; /* Padding to add space within the section */
@@ -144,6 +144,7 @@ def main():
 
     for _ in range(12):
         st.write("")
+        
     # New section for "The Enviro Mission"
     mission_html = """
     <div class="scroll-section">
