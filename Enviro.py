@@ -96,7 +96,7 @@ def main():
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
             padding: 20px;
             width: 300px;
-            height: 250px;
+            height: 250px; /* Fixed height for the div */
             border-radius: 8px;
             background-color: #daf7f1;
             text-align: center;
@@ -146,15 +146,17 @@ def main():
     img_html = f"""
     <div style="
         width: 100%;
-        height: 250px;
+        height: 350px; /* Larger height for the image */
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden; /* Hide overflow if the image is larger */
     ">
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
-            width: 2000px;
+            width: 100%;
             height: auto;
             object-fit: cover;
+            max-height: 100%; /* Ensure it does not exceed the container */
         " alt="Home Page Icon">
     </div>
     """
