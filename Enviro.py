@@ -88,46 +88,6 @@ def main():
             font-size: 25px;
             color: #422c17;
         }
-        .enviro-section {
-            position: relative;
-            opacity: 0;
-            transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #f7f7f7;
-            padding: 50px;
-        }
-        .enviro-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50px; /* Height of the strip */
-            background-color: #3498db; /* Color of the strip */
-            z-index: -1; /* Place the strip behind the content */
-        }
-        .enviro-section.active {
-            background-color: #d4edda !important; /* Ensure background color applies */
-        }
-        .enviro-section h1 {
-            font-size: 40px;
-            color: #2e7d32;
-            margin-bottom: 40px;
-            position: relative; /* Make sure content is above the strip */
-        }
-        .enviro-section ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 20px;
-            color: #555;
-        }
-        .enviro-section ul li {
-            margin-bottom: 20px;
-        }
         </style>
         """,
         unsafe_allow_html=True
@@ -152,34 +112,6 @@ def main():
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
 
-    # The Enviro Mission section
-    st.markdown("<div class='enviro-section' id='enviro-section'>", unsafe_allow_html=True)
-    st.markdown("<h1>The Enviro Mission</h1>", unsafe_allow_html=True)
-    st.markdown("<ul><li>Sustainable</li><li>Zero Waste</li><li>Fair Trade</li></ul>", unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-    # JavaScript to handle the scroll-triggered transition
-    st.markdown(
-        """
-        <script>
-        window.addEventListener('scroll', function() {
-            const enviroSection = document.getElementById('enviro-section');
-            const scrollY = window.scrollY;
-            const triggerPoint = 300; // Adjust this value to control when the transition starts
-            
-            console.log('Scroll event triggered', scrollY); // Debugging line
-            if (scrollY > triggerPoint) {
-                enviroSection.style.opacity = '1';
-                enviroSection.classList.add('active');
-            } else {
-                enviroSection.style.opacity = '0';
-                enviroSection.classList.remove('active');
-            }
-        });
-        </script>
-        """,
-        unsafe_allow_html=True
-    )
 
 if __name__ == "__main__":
     main()
