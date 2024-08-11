@@ -283,19 +283,22 @@ def main():
         <div class="scroll-section">
             <div class="hiw-section">
                 <h2>How it works</h2>
-                <p class="hiw-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
                 <div class="hiw-items">
                     <div class="hiw-item">
-                        <img src="{sustainable_logo}" alt="Sustainable" class="hiw-logo">
-                        <p>Sustainable</p>
+                        <img src="{sustainable_logo}" alt="Signup" class="hiw-logo">
+                        <p>Signup</p>
                     </div>
                     <div class="hiw-item">
-                        <img src="{zero_waste_logo}" alt="Zero Waste" class="hiw-logo">
-                        <p>Zero Waste</p>
+                        <img src="{zero_waste_logo}" alt="Select Materials" class="hiw-logo">
+                        <p>Select Materials</p>
                     </div>
                     <div class="hiw-item">
-                        <img src="{recyclable_logo}" alt="Recyclable" class="hiw-logo">
-                        <p>Recyclable</p>
+                        <img src="{recyclable_logo}" alt="Schedule Pickup" class="hiw-logo">
+                        <p>Schedule Pickup</p>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{recyclable_logo}" alt="Get Paid" class="hiw-logo">
+                        <p>Get Paid</p>
                     </div>
                 </div>
             </div>
