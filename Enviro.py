@@ -133,7 +133,7 @@ def main():
     container_html += '</div>'
 
     # Add the home page icon
-    container_html += f'<div style="margin-left: 20px;"><img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="width: 1500px; height: 1500px;"></div>'
+    container_html += f'<div style="margin-left: 20px;"><img src="data:image/png;base64,{home_page_icon_encoded}" alt="Home Page Icon" style="width: 300px; height: 150px;"></div>'
     container_html += '</div>'
 
     with empty_col:
