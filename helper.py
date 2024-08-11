@@ -5,14 +5,24 @@ from st_pages import Page, add_page_title, hide_pages
 def hide_pages_dynamically(authentication_status):
     if not authentication_status:
         st.write("Here1")
-        hide_pages(
-            ["4_Materials.py"]
-            )
+        st.sidebar.page_link('Enviro.py', label='Enviro')
+        st.sidebar.page_link('pages/2_Login.py', label='Login')
+        st.sidebar.page_link('pages/3_Signup.py', label='Signup')
+        st.sidebar.page_link('pages/9_About.py', label='About')
         # hide_pages(
         #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
         #     )
     else:
         st.write('Here2')
+        st.sidebar.page_link('Enviro.py', label='Enviro')
+        st.sidebar.page_link('pages/2_Login.py', label='Login')
+        st.sidebar.page_link('pages/3_Signup.py', label='Signup')
+        st.sidebar.page_link('pages/4_Materials.py.py', label='Materials')
+        st.sidebar.page_link('pages/5_Vehicles.py', label='Vehicles')
+        st.sidebar.page_link('pages/6_Address.py', label='Address')
+        st.sidebar.page_link('pages/7_Checkout.py', label='Checkout')
+        st.sidebar.page_link('pages/8_Orders.py', label='Orders')
+        st.sidebar.page_link('pages/9_About.py', label='About')
         pass
     
 def hide_pages_extras():

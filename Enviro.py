@@ -33,9 +33,6 @@ def main():
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
     st.set_page_config(layout="wide")
-
-    st.sidebar.page_link('Enviro.py', label='Enviro')
-    st.sidebar.page_link('pages/2_Login.py', label='Login')
     
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
