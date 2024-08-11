@@ -187,7 +187,7 @@ def main():
                 font-size: 20px;
                 color: #2a5d2b;
                 margin: 10px 0;
-                padding: 20px 20px; /* Adds padding to the left and right */
+                padding-left: 100px;
             }}
         </style>
     """
