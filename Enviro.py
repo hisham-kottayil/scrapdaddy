@@ -51,6 +51,21 @@ def main():
     hide_pages_dynamically(authentication_status)
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
+    custom_css = """
+    <style>
+        .st-emotion-cache-c3ikil.e11k5jya1 {
+            color: #3498db;  /* Text color */
+            background-color: #f0f0f5;  /* Background color */
+            font-size: 18px;  /* Font size */
+            padding: 10px;  /* Padding */
+            border-radius: 5px;  /* Rounded corners */
+        }
+    </style>
+    """
+
+    # Inject the CSS into the app
+    st.markdown(custom_css, unsafe_allow_html=True)
+
     # hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
