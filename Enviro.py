@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 import os
 
 
-
 def main():
     st.set_page_config(layout="wide")
 
@@ -41,12 +40,14 @@ def main():
     # Encode the background image
     background_image = load_image(background_image_path)
 
+    # Parallax background effect
     background_style = f"""
                         <style>
                             .stApp {{
                                 background-image: url("data:image/png;base64,{background_image}");
                                 background-size: cover;
                                 background-repeat: no-repeat;
+                                background-attachment: fixed;  /* Enables the parallax effect */
                                 opacity: 0.99;
                             }}
                             .css-1v3fvcr {{
