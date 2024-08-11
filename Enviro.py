@@ -154,7 +154,6 @@ def main():
         <img src="data:image/png;base64,{home_page_icon_base64}" style="
             width: 1000px;  /* Adjust width to make the image larger or smaller */
             height: 1000px;
-            object-fit: cover;
         " alt="Home Page Icon">
     </div>
     """
