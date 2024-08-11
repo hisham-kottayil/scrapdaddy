@@ -32,7 +32,7 @@ def load_sidebar_styles():
             background-color: rgba(218, 247, 241, 1);
             /* border: 1px solid lightgrey; */
         }
-        div[data-testid="stSidebarUserContent"] li div a {
+        div[data-testid="stPageLink-NavLink"] li div a {
             margin-left: 1rem;
             padding: 0.5rem;
             width: 200px;
