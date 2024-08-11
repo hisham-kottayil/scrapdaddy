@@ -23,7 +23,6 @@ def hide_pages_dynamically(authentication_status):
         st.sidebar.page_link('pages/7_Checkout.py', label='Checkout')
         st.sidebar.page_link('pages/8_Orders.py', label='Orders')
         st.sidebar.page_link('pages/9_About.py', label='About')
-        pass
     
 def hide_pages_extras():
     hide_pages(
