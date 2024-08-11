@@ -227,7 +227,7 @@ def main():
         <style>
             .services-section {
                 padding: 50px 0;
-                background-color: #f5f5f5;
+                background-color: #ffffff;
                 text-align: center;
             }
             .services-section h2 {
