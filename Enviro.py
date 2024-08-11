@@ -51,29 +51,22 @@ def main():
     st.markdown(
         """
         <style>
-        /* Style for stPageLink-NavLink elements */
-        .stPageLink-navLink {
-            background-color: #4CAF50; /* Green background */
-            color: white;  /* White text */
-            padding: 100px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            display: block;
-            font-size: 16px;
+        /* Custom styles for sidebar page link */
+        .sidebar .stLink {
+            color: #ff6347; /* Text color */
+            font-size: 18px; /* Font size */
+            font-weight: bold; /* Font weight */
+            text-decoration: none; /* No underline */
         }
-
-        /* Hover effects */
-        .stPageLink-navLink:hover {
-            background-color: #45a049; /* Darker green */
-            color: white;
+        
+        .sidebar .stLink:hover {
+            color: #ffa07a; /* Hover color */
+            text-decoration: underline; /* Underline on hover */
         }
         </style>
         """,
         unsafe_allow_html=True
     )
-
     hide_pages_dynamically(authentication_status)
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
