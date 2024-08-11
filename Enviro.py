@@ -7,8 +7,6 @@ from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_style
 from dotenv import load_dotenv
 import os
 
-
-
 def main():
     st.set_page_config(layout="wide")
 
@@ -99,6 +97,7 @@ def main():
             flex-direction: column;
             background-color: #f7f7f7;
             padding: 50px;
+            overflow: hidden; /* Ensure pseudo-element does not overflow */
         }
         .enviro-section::before {
             content: "";
