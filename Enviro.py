@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 from dotenv import load_dotenv
 import os
@@ -275,7 +275,7 @@ def main():
     st.markdown(services_html, unsafe_allow_html=True)
 
     signup_logo = f"data:image/png;base64,{load_image(signup_logo_path)}"
-    zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
+    materials_logo = f"data:image/png;base64,{load_image(materials_logo_path)}"
     recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
     # New section for "The Enviro Mission"
@@ -289,7 +289,7 @@ def main():
                         <p>Signup</p>
                     </div>
                     <div class="hiw-item">
-                        <img src="{zero_waste_logo}" alt="Select Materials" class="hiw-logo">
+                        <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
                         <p>Select Materials</p>
                     </div>
                     <div class="hiw-item">
