@@ -15,7 +15,7 @@ def main():
         st.session_state['authenticator_object'] = ''     
     authentication_status = st.session_state['authentication_status']
     authenticator = st.session_state['authenticator_object']
-    st.write(authentication_status)
+    # st.write(authentication_status)
     hide_pages_dynamically(authentication_status)
     # hide_pages_extras()
     # Function to fetch user data
