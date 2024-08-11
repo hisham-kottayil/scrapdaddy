@@ -117,40 +117,37 @@ def main():
         .category-button:hover {{
             background-color: #d2e8e3;
         }}
+        .home-icon {{
+            width: 450px; /* Adjust size here */
+            height: auto;
+        }}
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # Create the container with category buttons
-    for _ in range(12):
-        st.write("")
+    # Create columns for the category container and the home page icon
+    with st.container():
+        col1, col2 = st.columns([1.5, 1])
 
-    empty_col, img_col = st.columns([1, 1.5])
+        with col1:
+            # Create the container with category buttons
+            categories = ['Individual', 'Enterprises']
 
-    categories = ['Individual', 'Enterprises']
+            container_html = '<div class="container-box">'
+            container_html += '<h2>Choose Category</h2>'
+            for cat in categories:
+                link = "/Login"
+                logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
+                container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
+            container_html += '</div>'
 
-    container_html = '<div class="container-box">'
-    container_html += '<h2>Choose Category</h2>'
-    for cat in categories:
-        link = "/Login"
-        logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
-        container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
-    container_html += '</div>'
+            st.markdown(container_html, unsafe_allow_html=True)
 
-    with empty_col:
-        st.markdown(container_html, unsafe_allow_html=True)
-
-    # Add image to the right column
-    home_page_icon_base64 = load_image(home_page_icon)
-
-    for _ in range(12):
-        st.write("")
-        
-    # Define the paths to the logos
-    sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
-    zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
-    recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
+        with col2:
+            # Add image to the right column
+            home_page_icon_base64 = load_image(home_page_icon)
+            st.markdown(f'<img src="data:image/png;base64,{home_page_icon_base64}" class="home-icon" alt="Home Page Icon">', unsafe_allow_html=True)
 
     # New section for "The Enviro Mission"
     mission_html = f"""
