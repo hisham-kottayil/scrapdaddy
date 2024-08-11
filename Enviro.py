@@ -38,8 +38,6 @@ def main():
     
     st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
 
-    st.sidebar.page_link('Enviro.py', label='Enviro')
-    st.sidebar.page_link('pages/2_Login.py', label='Login')
 
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
