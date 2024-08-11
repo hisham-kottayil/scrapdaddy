@@ -108,4 +108,14 @@ def load_normal_button_style():
         }
         </style>
     """
-    
+
+def load_sidebar_styles_test():
+    return """
+        <style>
+
+        div[data-testid="stPageLink-NavLink"] li div a {
+            background-color: rgba(151, 166, 195, 0.15);
+        }
+   
+        </style>
+        """
