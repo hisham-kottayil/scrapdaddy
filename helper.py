@@ -6,7 +6,7 @@ def hide_pages_dynamically(authentication_status):
     if not authentication_status:
         st.write("Here1")
         hide_pages(
-            ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders"]
+            ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
             )
     else:
         st.write('Here2')
