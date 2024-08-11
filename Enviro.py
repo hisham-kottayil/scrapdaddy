@@ -262,5 +262,63 @@ def main():
 
     st.markdown(services_html, unsafe_allow_html=True)
 
+    sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
+    zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
+    recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
+
+    # New section for "The Enviro Mission"
+    hiw_html = f"""
+        <div class="scroll-section">
+            <div class="hiw-section">
+                <h2>How it works</h2>
+                <p class="hiw-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
+                <div class="hiw-items">
+                    <div class="hiw-item">
+                        <img src="{sustainable_logo}" alt="Sustainable" class="hiw-logo">
+                        <p>Sustainable</p>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{zero_waste_logo}" alt="Zero Waste" class="hiw-logo">
+                        <p>Zero Waste</p>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{recyclable_logo}" alt="Recyclable" class="hiw-logo">
+                        <p>Recyclable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .hiw-items {{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }}
+            .hiw-item {{
+                text-align: center;
+                width: 200px;
+            }}
+            .hiw-logo {{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }}
+            .hiw-item p {{
+                font-size: 24px;
+                color: #2a5d2b;
+            }}
+            .hiw-paragraph {{
+                font-size: 20px;
+                color: #2a5d2b;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
+            }}
+        </style>
+    """
+
+    st.markdown(hiw_html, unsafe_allow_html=True)
+
 if __name__ == "__main__":
     main()
