@@ -12,6 +12,7 @@ import os
 def main():
     st.set_page_config(layout="wide")
 
+    # Initialization
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
     if 'authenticator_object' not in st.session_state:
@@ -48,6 +49,7 @@ def main():
                                 background-size: cover;
                                 background-repeat: no-repeat;
                                 opacity: 0.99;
+                                scroll-behavior: smooth;
                             }}
                             .css-1v3fvcr {{
                                 background: none;
@@ -55,10 +57,34 @@ def main():
                             .css-12ttj6m {{
                                 background: none;
                             }}
+                            .scroll-section {{
+                                padding: 50px;
+                                transition: background-color 1s ease;
+                            }}
+                            .mission-section {{
+                                background-color: #d0f4de; /* Light green background */
+                                padding: 50px;
+                                text-align: center;
+                            }}
+                            .mission-section h2 {{
+                                font-size: 36px;
+                                color: #2a5d2b; /* Dark green */
+                            }}
+                            .mission-section ul {{
+                                list-style-type: none;
+                                padding: 0;
+                                font-size: 24px;
+                                color: #2a5d2b;
+                            }}
+                            .mission-section li {{
+                                margin: 10px 0;
+                            }}
                         </style>
                         """
 
     st.markdown(background_style, unsafe_allow_html=True)
+
+    # Existing content
     empty_col, col = st.columns([1, 1])
 
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
@@ -111,6 +137,22 @@ def main():
 
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
+
+    # New section for "The Enviro Mission"
+    mission_html = """
+    <div class="scroll-section">
+        <div class="mission-section">
+            <h2>The Enviro Mission</h2>
+            <ul>
+                <li>Sustainable</li>
+                <li>Zero Waste</li>
+                <li>Recyclable</li>
+            </ul>
+        </div>
+    </div>
+    """
+
+    st.markdown(mission_html, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
