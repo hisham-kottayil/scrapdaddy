@@ -146,6 +146,7 @@ def main():
         <div class="scroll-section">
             <div class="mission-section">
                 <h2>The Enviro Mission</h2>
+                <p>At Enviro, we empower you to make a positive impact by selling us your recyclable waste, helping to reduce landfill and conserve resources. Together, we can create a cleaner, greener future, one item at a time.</p>
                 <div class="mission-items">
                     <div class="mission-item">
                         <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
@@ -181,6 +182,11 @@ def main():
             .mission-item p {{
                 font-size: 24px;
                 color: #2a5d2b;
+            }}
+            .mission-section p {{
+                font-size: 20px;
+                color: #2a5d2b;
+                margin: 20px 0;
             }}
         </style>
     """
