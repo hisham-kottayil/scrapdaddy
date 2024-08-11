@@ -299,15 +299,11 @@ def main():
                     </div>
                     <div class="hiw-item">
                         <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
-                        <p>Schedule Pickup</p>
-                        <h15>Pick a date and time that suits you, and we'll handle the rest</h15>
-                        
+                        <p>Schedule Pickup</p>                        
                     </div>
                     <div class="hiw-item">
                         <img src="{money_logo}" alt="Get Paid" class="hiw-logo">
-                        <p>Get Paid</p>
-                        <h15>Receive payment directly to your account</h15>
-                        
+                        <p>Get Paid</p>                        
                     </div>
                 </div>
             </div>
