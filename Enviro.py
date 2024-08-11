@@ -55,7 +55,7 @@ def main():
         .stPageLink-navLink {
             background-color: #4CAF50; /* Green background */
             color: white;  /* White text */
-            padding: 10px;
+            padding: 100px;
             text-align: center;
             text-decoration: none;
             border-radius: 8px;
