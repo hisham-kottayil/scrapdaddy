@@ -39,8 +39,9 @@ def main():
             encoded_image = base64.b64encode(image_file.read()).decode()
         return encoded_image
 
-    # Encode the background image
+    # Encode the background image and home page icon
     background_image = load_image(background_image_path)
+    home_page_icon_encoded = load_image(home_page_icon)
 
     background_style = f"""
                         <style>
@@ -114,7 +115,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    # Create the container with category buttons
+    # Create the container with category buttons and the home page icon
     for _ in range(12):
         st.write("")
 
@@ -122,10 +123,6 @@ def main():
 
     categories = ['Individual', 'Enterprises']
 
-    # Encode the home page icon
-    home_page_icon_encoded = load_image(home_page_icon)
-
-    # Create the container with category buttons and the icon
     container_html = '<div style="display: flex; align-items: center;">'
     container_html += '<div class="container-box">'
     container_html += '<h2>Choose Category</h2>'
@@ -144,7 +141,7 @@ def main():
 
     for _ in range(12):
         st.write("")
-        
+
     # Define the paths to the logos
     sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
     zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
