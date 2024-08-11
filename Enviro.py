@@ -33,9 +33,7 @@ def main():
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
     st.set_page_config(layout="wide")
-    hide_pages_dynamically(authentication_status)
-
-    st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
+    
 
 
     if 'authentication_status' not in st.session_state:
@@ -50,6 +48,9 @@ def main():
     # hide_pages(
     #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
     #     )
+    hide_pages_dynamically(authentication_status)
+    st.sidebar.markdown(clickable_image(logo, link_url, width=150, height=150), unsafe_allow_html=True)
+
     # hide_pages_extras()
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key='1')
