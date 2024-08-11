@@ -42,8 +42,8 @@ def load_sidebar_styles():
             /* border: 1px solid lightgrey; */
         }
 
-        div[data-testid="stVerticalBlock"] li div a {
-            color: rgb(218, 247, 200);
+        div[data-testid="stPageLink-NavLink"] li div a {
+            background-color: rgba(151, 166, 195, 0.15);
         }
         [data-testid="stSidebarContent"] {
             background-color: #f7f8fa;
