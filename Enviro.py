@@ -98,8 +98,9 @@ def main():
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #f7f7f7;
+            background-color: #f7f7f7;  /* Background color for the Enviro section */
             padding: 50px;
+            background-attachment: fixed;
         }
         .enviro-section h1 {
             font-size: 40px;
