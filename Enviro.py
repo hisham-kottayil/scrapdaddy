@@ -33,18 +33,7 @@ def main():
     # st.set_page_config(initial_sidebar_state="collapsed")
     # page = st_navbar(["ScrapDaddy"])
     st.set_page_config(layout="wide")
-    sidebar_style = """
-        <style>
-        .stSidebarUserContent {
-            background-color: #f0f0f5;  /* Replace with your desired color */
-            padding: 10px;
-            border-radius: 5px;
-        }
-        </style>
-    """
 
-    # Inject the CSS
-    st.markdown(sidebar_style, unsafe_allow_html=True)
     st.sidebar.page_link('Enviro.py', label='Enviro')
     st.sidebar.page_link('pages/2_Login.py', label='Login')
     
