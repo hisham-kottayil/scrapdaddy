@@ -146,7 +146,7 @@ def main():
     img_html = f"""
     <div style="
         width: 100%;
-        height: 500px;  /* Increase container height as needed */
+        height: 1000px;  /* Increase container height as needed */
         display: flex;
         align-items: center;
         justify-content: center;
