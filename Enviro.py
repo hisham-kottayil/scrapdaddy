@@ -43,42 +43,41 @@ def main():
     background_image = load_image(background_image_path)
 
     background_style = f"""
-        <style>
-            .stApp {{
-                background-image: url("data:image/png;base64,{background_image}");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed; /* Makes the background image scroll with the page */
-                opacity: 0.99;
-                scroll-behavior: smooth;
-            }}
-            .css-1v3fvcr {{
-                background: none;
-            }}
-            .css-12ttj6m {{
-                background: none;
-            }}
-            .scroll-section {{
-                padding: 0;
-                margin: 0;
-                transition: background-color 1s ease;
-            }}
-            .mission-section {{
-                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
-                width: 100%;
-                margin: 0;
-                padding: 50px 0; /* Padding to add space within the section */
-                text-align: center;
-            }}
-            .mission-section h2 {{
-                font-size: 36px;
-                color: #2a5d2b; /* Dark green */
-                margin-bottom: 20px;
-            }}
-        </style>
-    """
+                        <style>
+                            .stApp {{
+                                background-image: url("data:image/png;base64,{background_image}");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                opacity: 0.99;
+                                scroll-behavior: smooth;
+                            }}
+                            .css-1v3fvcr {{
+                                background: none;
+                            }}
+                            .css-12ttj6m {{
+                                background: none;
+                            }}
+                            .scroll-section {{
+                                padding: 0;
+                                margin: 0;
+                                transition: background-color 1s ease;
+                            }}
+                            .mission-section {{
+                                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
+                                width: 100%;
+                                margin: 0;
+                                padding: 50px 0; /* Padding to add space within the section */
+                                text-align: center;
+                            }}
+                            .mission-section h2 {{
+                                font-size: 36px;
+                                color: #2a5d2b; /* Dark green */
+                                margin-bottom: 20px;
+                            }}
+                        </style>
+                        """
 
-    st.markdown(background_style, unsafe_allow_html=True)
+    # st.markdown(background_style, unsafe_allow_html=True)
 
     # Existing content
     empty_col, col = st.columns([1, 1])
