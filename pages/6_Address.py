@@ -32,7 +32,7 @@ def main():
     # Input fields for address information
     name = st.text_input('Name')
     st.markdown('<span>Contact <span style="color:grey;">- Mandatory</span></span>', unsafe_allow_html=True)
-    contact = st.text_input('')  # Empty label for the actual input field
+    contact = st.number_input('')  # Empty label for the actual input field
     # house_number = st.text_input('House Number')
     address = st.text_area('Address')
     region = st.text_input('Region')
