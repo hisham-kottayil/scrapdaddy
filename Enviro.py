@@ -308,13 +308,15 @@ def main():
         <style>
             .hiw-items {{
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 20px;
             }}
             .hiw-item {{
                 text-align: center;
-                width: 200px;
+                width: 45%;
+                margin-bottom: 20px;
             }}
             .hiw-logo {{
                 width: 100px;
