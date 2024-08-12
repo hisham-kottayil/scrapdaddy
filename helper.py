@@ -359,7 +359,6 @@ def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
             .mission-item {{
                 text-align: center;
                 width: 200px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each item */
                 border-radius: 8px; /* Add rounded corners to items */
                 padding: 20px; /* Add padding for better spacing */
                 background-color: #fff; /* White background for better contrast with shadow */
