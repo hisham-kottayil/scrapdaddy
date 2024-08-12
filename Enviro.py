@@ -33,10 +33,10 @@ def main():
     font-family: 'CustomFont';
     src: url('data:font/ttf;base64,{font_base64}') format('truetype');
     }}
-    html, body, [class*="css"] {{
+    html, body, [class*="css"], .stApp, .stText, .stTitle, .stHeader, .stSubheader, .stMarkdown {{
     font-family: 'CustomFont', sans-serif;
-    margin: 0; /* Ensure there's no default margin interfering */
-    padding: 0; /* Ensure there's no default padding interfering */
+    margin: 0;
+    padding: 0;
     }}
     </style>
     """
