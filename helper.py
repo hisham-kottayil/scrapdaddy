@@ -349,6 +349,9 @@ def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
             </div>
         </div>
         <style>
+            .mission-section, .mission-section h2, .mission-item p, .mission-paragraph {{
+                font-family: 'CustomFont', sans-serif;
+            }}
 
             .mission-section {{
                 background-color: #E8F1DA; /* Light green background */
