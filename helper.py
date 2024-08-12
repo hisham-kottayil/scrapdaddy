@@ -162,6 +162,7 @@ def services_html():
                 margin-bottom: 10px;
             }
             .service-item p {
+                font-family: \"CustomFont\"
                 font-size: 18px;
                 color: #555555;
             }
