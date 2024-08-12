@@ -129,14 +129,16 @@ def services_html():
             </div>
         </div>
         <style>
-            .services-section {
-                padding: 50px 0;
-                background-color: #F7F8FA;
-                text-align: center;
-                border-radius: 15px;
+            @font-face {
+                font-family: 'CustomFont';
+                src: url('data:font/ttf;base64,{font_base64}') format('truetype');
+            }
+            .services-section h2,
+            .services-section h3,
+            .services-section p {
+                font-family: 'CustomFont', sans-serif; /* Apply custom font to h2, h3, and p */
             }
             .services-section h2 {
-                font-family: 'CustomFont', sans-serif;
                 font-size: 36px;
                 color: #2a5d2b;
                 margin-bottom: 20px;
@@ -155,13 +157,11 @@ def services_html():
                 margin: 10px;
             }
             .service-item h3 {
-                font-family: 'CustomFont', sans-serif;
                 font-size: 24px;
                 color: #422c17;
                 margin-bottom: 10px;
             }
             .service-item p {
-                font-family: 'CustomFont', sans-serif;
                 font-size: 18px;
                 color: #555555;
             }
