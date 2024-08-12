@@ -164,3 +164,81 @@ def services_html():
             }
         </style>
     """
+    
+def hiw_html():
+    return """
+        <div class="scroll-section">
+            <div class="hiw-section">
+                <h2>How it works?</h2>
+                <div class="hiw-items">
+                    <div class="hiw-item">
+                        <img src="{signup_logo}" alt="Signup" class="hiw-logo">
+                        <p>Signup</p>
+                        <h7>Create an account in minutes through our website or app</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
+                        <p>Select Materials</p>                        
+                        <h7>Choose the types of materials you want to recycle</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
+                        <p>Schedule Pickup</p>                        
+                        <h7>Pick a date and time that suits you, and we'll handle the rest</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{money_logo}" alt="Get Paid" class="hiw-logo">
+                        <p>Get Paid</p>                        
+                        <h7>Receive payment directly to your account once your materials are processed</h7>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .hiw-section {{
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
+                text-align: center;
+                border-radius: 15px; 
+            }}
+            .hiw-section h2 {{
+                font-size: 36px;
+                color: #2a5d2b; /* Dark green */
+                margin-bottom: 20px;
+            }}
+            .hiw-section h7 {{
+                color: #2a5d2b; /* Dark green */
+            }}
+            .hiw-items {{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }}
+            .hiw-item {{
+                text-align: center;
+                width: 45%;
+                margin-bottom: 20px;
+            }}
+            .hiw-logo {{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }}
+            .hiw-item p {{
+                font-size: 24px;
+                color: #2a5d2b;
+            }}
+            .hiw-paragraph {{
+                font-size: 20px;
+                color: #2a5d2b;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
+            }}
+        </style>
+
+    """
