@@ -163,64 +163,7 @@ def main():
     for _ in range(10):
         st.write("")
         
-    # # Define the paths to the logos
-    # sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
-    # zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
-    # recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
-    # # New section for "The Enviro Mission"
-    # mission_html = f"""
-    #     <div class="scroll-section">
-    #         <div class="mission-section">
-    #             <h2>The Enviro Mission</h2>
-    #             <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
-    #             <div class="mission-items">
-    #                 <div class="mission-item">
-    #                     <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
-    #                     <p>Sustainable</p>
-    #                 </div>
-    #                 <div class="mission-item">
-    #                     <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
-    #                     <p>Zero Waste</p>
-    #                 </div>
-    #                 <div class="mission-item">
-    #                     <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
-    #                     <p>Recyclable</p>
-    #                 </div>
-    #             </div>
-    #         </div>
-    #     </div>
-    #     <style>
-    #         .mission-items {{
-    #             display: flex;
-    #             justify-content: space-around;
-    #             align-items: center;
-    #             margin-top: 20px;
-    #         }}
-    #         .mission-item {{
-    #             text-align: center;
-    #             width: 200px;
-    #         }}
-    #         .mission-logo {{
-    #             width: 100px;
-    #             height: 100px;
-    #             margin-bottom: 10px;
-    #         }}
-    #         .mission-item p {{
-    #             font-size: 24px;
-    #             color: #2a5d2b;
-    #         }}
-    #         .mission-paragraph {{
-    #             font-size: 20px;
-    #             color: #2a5d2b;
-    #             margin-left: 100px;
-    #             margin-right: 100px;
-    #             padding: 0 20px; /* Adds padding to the left and right */
-    #         }}
-    #     </style>
-    # """
-
-    # st.markdown(mission_html, unsafe_allow_html=True)
     # New section for "Our Services"
     services_html = """
         <div class="services-section">
@@ -417,6 +360,66 @@ def main():
     """
 
     st.markdown(why_choose_us_html, unsafe_allow_html=True)
+
+    # Define the paths to the logos
+    sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
+    zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
+    recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
+
+    # New section for "The Enviro Mission"
+    mission_html = f"""
+        <div class="scroll-section">
+            <div class="mission-section">
+                <h2>The Enviro Mission</h2>
+                <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
+                <div class="mission-items">
+                    <div class="mission-item">
+                        <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
+                        <p>Sustainable</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
+                        <p>Zero Waste</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
+                        <p>Recyclable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .mission-items {{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }}
+            .mission-item {{
+                text-align: center;
+                width: 200px;
+            }}
+            .mission-logo {{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }}
+            .mission-item p {{
+                font-size: 24px;
+                color: #2a5d2b;
+            }}
+            .mission-paragraph {{
+                font-size: 20px;
+                color: #2a5d2b;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
+            }}
+        </style>
+    """
+
+    st.markdown(mission_html, unsafe_allow_html=True)
+
 
 if __name__ == "__main__":
     main()
