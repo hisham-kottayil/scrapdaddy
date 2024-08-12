@@ -216,7 +216,7 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
             }}
             .hiw-section h2 {{
                 font-size: 36px;
-                color: #2a5d2b; /* Dark green */
+                color: #422c17; /* Dark green */
                 margin-bottom: 20px;
             }}
             .hiw-section h7 {{
@@ -281,14 +281,6 @@ def why_choose_us():
             </div>
         </div>
         <style>
-            @font-face {
-                font-family: 'CustomFont';
-                src: url('path/to/your/font/file.woff2') format('woff2'),
-                     url('path/to/your/font/file.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-
             .why-choose-us-section, .why-choose-us-section h2, .why-choose-us-item h3, .why-choose-us-item p {
                 font-family: 'CustomFont', sans-serif;
             }
