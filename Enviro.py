@@ -57,6 +57,11 @@ def main():
                             .css-12ttj6m {{
                                 background: none;
                             }}
+                            .scroll-section {{
+                                padding: 0;
+                                margin: 0;
+                                transition: background-color 1s ease;
+                            }}
                         </style>
                         """
 
@@ -64,24 +69,7 @@ def main():
 
     extra_section_style = f"""
                         <style>
-                            .scroll-section {{
-                                padding: 0;
-                                margin: 0;
-                                transition: background-color 1s ease;
-                            }}
-                            .mission-section {{
-                                background-color: #E8F1DA; /* Light green background */
-                                width: 100%;
-                                margin: 0;
-                                padding: 50px 0; /* Padding to add space within the section */
-                                text-align: center;
-                                border-radius: 15px; 
-                            }}
-                            .mission-section h2 {{
-                                font-size: 36px;
-                                color: #422c17; /* Dark brown */
-                                margin-bottom: 20px;
-                            }}
+
 
                         </style>
                         """
@@ -398,6 +386,20 @@ def main():
             </div>
         </div>
         <style>
+
+            .mission-section {{
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
+                text-align: center;
+                border-radius: 15px; 
+            }}
+            .mission-section h2 {{
+                font-size: 36px;
+                color: #422c17; /* Dark brown */
+                margin-bottom: 20px;
+            }}
             .mission-items {{
                 display: flex;
                 justify-content: space-around;
