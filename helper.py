@@ -155,11 +155,13 @@ def services_html():
                 margin: 10px;
             }
             .service-item h3 {
+                font-family: 'CustomFont', sans-serif;
                 font-size: 24px;
                 color: #422c17;
                 margin-bottom: 10px;
             }
             .service-item p {
+                font-family: 'CustomFont', sans-serif;
                 font-size: 18px;
                 color: #555555;
             }
