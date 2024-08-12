@@ -156,6 +156,7 @@ def services_html():
                 margin: 10px;
             }
             .service-item h3 {
+                font-family: \"CustomFont\"
                 font-size: 24px;
                 color: #422c17;
                 margin-bottom: 10px;
