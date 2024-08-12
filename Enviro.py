@@ -3,7 +3,7 @@ import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path
-from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us
 from dotenv import load_dotenv
 import os
 
@@ -156,71 +156,9 @@ def main():
     st.markdown(hiw_html_str, unsafe_allow_html=True)
 
     # Additional section for "Why Choose Us?"
-    why_choose_us_html = """
-        <div class="why-choose-us-section">
-            <h2>Why Choose Us?</h2>
-            <div class="why-choose-us-items">
-                <div class="why-choose-us-item">
-                    <h3>Eco-Friendly Approach</h3>
-                    <p>We prioritize sustainability in everything we do, from the way we process waste to the materials we use in our operations.</p>
-                </div>
-                <div class="why-choose-us-item">
-                    <h3>Competitive Rates</h3>
-                    <p>Maximize your returns with our transparent pricing and fair market rates for all recyclable materials.</p>
-                </div>
-                <div class="why-choose-us-item">
-                    <h3>Customer-Centric Service</h3>
-                    <p>Our intuitive app and dedicated customer support team ensure that your recycling experience is hassle-free and rewarding.</p>
-                </div>
-                <div class="why-choose-us-item">
-                    <h3>Community Impact</h3>
-                    <p>By choosing us, you're contributing to a cleaner environment and a healthier community. Together, we can make a difference.</p>
-                </div>
-            </div>
-        </div>
-        <style>
-            .why-choose-us-section {
-                padding: 50px 0;
-                background-color: #F7F8FA; /* Light green background */
-                text-align: center;
-                border-radius: 15px;
-                margin-top: 30px;
-            }
-            .why-choose-us-section h2 {
-                font-size: 36px;
-                color: #2a5d2b;
-                margin-bottom: 20px;
-            }
-            .why-choose-us-items {
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
-            .why-choose-us-item {
-                background-color: #E8F1DA;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                padding: 20px;
-                width: 45%;
-                margin: 10px;
-                text-align: center; /* Center-aligns the text */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            .why-choose-us-item h3 {
-                font-size: 24px;
-                color: #422c17;
-                margin-bottom: 10px;
-            }
-            .why-choose-us-item p {
-                font-size: 18px;
-                color: #555555;
-            }
-        </style>
-    """
+    why_choose_us_str = why_choose_us()
 
-    st.markdown(why_choose_us_html, unsafe_allow_html=True)
+    st.markdown(why_choose_us_str, unsafe_allow_html=True)
     for _ in range(2):
         st.write("")
     # Define the paths to the logos
