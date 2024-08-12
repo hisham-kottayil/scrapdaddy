@@ -91,6 +91,7 @@ def main():
                                 margin-bottom: 20px;
                                 padding-left: 100px;
                                 padding-right: 50px;
+                                margin-left: 100px;
                             }}
                         </style>
                         """
