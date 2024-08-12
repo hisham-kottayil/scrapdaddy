@@ -38,6 +38,13 @@ def main():
     margin: 0;
     padding: 0;
     }}
+    .container-box h2 {{
+        font-family: 'CustomFont', sans-serif;
+    }}
+
+    .category-button span {{
+        font-family: 'CustomFont', sans-serif;
+    }}
     </style>
     """
 
