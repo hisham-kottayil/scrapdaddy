@@ -45,6 +45,7 @@ def main():
     st.write("")
     st.write("")
     st.write("")
+    st.subheader('Pickup Slot')
     if 'date_chosen' in st.session_state.keys():
         st.write(f'date chosen: {st.session_state['date_chosen']}')
     if 'time_slot' in st.session_state.keys():
