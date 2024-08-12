@@ -242,7 +242,7 @@ def main():
         <style>
             .services-section {
                 padding: 50px 0;
-                background-color: #ffffff;
+                background-color: #F7F8FA;
                 text-align: center;
             }
             .services-section h2 {
