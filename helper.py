@@ -307,3 +307,69 @@ def why_choose_us():
             }
         </style>   
     """
+    
+def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
+    return f"""
+        <div class="scroll-section">
+            <div class="mission-section">
+                <h2>The Enviro Mission</h2>
+                <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
+                <div class="mission-items">
+                    <div class="mission-item">
+                        <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
+                        <p>Sustainable</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
+                        <p>Zero Waste</p>
+                    </div>
+                    <div class="mission-item">
+                        <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
+                        <p>Recyclable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+
+            .mission-section {{
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
+                text-align: center;
+                border-radius: 15px; 
+            }}
+            .mission-section h2 {{
+                font-size: 36px;
+                color: #422c17; /* Dark brown */
+                margin-bottom: 20px;
+            }}
+            .mission-items {{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+            }}
+            .mission-item {{
+                text-align: center;
+                width: 200px;
+            }}
+            .mission-logo {{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }}
+            .mission-item p {{
+                font-size: 24px;
+                color: #422c17;
+            }}
+            .mission-paragraph {{
+                font-size: 20px;
+                color: #422c17;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
+            }}
+        </style>
+    """

@@ -3,7 +3,7 @@ import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path
-from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html
 from dotenv import load_dotenv
 import os
 
@@ -167,72 +167,9 @@ def main():
     recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
     # New section for "The Enviro Mission"
-    mission_html = f"""
-        <div class="scroll-section">
-            <div class="mission-section">
-                <h2>The Enviro Mission</h2>
-                <p class="mission-paragraph">At Enviro, you can sell us your recyclable waste to help reduce landfill and conserve resources. Together, we can create a greener future.</p>
-                <div class="mission-items">
-                    <div class="mission-item">
-                        <img src="{sustainable_logo}" alt="Sustainable" class="mission-logo">
-                        <p>Sustainable</p>
-                    </div>
-                    <div class="mission-item">
-                        <img src="{zero_waste_logo}" alt="Zero Waste" class="mission-logo">
-                        <p>Zero Waste</p>
-                    </div>
-                    <div class="mission-item">
-                        <img src="{recyclable_logo}" alt="Recyclable" class="mission-logo">
-                        <p>Recyclable</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>
+    mission_html_str = mission_html()
 
-            .mission-section {{
-                background-color: #E8F1DA; /* Light green background */
-                width: 100%;
-                margin: 0;
-                padding: 50px 0; /* Padding to add space within the section */
-                text-align: center;
-                border-radius: 15px; 
-            }}
-            .mission-section h2 {{
-                font-size: 36px;
-                color: #422c17; /* Dark brown */
-                margin-bottom: 20px;
-            }}
-            .mission-items {{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-top: 20px;
-            }}
-            .mission-item {{
-                text-align: center;
-                width: 200px;
-            }}
-            .mission-logo {{
-                width: 100px;
-                height: 100px;
-                margin-bottom: 10px;
-            }}
-            .mission-item p {{
-                font-size: 24px;
-                color: #422c17;
-            }}
-            .mission-paragraph {{
-                font-size: 20px;
-                color: #422c17;
-                margin-left: 100px;
-                margin-right: 100px;
-                padding: 0 20px; /* Adds padding to the left and right */
-            }}
-        </style>
-    """
-
-    st.markdown(mission_html, unsafe_allow_html=True)
+    st.markdown(mission_html_str, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
