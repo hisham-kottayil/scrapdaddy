@@ -109,33 +109,58 @@ def load_normal_button_style():
         </style>
     """
 
-def container_style():
+def services_html():
     return """
+        <div class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-items">
+                <div class="service-item">
+                    <h3>Recycling & Waste Management</h3>
+                    <p>Our comprehensive recycling services cater to both residential and commercial clients, ensuring that your waste is collected, processed, and transformed into reusable materials efficiently and responsibly.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Pickup & Drop-off</h3>
+                    <p>Convenience is key. Schedule a pickup through our user-friendly app, or drop off your recyclable materials at one of our designated locations. We operate on your schedule, making recycling easier than ever.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Monetization of Scrap</h3>
+                    <p>Why throw it away when you can get paid for it? We offer competitive rates for a wide range of recyclable materials, including metals, paper, and electronics. Turn your waste into wealth with our seamless process.</p>
+                </div>
+            </div>
+        </div>
         <style>
-        .container-box {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-            padding: 20px;
-            width: 300px;
-            height: 250px;
-            border-radius: 8px;
-            background-color: #daf7f1;
-            text-align: center;
-            margin: 0 auto;
-        }
-        .container-box h2 {
-            margin-bottom: 18px;
-            font-size: 25px;
-            color: #422c17;
-        }
-        .category-button {{
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #422c17;
-            font-size: 20px;
-        }}
-        .category-button:hover {{
-            background-color: #d2e8e3;
-        }}
+            .services-section {
+                padding: 50px 0;
+                background-color: #F7F8FA;
+                text-align: center;
+                border-radius: 15px;
+            }
+            .services-section h2 {
+                font-size: 36px;
+                color: #2a5d2b;
+                margin-bottom: 20px;
+            }
+            .services-items {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .service-item {
+                background-color: #DBF7F1;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 20px;
+                width: 30%;
+                margin: 10px;
+            }
+            .service-item h3 {
+                font-size: 24px;
+                color: #422c17;
+                margin-bottom: 10px;
+            }
+            .service-item p {
+                font-size: 18px;
+                color: #555555;
+            }
         </style>
     """
