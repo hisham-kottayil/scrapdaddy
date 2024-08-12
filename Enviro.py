@@ -277,6 +277,9 @@ def main():
 
     st.markdown(services_html, unsafe_allow_html=True)
 
+    for _ in range(2):
+        st.write("")
+
     signup_logo = f"data:image/png;base64,{load_image(signup_logo_path)}"
     materials_logo = f"data:image/png;base64,{load_image(materials_logo_path)}"
     pickup_logo = f"data:image/png;base64,{load_image(pickup_logo_path)}"
