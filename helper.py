@@ -344,6 +344,7 @@ def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
                 padding: 50px 0; /* Padding to add space within the section */
                 text-align: center;
                 border-radius: 15px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }}
             .mission-section h2 {{
                 font-size: 36px;
