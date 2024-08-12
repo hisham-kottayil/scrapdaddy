@@ -35,7 +35,6 @@ def main():
     # house_number = st.text_input('House Number')
     address = st.text_area('Address', placeholder = 'Mandatory')
     region = st.text_input('Region')
-    district = st.text_input('District')
     pincode = st.text_input('Pincode', placeholder = 'Mandatory')
 
 
@@ -49,7 +48,7 @@ def main():
             Name: {name}\n
             Contact Number: {contact}\n
             Address: {address}\n
-            Region: {region}, {district}, {pincode}
+            Region: {region}, {pincode}
             """
             st.session_state['customer_details'] = f"""
             Name: {name}\n
