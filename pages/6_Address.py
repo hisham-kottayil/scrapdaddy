@@ -44,14 +44,15 @@ def main():
     if st.button('Proceed'):
         if contact == '' or name is None or address is None or pincode is None:
             st.error("Please provide all the mandatory fields to proceed.")
-        st.session_state['addess'] = f"""
-        Name: {name}\n
-        Contact Number: {contact}\n
-        Address: {address}\n
-        Region: {region}, {district}, {pincode}
-        """
-        st.session_state.page = 'Checkout'
-        st.switch_page("pages/7_Checkout.py")
+        else:
+            st.session_state['addess'] = f"""
+            Name: {name}\n
+            Contact Number: {contact}\n
+            Address: {address}\n
+            Region: {region}, {district}, {pincode}
+            """
+            st.session_state.page = 'Checkout'
+            st.switch_page("pages/7_Checkout.py")
 
 if __name__ == "__main__":
     main()
