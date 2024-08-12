@@ -31,7 +31,7 @@ def main():
         authenticator.logout('Logout!', 'sidebar', key = '1')
     # Input fields for address information
     name = st.text_input('Name')
-    contact = int(st.number_input('Contact', value = None, format="%0.0f"))  # Empty label for the actual input field
+    contact = st.number_input('Contact', value = None, format="%0.0f")  # Empty label for the actual input field
     # house_number = st.text_input('House Number')
     address = st.text_area('Address')
     region = st.text_input('Region')
@@ -39,7 +39,7 @@ def main():
     pincode = st.text_input('Pincode')
 
 
-
+    contact = int(contact)
     # Display the entered information
     if st.button('Proceed'):
         st.session_state['addess'] = f"""
