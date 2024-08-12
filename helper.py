@@ -130,10 +130,6 @@ def services_html():
             </div>
         </div>
         <style>
-            @font-face {
-                font-family: 'CustomFont';
-                src: url('data:font/ttf;base64,{font_base64}') format('truetype');
-            }
             .services-section h2,
             .services-section h3,
             .services-section p {
