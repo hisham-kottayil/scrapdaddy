@@ -75,7 +75,7 @@ def main():
                                 margin-bottom: 20px;
                             }}
                             .hiw-section {{
-                                background-color: rgba(178, 210, 129, 0.3); /* Light green background */
+                                background-color: #E8F1DA; /* Light green background */
                                 width: 100%;
                                 margin: 0;
                                 padding: 50px 0; /* Padding to add space within the section */
