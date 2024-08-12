@@ -90,7 +90,7 @@ def main():
                                 color: #2a5d2b; /* Dark green */
                                 margin-bottom: 20px;
                                 padding-left: 100px;
-                                padding-right: 20px;
+                                padding-right: 50px;
                             }}
                         </style>
                         """
