@@ -137,7 +137,7 @@ def main():
         
 
     # New section for "Our Services"
-    services_html = services_html
+    services_html = services_html()
 
     st.markdown(services_html, unsafe_allow_html=True)
 
