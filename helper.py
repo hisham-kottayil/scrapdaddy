@@ -137,6 +137,7 @@ def services_html():
                 border-radius: 15px;
             }
             .services-section h2 {
+                font-family: \"CustomFont\"
                 font-size: 36px;
                 color: #2a5d2b;
                 margin-bottom: 20px;
