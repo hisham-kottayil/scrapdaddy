@@ -185,7 +185,7 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
                     <div class="hiw-item">
                         <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
                         <p>Select Materials</p>                        
-                        <h7>Choose the types of materials you want to recycle</h7>
+                        <h7>Choose the types of materials you want to recycle to ensure proper processing</h7>
                     </div>
                     <div class="hiw-item">
                         <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
