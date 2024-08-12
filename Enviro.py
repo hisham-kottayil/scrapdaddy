@@ -71,7 +71,7 @@ def main():
                             }}
                             .mission-section h2 {{
                                 font-size: 36px;
-                                color: #2a5d2b; /* Dark green */
+                                color: #ffffff; /* Dark green */
                                 margin-bottom: 20px;
                             }}
                             .hiw-section {{
