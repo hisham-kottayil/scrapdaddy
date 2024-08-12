@@ -202,6 +202,7 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
                 padding: 50px 0; /* Padding to add space within the section */
                 text-align: center;
                 border-radius: 15px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
             }}
             .hiw-section h2 {{
                 font-size: 36px;
@@ -222,6 +223,10 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
                 text-align: center;
                 width: 45%;
                 margin-bottom: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each item */
+                border-radius: 8px; /* Add rounded corners to items */
+                padding: 20px; /* Add padding for better spacing */
+                background-color: #fff; /* White background for better contrast with shadow */
             }}
             .hiw-logo {{
                 width: 100px;
