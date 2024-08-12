@@ -360,7 +360,8 @@ def main():
     """
 
     st.markdown(why_choose_us_html, unsafe_allow_html=True)
-
+    for _ in range(2):
+        st.write("")
     # Define the paths to the logos
     sustainable_logo = f"data:image/png;base64,{load_image(sustainable_logo_path)}"
     zero_waste_logo = f"data:image/png;base64,{load_image(zero_waste_logo_path)}"
@@ -410,7 +411,7 @@ def main():
             }}
             .mission-paragraph {{
                 font-size: 20px;
-                color: #2a5d2b;
+                color: #ffffff;
                 margin-left: 100px;
                 margin-right: 100px;
                 padding: 0 20px; /* Adds padding to the left and right */
