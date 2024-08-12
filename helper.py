@@ -130,6 +130,7 @@ def services_html():
         </div>
         <style>
             .services-section {
+                font-family: \"CustomFont\"
                 padding: 50px 0;
                 background-color: #F7F8FA;
                 text-align: center;
