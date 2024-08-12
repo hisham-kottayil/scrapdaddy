@@ -10,16 +10,28 @@ from pathlib import Path
 
 
 
+# Load the font file
+def load_font(file_path):
+    with open(file_path, "rb") as font_file:
+        font_data = font_file.read()
+    return base64.b64encode(font_data).decode('utf-8')
+
+
 def main():
     st.set_page_config(layout="wide")
 
-    # Load custom font
+    # Define the path to the font file
     font_path = Path(home_font_path)
+
+    # Get the base64 encoded font
+    font_base64 = load_font(font_path)
+
+    # Define CSS to use the custom font
     font_css = f"""
     <style>
     @font-face {{
     font-family: 'CustomFont';
-    src: url('data:font/ttf;base64,{font_path.read_bytes().encode("base64").decode()}') format('truetype');
+    src: url('data:font/ttf;base64,{font_base64}') format('truetype');
     }}
     html, body, [class*="css"] {{
     font-family: 'CustomFont', sans-serif;
@@ -29,6 +41,7 @@ def main():
 
     # Apply the custom font
     st.markdown(font_css, unsafe_allow_html=True)
+
     # Initialization
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
