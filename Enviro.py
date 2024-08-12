@@ -57,6 +57,13 @@ def main():
                             .css-12ttj6m {{
                                 background: none;
                             }}
+                        </style>
+                        """
+
+    st.markdown(background_style, unsafe_allow_html=True)
+
+    extra_section_style = f"""
+                        <style>
                             .scroll-section {{
                                 padding: 0;
                                 margin: 0;
@@ -93,8 +100,7 @@ def main():
                             }}
                         </style>
                         """
-
-    st.markdown(background_style, unsafe_allow_html=True)
+    st.markdown(extra_section_style, unsafe_allow_html=True)
 
     # Existing content
     st.markdown(load_home_button_styles(), unsafe_allow_html=True)
