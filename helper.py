@@ -134,8 +134,10 @@ def services_html():
                 background-color: #F7F8FA;
                 text-align: center;
                 border-radius: 15px;
+                font-family: \"CustomFont\"
             }
             .services-section h2 {
+                font-family: \"CustomFont\"
                 font-size: 36px;
                 color: #2a5d2b;
                 margin-bottom: 20px;
@@ -154,6 +156,7 @@ def services_html():
                 margin: 10px;
             }
             .service-item h3 {
+                font-family: \"CustomFont\"
                 font-size: 24px;
                 color: #422c17;
                 margin-bottom: 10px;
