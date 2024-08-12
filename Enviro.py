@@ -177,7 +177,6 @@ def main():
         logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
         container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
     container_html += '</div>'
-    st.write(container_html)
 
     with empty_col:
         st.markdown(container_html, unsafe_allow_html=True)
