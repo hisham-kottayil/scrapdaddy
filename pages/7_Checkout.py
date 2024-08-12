@@ -52,7 +52,7 @@ def main():
     # st.button('Checkout')
     col1, col2, col3 = st.columns(3)
     with col3:
-        if st.button('Checkout'):
+        if st.button('Schedule'):
             if 'selected_vehicle' not in st.session_state.keys():
                 st.error("Please choose vehicle to proceed.")
             if 'addess' not in st.session_state.keys():
@@ -63,7 +63,8 @@ def main():
                 st.error("Please chose time slot to proceed.")
             if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
                 st.success('Pickup scheduled!')
-                # st.switch_page("pages/orders.py")
+                st.switch_page("pages/8_Orders.py")
+                
             
                 
 if __name__ == "__main__":
