@@ -35,7 +35,7 @@ vehicle_logos = {
 }
 
 logo = './images/recycling_5.png'
-link_url = "/About"
+link_url = ""
 def clickable_image(image_path, link_url, width, height):
     with open(image_path, "rb") as image_file:
         image = image_file.read()
