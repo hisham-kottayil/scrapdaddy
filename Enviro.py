@@ -399,7 +399,10 @@ def main():
                 padding: 20px;
                 width: 45%;
                 margin: 10px;
-                text-align: left;
+                text-align: center; /* Center-aligns the text */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             .why-choose-us-item h3 {
                 font-size: 24px;
