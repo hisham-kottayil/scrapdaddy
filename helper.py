@@ -165,8 +165,8 @@ def services_html():
         </style>
     """
     
-def hiw_html():
-    return """
+def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
+    return f"""
         <div class="scroll-section">
             <div class="hiw-section">
                 <h2>How it works?</h2>

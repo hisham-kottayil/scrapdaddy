@@ -151,7 +151,7 @@ def main():
     
 
     # New section for "The Enviro Mission"
-    hiw_html_str = hiw_html()
+    hiw_html_str = hiw_html(signup_logo, materials_logo, pickup_logo, money_logo)
 
     st.markdown(hiw_html_str, unsafe_allow_html=True)
 
