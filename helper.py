@@ -116,11 +116,11 @@ def services_html():
             <h2>Our Services</h2>
             <div class="services-items">
                 <div class="service-item">
-                    <h3>Recycling & Waste Management</h3>
+                    <h3>Recycling and Waste Management</h3>
                     <p>Our comprehensive recycling services cater to both residential and commercial clients, ensuring that your waste is collected, processed, and transformed into reusable materials efficiently and responsibly.</p>
                 </div>
                 <div class="service-item">
-                    <h3>Pickup & Drop-off</h3>
+                    <h3>Pickup and Drop-off</h3>
                     <p>Convenience is key. Schedule a pickup through our user-friendly app, or drop off your recyclable materials at one of our designated locations. We operate on your schedule, making recycling easier than ever.</p>
                 </div>
                 <div class="service-item">
