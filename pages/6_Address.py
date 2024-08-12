@@ -39,7 +39,7 @@ def main():
     pincode = st.text_input('Pincode')
 
 
-    contact = int(contact)
+    contact = int(contact) if contact else ''
     # Display the entered information
     if st.button('Proceed'):
         st.session_state['addess'] = f"""
