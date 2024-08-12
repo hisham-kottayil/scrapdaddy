@@ -167,7 +167,7 @@ def main():
     recyclable_logo = f"data:image/png;base64,{load_image(recyclable_logo_path)}"
 
     # New section for "The Enviro Mission"
-    mission_html_str = mission_html()
+    mission_html_str = mission_html(sustainable_logo, zero_waste_logo, recyclable_logo)
 
     st.markdown(mission_html_str, unsafe_allow_html=True)
 
