@@ -69,6 +69,7 @@ def signup():
             # st.write(response_data)
             if st.button("Successfully registered User. Please login to Continue!"):
                 st.session_state.page = 'Login'
+                st.switch_page("pages/2_Login.py")
         except requests.exceptions.RequestException as e:
             print(f"An error occurred: {e}")
             
