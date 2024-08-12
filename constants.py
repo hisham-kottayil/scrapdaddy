@@ -1,7 +1,7 @@
 import base64
 
 # background_image_path = '/Users/hishammohammed/Desktop/personal_project/scrapdaddy/hackathon/images/bg_20.jpg'
-background_image_path = './images/bg_26.jpg'
+background_image_path = './images/bg_27.jpg'
 sustainable_logo_path = './images/sustainable.png'
 recyclable_logo_path = './images/recyclable.png'
 zero_waste_logo_path = './images/zero_waste.png'
