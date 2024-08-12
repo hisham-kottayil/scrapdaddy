@@ -39,8 +39,7 @@ def main():
     st.write("")
     st.subheader('Pickup Address')
     if 'addess' in st.session_state.keys():
-        # st.write(st.session_state['addess'])
-        pass
+        st.write(st.session_state['addess'])
     else:
         st.write('Please add address')
     st.write("")
