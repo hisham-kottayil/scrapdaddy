@@ -35,12 +35,23 @@ def main():
     }}
     html, body, [class*="css"] {{
     font-family: 'CustomFont', sans-serif;
+    margin: 0; /* Ensure there's no default margin interfering */
+    padding: 0; /* Ensure there's no default padding interfering */
     }}
     </style>
     """
 
     # Apply the custom font
     st.markdown(font_css, unsafe_allow_html=True)
+
+    # Test with styled text
+    st.title("This is a title with a custom font!")
+    st.write("This text uses your custom font.")
+
+    # Test with other elements
+    st.header("Header with Custom Font")
+    st.subheader("Subheader with Custom Font")
+    st.text("Plain text with custom font")
 
     # Initialization
     if 'authentication_status' not in st.session_state:
