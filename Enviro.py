@@ -53,6 +53,10 @@ def main():
     st.subheader("Subheader with Custom Font")
     st.text("Plain text with custom font")
 
+    # Test with styled text
+    st.markdown("<h1 style='font-family: \"CustomFont\", sans-serif;'>This is a title with a custom font!</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='font-family: \"CustomFont\", sans-serif;'>This text uses your custom font.</p>", unsafe_allow_html=True)
+
     # Initialization
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
