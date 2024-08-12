@@ -86,6 +86,10 @@ def main():
                                 color: #2a5d2b; /* Dark green */
                                 margin-bottom: 20px;
                             }}
+                            .hiw-section h7 {{
+                                color: #2a5d2b; /* Dark green */
+                                margin-bottom: 20px;
+                            }}
                         </style>
                         """
 
