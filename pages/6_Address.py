@@ -31,7 +31,7 @@ def main():
         authenticator.logout('Logout!', 'sidebar', key = '1')
     # Input fields for address information
     name = st.text_input('Name')
-    contact = st.number_input('Contact', value = None, format="%0.0f", step = None)  # Empty label for the actual input field
+    contact = st.number_input('Contact', value = None, format="%0.0f", step = None, placeholder = 'Mandatory')  # Empty label for the actual input field
     # house_number = st.text_input('House Number')
     address = st.text_area('Address')
     region = st.text_input('Region')
