@@ -45,7 +45,8 @@ def main():
         st.session_state['addess'] = f"""
         Name: {name}\n
         Contact Number: {contact}\n
-        Address: {address}, {region}, {district}, {pincode}
+        Address: {address}\n
+        Region: {region}, {district}, {pincode}
         """
         st.session_state.page = 'Checkout'
         st.switch_page("pages/7_Checkout.py")
