@@ -245,6 +245,7 @@ def main():
                 padding: 50px 0;
                 background-color: #F7F8FA;
                 text-align: center;
+                border-radius: 15px;
             }
             .services-section h2 {
                 font-size: 36px;
