@@ -3,7 +3,7 @@ import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path, home_font_path
-from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html, generate_container_html
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -163,17 +163,16 @@ def main():
 
     categories = ['Individual', 'Enterprises']
 
-    # container_html = '<div class="container-box">'
-    # container_html += '<h2>Choose Category</h2>'
-    # for cat in categories:
-    #     link = "/Login"
-    #     logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
-    #     container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
-    # container_html += '</div>'
+    container_html = '<div class="container-box">'
+    container_html += '<h2>Choose Category</h2>'
+    for cat in categories:
+        link = "/Login"
+        logo_img_tag = generate_logo_html(cat, logo_path=category_logos[cat])
+        container_html += f'<a href="{link}" target="_self" class="category-button">{logo_img_tag} <span>{cat}</span></a>'
+    container_html += '</div>'
 
     with empty_col:
-        st.markdown(generate_container_html(categories, category_logos), unsafe_allow_html=True)
-
+        st.markdown(container_html, unsafe_allow_html=True)
 
     # Add image to the right column
     home_page_icon_base64 = load_image(home_page_icon)
