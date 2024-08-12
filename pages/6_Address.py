@@ -51,6 +51,10 @@ def main():
             Address: {address}\n
             Region: {region}, {district}, {pincode}
             """
+            st.session_state['customer_details'] = f"""
+            Name: {name}\n
+            Contact Number: {contact}
+            """
             st.session_state.page = 'Checkout'
             st.switch_page("pages/7_Checkout.py")
 

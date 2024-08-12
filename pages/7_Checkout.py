@@ -34,11 +34,15 @@ def main():
         st.write(st.session_state['selected_vehicle'])
     else:
         st.write('Please choose a vehicle')
-    st.subheader('Pickup Address')
-    if 'addess' in st.session_state.keys():
-        st.write(st.session_state['addess'])
+    st.subheader('Customer Details')
+    # if 'addess' in st.session_state.keys():
+    #     st.write(st.session_state['addess'])
+    # else:
+    #     st.write('Please add address')
+    if 'customer_details' in st.session_state.keys():
+        st.write(st.session_state['customer_details'])
     else:
-        st.write('Please add address')
+        st.write('Please add customer details')
     st.subheader('Pickup Slot')
     if 'date_chosen' in st.session_state.keys():
         st.write(f'date chosen: {st.session_state['date_chosen']}')
