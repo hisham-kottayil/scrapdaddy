@@ -29,22 +29,16 @@ def main():
         authenticator.logout('Logout!', 'sidebar', key = '1')
     st.title('Confirm Your Order')
     st.write("")
-    st.write("")
-    st.write("")
     st.subheader('Vehicle Choosen')
     if 'selected_vehicle' in st.session_state.keys():
         st.write(st.session_state['selected_vehicle'])
     else:
         st.write('Please choose a vehicle')
-    st.write("")
     st.subheader('Pickup Address')
     if 'addess' in st.session_state.keys():
         st.write(st.session_state['addess'])
     else:
         st.write('Please add address')
-    st.write("")
-    st.write("")
-    st.write("")
     st.subheader('Pickup Slot')
     if 'date_chosen' in st.session_state.keys():
         st.write(f'date chosen: {st.session_state['date_chosen']}')
