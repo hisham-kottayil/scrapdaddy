@@ -82,22 +82,7 @@ def main():
                                 color: #422c17; /* Dark brown */
                                 margin-bottom: 20px;
                             }}
-                            .hiw-section {{
-                                background-color: #E8F1DA; /* Light green background */
-                                width: 100%;
-                                margin: 0;
-                                padding: 50px 0; /* Padding to add space within the section */
-                                text-align: center;
-                                border-radius: 15px; 
-                            }}
-                            .hiw-section h2 {{
-                                font-size: 36px;
-                                color: #2a5d2b; /* Dark green */
-                                margin-bottom: 20px;
-                            }}
-                            .hiw-section h7 {{
-                                color: #2a5d2b; /* Dark green */
-                            }}
+
                         </style>
                         """
     st.markdown(extra_section_style, unsafe_allow_html=True)
@@ -268,6 +253,22 @@ def main():
             </div>
         </div>
         <style>
+            .hiw-section {{
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
+                text-align: center;
+                border-radius: 15px; 
+            }}
+            .hiw-section h2 {{
+                font-size: 36px;
+                color: #2a5d2b; /* Dark green */
+                margin-bottom: 20px;
+            }}
+            .hiw-section h7 {{
+                color: #2a5d2b; /* Dark green */
+            }}
             .hiw-items {{
                 display: flex;
                 flex-wrap: wrap;
