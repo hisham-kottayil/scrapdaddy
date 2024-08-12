@@ -184,7 +184,7 @@ def main():
     # Add image to the right column
     home_page_icon_base64 = load_image(home_page_icon)
 
-    for _ in range(6):
+    for _ in range(5):
         st.write("")
         
 
