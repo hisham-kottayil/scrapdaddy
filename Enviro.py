@@ -63,7 +63,7 @@ def main():
                                 transition: background-color 1s ease;
                             }}
                             .mission-section {{
-                                background-color: #26AEA1; /* Light green background */
+                                background-color: #E8F1DA; /* Light green background */
                                 width: 100%;
                                 margin: 0;
                                 padding: 50px 0; /* Padding to add space within the section */
@@ -71,7 +71,7 @@ def main():
                             }}
                             .mission-section h2 {{
                                 font-size: 36px;
-                                color: #ffffff; /* Dark green */
+                                color: #2a5d2b; /* Dark green */
                                 margin-bottom: 20px;
                             }}
                             .hiw-section {{
@@ -411,7 +411,7 @@ def main():
             }}
             .mission-paragraph {{
                 font-size: 20px;
-                color: #ffffff;
+                color: #2a5d2b;
                 margin-left: 100px;
                 margin-right: 100px;
                 padding: 0 20px; /* Adds padding to the left and right */
