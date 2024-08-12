@@ -42,7 +42,7 @@ def main():
     contact = int(contact) if contact else ''
     # Display the entered information
     if st.button('Proceed'):
-        if contact == '' or name is None or address is None or pincode is None:
+        if contact == '' or name == '' or address is None or pincode is None:
             st.error("Please provide all the mandatory fields to proceed.")
         else:
             st.session_state['addess'] = f"""
