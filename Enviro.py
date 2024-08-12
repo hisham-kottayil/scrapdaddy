@@ -293,9 +293,7 @@ def main():
                     </div>
                     <div class="hiw-item">
                         <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
-                        <p>Select Materials</p>
-                        <h15>Choose the types of materials you want to recycle</h15>
-                        
+                        <p>Select Materials</p>                        
                     </div>
                     <div class="hiw-item">
                         <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
