@@ -24,6 +24,7 @@ def main():
     st.subheader('Please choose preferred slot')
     today = date.today()
     date_chosen = st.date_input('Choose preferred Date', min_value = today)
+    st.session_state['date_chosen'] = date_chosen
     # current_time = datetime.now().time()
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
@@ -35,6 +36,7 @@ def main():
             'Time slot',
             ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'),
             placeholder='7 AM - 11 AM')
+    st.session_state['time_slot'] = option
 
     st.subheader('Choose your vehicle')
     

@@ -45,6 +45,10 @@ def main():
     st.write("")
     st.write("")
     st.write("")
+    if 'date_chosen' in st.session_state.keys():
+        st.write(f'date chosen: {st.session_state['date_chosen']}')
+    if 'time_slot' in st.session_state.keys():
+        st.write(f'time slot chosen: {st.session_state['time_slot']}')
     # Add a checkout button
     # st.button('Checkout')
     col1, col2, col3 = st.columns(3)
@@ -54,6 +58,10 @@ def main():
                 st.error("Please choose vehicle to proceed.")
             if 'addess' not in st.session_state.keys():
                 st.error("Please add address to proceed.")
+            if 'date_chosen' not in st.session_state.keys():
+                st.error("Please choose pickup date to proceed.")
+            if 'time_slot' not in st.session_state.keys():
+                st.error("Please chose time slot to proceed.")
             if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
                 st.success('Pickup scheduled!')
                 # st.switch_page("pages/orders.py")
