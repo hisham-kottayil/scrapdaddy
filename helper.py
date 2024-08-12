@@ -201,6 +201,10 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
             </div>
         </div>
         <style>
+            .hiw-section, .hiw-item, .hiw-item p, .hiw-section h2, .hiw-item h7 {{
+                font-family: 'CustomFont', sans-serif;
+            }}
+
             .hiw-section {{
                 background-color: #E8F1DA; /* Light green background */
                 width: 100%;
@@ -251,7 +255,6 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
                 padding: 0 20px; /* Adds padding to the left and right */
             }}
         </style>
-
     """
     
 def why_choose_us():
