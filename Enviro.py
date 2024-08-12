@@ -139,7 +139,7 @@ def main():
     )
 
     # Create the container with category buttons
-    for _ in range(12):
+    for _ in range(15):
         st.write("")
 
     empty_col, img_col = st.columns([1, 1.5])
