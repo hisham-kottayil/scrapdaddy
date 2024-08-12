@@ -80,6 +80,7 @@ def main():
                                 margin: 0;
                                 padding: 50px 0; /* Padding to add space within the section */
                                 text-align: center;
+                                border-radius: 15px; 
                             }}
                             .hiw-section h2 {{
                                 font-size: 36px;
