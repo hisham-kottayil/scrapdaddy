@@ -30,7 +30,7 @@ def main():
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key = '1')
     # Input fields for address information
-    name = st.text_input('Name')
+    name = st.text_input('Name', placeholder = 'Mandatory')
     contact = st.number_input('Contact', value = None, format="%0.0f", step = None, placeholder = 'Mandatory')  # Empty label for the actual input field
     # house_number = st.text_input('House Number')
     address = st.text_area('Address')
@@ -42,6 +42,8 @@ def main():
     contact = int(contact) if contact else ''
     # Display the entered information
     if st.button('Proceed'):
+        if contact == '':
+            st.error("Please provide all the mandatory fields to proceed.")
         st.session_state['addess'] = f"""
         Name: {name}\n
         Contact Number: {contact}\n
