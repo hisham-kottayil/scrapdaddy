@@ -411,7 +411,7 @@ def main():
             }}
             .mission-paragraph {{
                 font-size: 20px;
-                color: #2a5d2b;
+                color: #422c17;
                 margin-left: 100px;
                 margin-right: 100px;
                 padding: 0 20px; /* Adds padding to the left and right */
