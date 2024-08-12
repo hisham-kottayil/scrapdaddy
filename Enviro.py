@@ -289,19 +289,22 @@ def main():
                     <div class="hiw-item">
                         <img src="{signup_logo}" alt="Signup" class="hiw-logo">
                         <p>Signup</p>
-                        <h7>Here</h7>
+                        <h7>Create an account in minutes through our website or app</h7>
                     </div>
                     <div class="hiw-item">
                         <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
                         <p>Select Materials</p>                        
+                        <h7>Choose the types of materials you want to recycle</h7>
                     </div>
                     <div class="hiw-item">
                         <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
                         <p>Schedule Pickup</p>                        
+                        <h7>Pick a date and time that suits you, and we'll handle the rest</h7>
                     </div>
                     <div class="hiw-item">
                         <img src="{money_logo}" alt="Get Paid" class="hiw-logo">
                         <p>Get Paid</p>                        
+                        <h7>Receive payment directly to your account once your materials are processed</h7>
                     </div>
                 </div>
             </div>
