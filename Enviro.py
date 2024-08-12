@@ -2,16 +2,33 @@ import streamlit as st
 import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path, home_font_path
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
 
 
 def main():
     st.set_page_config(layout="wide")
 
+    # Load custom font
+    font_path = Path(home_font_path)
+    font_css = f"""
+    <style>
+    @font-face {{
+    font-family: 'CustomFont';
+    src: url('data:font/ttf;base64,{font_path.read_bytes().encode("base64").decode()}') format('truetype');
+    }}
+    html, body, [class*="css"] {{
+    font-family: 'CustomFont', sans-serif;
+    }}
+    </style>
+    """
+
+    # Apply the custom font
+    st.markdown(font_css, unsafe_allow_html=True)
     # Initialization
     if 'authentication_status' not in st.session_state:
         st.session_state['authentication_status'] = ''
