@@ -138,6 +138,12 @@ def services_html():
             .services-section p {
                 font-family: 'CustomFont', sans-serif; /* Apply custom font to h2, h3, and p */
             }
+            .services-section {
+                padding: 50px 0;
+                background-color: #F7F8FA;
+                text-align: center;
+                border-radius: 15px;
+            }
             .services-section h2 {
                 font-size: 36px;
                 color: #2a5d2b;
