@@ -1,5 +1,5 @@
 import streamlit as st
-from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
+from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, limits
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
 
 def main():
@@ -32,6 +32,7 @@ def main():
     st.subheader('Vehicle Choosen')
     if 'selected_vehicle' in st.session_state.keys():
         st.write(st.session_state['selected_vehicle'])
+        st.write(limits[st.session_state['selected_vehicle']])
     else:
         st.write('Please choose a vehicle')
     st.subheader('Customer Details')
