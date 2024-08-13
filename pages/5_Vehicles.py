@@ -21,7 +21,7 @@ def main():
 
     # st.write(st.session_state)
 
-    st.subheader('Please choose preferred slot')
+    st.subheader('Choose your preferred slot')
     today = date.today()
     date_chosen = st.date_input('Choose preferred Date', min_value = today)
     st.session_state['date_chosen'] = date_chosen
