@@ -64,7 +64,7 @@ def main():
                 st.error("Please chose time slot to proceed.")
             if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
                 st.success(
-                    """Pickup scheduled! 
+                    """Pickup scheduled! \n
                     Go to Order to view the status."""
                     )
                 # st.switch_page("pages/8_Orders.py")
