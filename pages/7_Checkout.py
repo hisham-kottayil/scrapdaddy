@@ -31,8 +31,8 @@ def main():
     st.write("")
     st.subheader('Vehicle Choosen')
     if 'selected_vehicle' in st.session_state.keys():
-        st.write(st.session_state['selected_vehicle'])
-        st.write(limits[st.session_state['selected_vehicle']])
+        st.write(f"st.session_state['selected_vehicle'] - max weight: {limits[st.session_state['selected_vehicle']]} kgs")
+        # st.write(limits[st.session_state['selected_vehicle']])
     else:
         st.write('Please choose a vehicle')
     st.subheader('Customer Details')
