@@ -3,9 +3,9 @@ import base64
 
 colors = {'green1': '#B2D281', 
           'green2': '#E8F1DA', 
-          'blue1': '#DBF7F1', 
           'green3': '#26AEA1', 
           'green4': '#2c5f2d',
+          'blue1': '#DBF7F1', 
           'brown1': '#422c17'}
 
 # background_image_path = '/Users/hishammohammed/Desktop/personal_project/scrapdaddy/hackathon/images/bg_20.jpg'
