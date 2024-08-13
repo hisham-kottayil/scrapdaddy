@@ -23,7 +23,7 @@ def main():
 
     st.subheader('Choose your preferred slot')
     today = date.today()
-    date_chosen = st.date_input('Choose preferred Date', min_value = today)
+    date_chosen = st.date_input('Pickup Date', min_value = today)
     st.session_state['date_chosen'] = date_chosen
     # current_time = datetime.now().time()
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
