@@ -134,16 +134,16 @@ def main():
             font-size: 25px;
             color: #422c17;
         }
-        .category-button {
+        .category-button {{
             display: block;
             padding: 10px;
             text-decoration: none;
             color: #422c17;
             font-size: 20px;
-        }
-        .category-button:hover {
+        }}
+        .category-button:hover {{
             background-color: #d2e8e3;
-        }
+        }}
         </style>
         """,
         unsafe_allow_html=True
