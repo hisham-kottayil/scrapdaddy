@@ -13,7 +13,7 @@ money_logo_path = './images/money.png'
 
 # home_font_path = './fonts/PlayfairDisplay-VariableFont_wght.ttf'
 # home_font_path = './fonts/Platypi-VariableFont_wght.ttf'
-home_font_path = './fonts/BodoniModa-VariableFont_opsz,wght.ttf'
+home_font_path = './fonts/Bodoni.ttf'
 
 
 
