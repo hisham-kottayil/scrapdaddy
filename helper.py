@@ -414,7 +414,7 @@ def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
                 margin-bottom: 10px;
             }}
             .mission-item p {{
-                font-size: 24px;
+                font-size: 20px;
                 color: #422c17;
             }}
             .mission-paragraph {{
