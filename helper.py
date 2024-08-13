@@ -109,6 +109,37 @@ def load_normal_button_style():
         }
         </style>
     """
+    
+def category_html():
+    return """
+        <style>
+        .container-box {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            width: 300px;
+            height: 250px;
+            border-radius: 8px;
+            background-color: #daf7f1;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container-box h2 {
+            margin-bottom: 18px;
+            font-size: 25px;
+            color: #422c17;
+        }
+        .category-button {{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #422c17;
+            font-size: 20px;
+        }}
+        .category-button:hover {{
+            background-color: #d2e8e3;
+        }}
+        </style>
+        """
 
 def services_html():
     return """

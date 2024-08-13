@@ -3,7 +3,7 @@ import base64
 from st_pages import Page, add_page_title, hide_pages
 import time
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, sustainable_logo_path, recyclable_logo_path, zero_waste_logo_path, home_page_icon, signup_logo_path, materials_logo_path, pickup_logo_path, money_logo_path, home_font_path
-from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html
+from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles, services_html, hiw_html, why_choose_us, mission_html, category_html
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -116,38 +116,7 @@ def main():
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{label} logo'>" if logo_path else ""
         return logo_img_tag
 
-    st.markdown(
-        """
-        <style>
-        .container-box {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-            padding: 20px;
-            width: 300px;
-            height: 250px;
-            border-radius: 8px;
-            background-color: #daf7f1;
-            text-align: center;
-            margin: 0 auto;
-        }
-        .container-box h2 {
-            margin-bottom: 18px;
-            font-size: 25px;
-            color: #422c17;
-        }
-        .category-button {{
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #422c17;
-            font-size: 20px;
-        }}
-        .category-button:hover {{
-            background-color: #d2e8e3;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown(category_html(), unsafe_allow_html=True)
 
     # Create the container with category buttons
     for _ in range(15):
