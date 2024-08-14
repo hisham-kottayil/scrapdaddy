@@ -20,6 +20,46 @@ def load_font(file_path):
 def main():
     st.set_page_config(layout="wide")
 
+    st.markdown(
+        """
+        <style>
+        .top-bar {
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .top-bar button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .top-bar button:hover {
+            background-color: #0056b3;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # HTML for the top bar
+    st.markdown(
+        """
+        <div class="top-bar">
+            <div>My Streamlit App</div>
+            <button onclick="document.getElementById('top-button').click();">Click Me</button>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
     # Define the path to the font file
     font_path = Path(home_font_path)
 
