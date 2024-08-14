@@ -22,9 +22,6 @@ def load_font(file_path):
 def main():
     st.set_page_config(layout="wide")
 
-    page = st_navbar(["Register Now"])
-    if page:
-        st.write(page)
     # Define the path to the font file
     font_path = Path(home_font_path)
 
