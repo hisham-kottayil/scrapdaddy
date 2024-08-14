@@ -22,6 +22,74 @@ def load_font(file_path):
 def main():
     st.set_page_config(layout="wide")
 
+    st.markdown("""
+        <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            padding: 60px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+    # HTML for the top navigation bar
+    st.markdown("""
+        <div class="topnav">
+        <a href="#" class="active" onclick="navigateTo('home')">Home</a>
+        <a href="#" onclick="navigateTo('about')">About</a>
+        <a href="#" onclick="navigateTo('contact')">Contact</a>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # JavaScript for handling navigation (basic example)
+    st.markdown("""
+        <script>
+        function navigateTo(page) {
+            if (page === 'home') {
+                window.location.href = '#home';
+            } else if (page === 'about') {
+                window.location.href = '#about';
+            } else if (page === 'contact') {
+                window.location.href = '#contact';
+            }
+        }
+        </script>
+        """, unsafe_allow_html=True)
+
+    # Example content to show different pages
+    st.write('<div id="home" class="content">Welcome to the Home Page!</div>', unsafe_allow_html=True)
+    st.write('<div id="about" class="content" style="display:none;">About Page</div>', unsafe_allow_html=True)
+    st.write('<div id="contact" class="content" style="display:none;">Contact Page</div>', unsafe_allow_html=True)
+
+  
+  
     # Define the path to the font file
     font_path = Path(home_font_path)
 
