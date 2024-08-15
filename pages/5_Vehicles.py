@@ -123,11 +123,12 @@ def main():
                 {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
             </button>
         """
-        with cols[i % 2]:
-            selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-            if selected_vehicle:
-                selected = {}
-                selected['vehicle'] = vehicle
+        selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+        # with cols[i % 2]:
+        #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+        #     if selected_vehicle:
+        #         selected = {}
+        #         selected['vehicle'] = vehicle
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
         try:
