@@ -79,15 +79,19 @@ def signup():
         try:
             r = requests.post(url=url, json=json_data, headers=headers)
             r.raise_for_status()  # Check for HTTP request errors
-            st.write(r.json())
-            st.write(r)
+
+            response_data = r.json()
+            if "errors" in response_data:
+                error_message = response_data["errors"][0]["message"]
+                error_code = response_data["errors"][0]["extensions"]["code"]
+                st.write(f"GraphQL error occurred: {error_message}")
+                st.write(f"Error Code: {error_code}")
+            else:
+                st.write("Success!")
+                st.write(f"Response Data: {response_data}")
         except requests.exceptions.HTTPError as http_err:
             st.write(f"HTTP error occurred: {http_err}")
-            st.write(f"Status Code: {r.status_code}")
         except Exception as err:
             st.write(f"Other error occurred: {err}")
-        else:
-            st.write("Success!")
-            st.write(f"Response Code: {r.status_code}")
             
 signup()
