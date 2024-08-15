@@ -124,6 +124,7 @@ def main():
             </button>
         """
         selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+        st.write('Here1')
         if selected_vehicle:
             selected = {}
             selected['vehicle'] = vehicle
