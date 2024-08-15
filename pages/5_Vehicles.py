@@ -144,7 +144,7 @@ def main():
         except:
             pass
 
-
+    # Function to create a button with logo, name, and weight
     def create_vehicle_button(vehicle_name):
         col1, col2 = st.columns([1, 4])
         with col1:
@@ -154,11 +154,15 @@ def main():
                 st.write(f"Selected: {vehicle_name}")
 
     # Create a 2x2 grid of vehicle buttons
-    st.write("### Select a Vehicle")
-    create_vehicle_button('3 Wheeler')
-    create_vehicle_button('Tata Ace')
-    create_vehicle_button('14 ft Truck')
-    create_vehicle_button('Tata 407')
+    col1, col2 = st.columns(2)
+
+    with col1:
+        create_vehicle_button('3 Wheeler')
+        create_vehicle_button('14 ft Truck')
+
+    with col2:
+        create_vehicle_button('Tata Ace')
+        create_vehicle_button('Tata 407')
 
 
 
