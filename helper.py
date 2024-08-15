@@ -393,7 +393,7 @@ def mission_html(sustainable_logo, zero_waste_logo, recyclable_logo):
                 text-align: center;
                 border-radius: 15px; 
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
-                border: 2px solid #F7F8FA; /* Thin border with color #F7F8FA */
+                border: 5px solid #F7F8FA; /* Thin border with color #F7F8FA */
 
             }}
             .mission-section h2 {{
