@@ -148,7 +148,7 @@ def main():
             st.image(vehicle_logos[vehicle_name], width=50)  # Adjust size as needed
         with col2:
             if st.button(f"{vehicle_name}\n (Max Weight: **{limits[vehicle_name]} kg**)", key=vehicle_name):
-                vehicle_chosen = vehicle_name
+                st.session_state['selected_vehicle'] = vehicle_name
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
@@ -167,7 +167,15 @@ def main():
     
     for _ in range(5):
         st.write('')
-    
+
+    if st.session_state['selected_vehicle']:
+
+        st.markdown(
+            f'<span style="color:gray;">Vehicle: {st.session_state['selected_vehicle']}, maximum load: {limits[st.session_state['selected_vehicle']]} kgs ✔️</span>',
+            unsafe_allow_html=True
+        )
+
+   
     if st.button('Proceed to Add Address'):
         if st.session_state['time_slot_validity'] == False:
             st.error('Please choose a valid timeslot.')
