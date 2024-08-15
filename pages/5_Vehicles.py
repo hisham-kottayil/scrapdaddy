@@ -56,13 +56,13 @@ def main():
     if date_chosen != today: 
         st.session_state['time_slot_validity'] = True
     else:
-        if options[option] == 1 and current_hour > 11:
+        if options[option] == 1 and current_hour > 10:
             st.error('Please choose a valid timeslot.')
             st.session_state['time_slot_validity'] = False
-        elif options[option] == 2 and current_hour > 16:
+        elif options[option] == 2 and current_hour > 15:
             st.error('Please choose a valid timeslot.')
             st.session_state['time_slot_validity'] = False
-        elif options[option] == 3 and current_hour > 19:
+        elif options[option] == 3 and current_hour > 18:
             st.error('Please choose a valid timeslot.')
             st.session_state['time_slot_validity'] = False
         else:
