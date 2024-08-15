@@ -140,14 +140,22 @@ def main():
     #         pass
 
     # Function to create a button with a logo, name, and weight
+    # Function to create a button with a logo, name, and weight
     def create_vehicle_button(vehicle_name):
+        global vehicle_chosen
         col1, col2 = st.columns([1, 4])
         with col1:
             st.image(vehicle_logos[vehicle_name], width=60)  # Adjust size as needed
         with col2:
-            if st.button(f"{vehicle_name}\nMax Weight: {limits[vehicle_name]} kg"):
+            button_label = f"""
+            {vehicle_name}<br>
+            <span style="color: red; font-weight: bold;">
+            Max Weight: {limits[vehicle_name]} kg
+            </span>
+            """
+            if st.button(label="", key=vehicle_name, help=button_label):
                 st.session_state['selected_vehicle'] = vehicle_name
-                st.write(f"Selected: {vehicle_name}")
+            st.markdown(button_label, unsafe_allow_html=True)
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
@@ -159,6 +167,7 @@ def main():
     with col2:
         create_vehicle_button('Tata Ace')
         create_vehicle_button('Tata 407')
+
 
 
 
