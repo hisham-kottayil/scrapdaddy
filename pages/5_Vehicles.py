@@ -129,7 +129,7 @@ def main():
             if selected_vehicle:
                 selected = {}
                 selected['vehicle'] = vehicle
-        st.write('here3')
+        # st.write('here3')
     st.write('Here')
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
