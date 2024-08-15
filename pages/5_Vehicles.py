@@ -26,7 +26,7 @@ def main():
     date_chosen = st.date_input('Pickup Date', min_value = today)
     st.session_state['date_chosen'] = date_chosen
     current_time = datetime.now().time()
-    st.write(current_time)
+    st.write(current_time.hour)
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
     # if time_chosen and (date_chosen == today) and (time_chosen < current_time):
