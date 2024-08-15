@@ -137,7 +137,10 @@ def main():
             )
         except:
             pass
-
+    
+    for _ in range(5):
+        st.write('')
+    
     if st.button('Proceed to Add Address'):
         if st.session_state['time_slot_validity'] == False:
             st.error('Please choose a valid timeslot.')
