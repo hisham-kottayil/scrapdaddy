@@ -71,7 +71,7 @@ def signup():
                 error_message = response_data["errors"][0]["message"]
 
                 if "user_name_key" in error_message:
-                    st.error("Username already exists! Please use a different username.")
+                    st.error("Username already exists! Please use a different username or log in.")
                 elif "user_email_key" in error_message:
                     st.error("Email already exists! Please use a different email or log in.")
                 else:
