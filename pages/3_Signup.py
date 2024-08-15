@@ -62,20 +62,6 @@ def signup():
             "variables": variables
         }
 
-        # try:
-        # r = requests.post(url=url, json=json_data, headers=headers)
-        # r.raise_for_status()  # Check for HTTP request errors
-        # response_data = r.json()
-        # st.write(response_data)
-        # st.write(r.raise_for_status())
-        # # st.write(response_data)
-        # if st.button("Successfully registered User. Please login to Continue!"):
-        #     # st.session_state.page = 'Login'
-        #     st.switch_page("pages/2_Login.py")
-        # # except requests.exceptions.RequestException as e:
-        # #     print(f"An error occurred: {e}")
-
-
         try:
             r = requests.post(url=url, json=json_data, headers=headers)
             r.raise_for_status()  # Check for HTTP request errors
