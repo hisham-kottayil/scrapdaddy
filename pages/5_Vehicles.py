@@ -54,8 +54,8 @@ def main():
         index=option_texts.index('7 AM - 11 AM'),  # Default selection
         placeholder='7 AM - 11 AM'
     )
-    st.write(current_hour)
-    st.write(options[option])
+    # st.write(current_hour)
+    # st.write(options[option])
     if date_chosen == today: 
         pass
     else:
