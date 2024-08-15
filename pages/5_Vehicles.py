@@ -61,10 +61,15 @@ def main():
     else:
         if options[option] == 1 and current_hour > 11:
             st.error('Please choose a valid timeslot.')
+            st.session_state['time_slot_validity'] = False
         elif options[option] == 2 and current_hour > 16:
             st.error('Please choose a valid timeslot.')
+            st.session_state['time_slot_validity'] = False
         elif options[option] == 3 and current_hour > 19:
             st.error('Please choose a valid timeslot.')
+            st.session_state['time_slot_validity'] = False
+        else:
+            st.session_state['time_slot_validity'] = True
     
     
     st.session_state['time_slot'] = option
@@ -144,8 +149,11 @@ def main():
 
 
     if st.button('Proceed to Add Address'):
-        st.session_state.page = 'Address'
-        st.switch_page("pages/6_Address.py")
+        if st.session_state['time_slot_validity'] == False:
+            st.error('Please choose a valid timeslot.')
+        else:
+            st.session_state.page = 'Address'
+            st.switch_page("pages/6_Address.py")
         
 
 if __name__ == "__main__":
