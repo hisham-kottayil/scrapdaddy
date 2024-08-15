@@ -131,7 +131,7 @@ def main():
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
                 selected['vehicle'] = vehicle
-    
+    st.write('Here')
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
         try:
@@ -141,7 +141,6 @@ def main():
             )
         except:
             pass
-
 
     if st.button('Proceed to Add Address'):
         if st.session_state['time_slot_validity'] == False:
