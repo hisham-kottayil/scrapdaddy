@@ -147,7 +147,7 @@ def main():
         with col1:
             st.image(vehicle_logos[vehicle_name], width=50)  # Adjust size as needed
         with col2:
-            if st.button(f"{vehicle_name}\n Max Weight: **{limits[vehicle_name]} kg**", key=vehicle_name):
+            if st.button(f"{vehicle_name}\n (Max Weight: **{limits[vehicle_name]} kg**)", key=vehicle_name):
                 vehicle_chosen = vehicle_name
 
     # Create a 2x2 grid of vehicle buttons
