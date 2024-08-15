@@ -31,12 +31,7 @@ def main():
     ist_tz = pytz.timezone('Asia/Kolkata')
     current_time = datetime.now(ist_tz).time()
     current_hour = current_time.hour
-    # time_chosen = st.time_input('Choose preferred Time', value = 'now')
-    # # Check if chosen time is valid
-    # if time_chosen and (date_chosen == today) and (time_chosen < current_time):
-    #     st.error("Please select a valid time!")
-    # else:
-    #     st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
+    
     # Define the mapping of options to IDs
     options = {
         '7 AM - 11 AM': 1,

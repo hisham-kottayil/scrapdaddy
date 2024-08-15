@@ -121,7 +121,7 @@ def main():
     st.markdown(category_html(), unsafe_allow_html=True)
 
     # Create the container with category buttons
-    for _ in range(15):
+    for _ in range(12):
         st.write("")
 
     empty_col, img_col = st.columns([1, 1.5])
