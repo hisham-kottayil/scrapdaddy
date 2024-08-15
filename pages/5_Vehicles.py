@@ -124,6 +124,9 @@ def main():
             </button>
         """
         selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+        if selected_vehicle:
+            selected = {}
+            selected['vehicle'] = vehicle
         # with cols[i % 2]:
         #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
         #     if selected_vehicle:
