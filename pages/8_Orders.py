@@ -142,7 +142,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    # orders.append(94)
+    orders.append(8)
     for order in orders:
         dt = datetime.fromisoformat(order['created_at'].split('+')[0])
 
