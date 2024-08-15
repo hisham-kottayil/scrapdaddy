@@ -141,7 +141,13 @@ def main():
     """,
         unsafe_allow_html=True
     )
-    orders.append(8)
+    orders.append(
+        {
+        "id":8,
+        "is_completed":True,
+        "created_at":"2024-08-15T18:40:36.301022+00:00",
+        }
+    )
     st.write(orders)
 
     for order in orders:
