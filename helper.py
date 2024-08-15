@@ -9,7 +9,7 @@ def hide_pages_dynamically(authentication_status):
         st.sidebar.page_link('Enviro.py', label='Enviro')
         st.sidebar.page_link('pages/2_Login.py', label='Login')
         st.sidebar.page_link('pages/3_Signup.py', label='Signup')
-        st.sidebar.page_link('pages/9_About.py', label='About')
+        # st.sidebar.page_link('pages/9_About.py', label='About')
         # hide_pages(
         #     ["3_Signup", "Signup", "signup", "4_Materials", "Vehicle", "Address", "Checkout", "Orders", "styles"]
         #     )
@@ -23,7 +23,7 @@ def hide_pages_dynamically(authentication_status):
         st.sidebar.page_link('pages/6_Address.py', label='Address')
         st.sidebar.page_link('pages/7_Checkout.py', label='Checkout')
         st.sidebar.page_link('pages/8_Orders.py', label='Orders')
-        st.sidebar.page_link('pages/9_About.py', label='About')
+        # st.sidebar.page_link('pages/9_About.py', label='About')
     
 def hide_pages_extras():
     hide_pages(
