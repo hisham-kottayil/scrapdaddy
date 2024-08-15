@@ -127,10 +127,9 @@ def main():
             selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
             st.write('Here2')
             if selected_vehicle:
-                # st.text(vehicle)
-                # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
                 selected = {}
                 selected['vehicle'] = vehicle
+        st.write('here3')
     st.write('Here')
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
