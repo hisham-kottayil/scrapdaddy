@@ -51,8 +51,6 @@ def main():
     )
     # st.write(current_hour)
     # st.write(options[option])
-    st.write(options[option])
-    st.write(current_hour)
     if date_chosen != today: 
         st.session_state['time_slot_validity'] = True
     else:
