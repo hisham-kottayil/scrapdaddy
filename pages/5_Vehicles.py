@@ -140,6 +140,7 @@ def main():
     #         pass
 
     # Function to create a button with an image, name, and weight
+    st.session_state['selected_vehicle'] = None
     def create_vehicle_button(vehicle_name):
         global vehicle_chosen
         
