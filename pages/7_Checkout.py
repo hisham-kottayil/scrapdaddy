@@ -84,7 +84,7 @@ def main():
 
                         # Define the variables to pass to the mutation
                         variables = {
-                            'address_id': st.session_state['address'],
+                            'address_id': 1,
                             'user_id': st.session_state['user_id'],
                             'is_completed': False
                         }
