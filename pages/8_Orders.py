@@ -87,7 +87,7 @@ def main():
 
     if authentication_status and authenticator != '':
         authenticator.logout('Logout!', 'sidebar', key = '1')
-    user_id = st.query_params['user_id']
+    user_id = st.session_state['user_id']
     st.write(user_id)
     # user_id = 94
     query = {
