@@ -5,6 +5,7 @@ from datetime import date, datetime
 from constants import vehicles, limits, vehicle_logos
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
+import pytz
 
 
 def load_image(image_path):
@@ -25,7 +26,9 @@ def main():
     today = date.today()
     date_chosen = st.date_input('Pickup Date', min_value = today)
     st.session_state['date_chosen'] = date_chosen
-    current_time = datetime.now().time()
+    
+    saudi_tz = pytz.timezone('Asia/Riyadh')
+    current_time = datetime.now(saudi_tz).time()
     st.write(current_time.hour)
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
