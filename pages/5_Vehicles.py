@@ -57,8 +57,14 @@ def main():
     st.write(current_hour)
     st.write(options[option])
     if date_chosen == today: 
-        st.write("today")
-    else:st.write("not today")
+        pass
+    else:
+        if options[option] == 1 and current_hour > 11:
+            st.error('Please choose a valid timeslot.')
+        if options[option] == 2 and current_hour > 16:
+            st.error('Please choose a valid timeslot.')
+        if options[option] == 3 and current_hour > 19:
+            st.error('Please choose a valid timeslot.')
     
     
     st.session_state['time_slot'] = option
