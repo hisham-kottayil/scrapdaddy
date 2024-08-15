@@ -53,8 +53,6 @@ def main():
     # Add a checkout button
     # st.button('Checkout')
     col1, col2, col3 = st.columns(3)
-    st.write(st.session_state['address'])
-    st.write('')
     with col3:
         if st.button('Schedule'):
             if 'selected_vehicle' not in st.session_state.keys():
@@ -66,6 +64,7 @@ def main():
             if 'time_slot' not in st.session_state.keys():
                 st.error("Please chose time slot to proceed.")
             if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
+                st.write('Yes')
                 with st.spinner('Scheduling. Please wait a moment...'):
                     try:
                         secret_key = st.secrets['SECRET_KEY']
