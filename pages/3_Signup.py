@@ -76,24 +76,24 @@ def signup():
         # #     print(f"An error occurred: {e}")
 
 
-        # try:
-        r = requests.post(url=url, json=json_data, headers=headers)
-        r.raise_for_status()  # Check for HTTP request errors
+        try:
+            r = requests.post(url=url, json=json_data, headers=headers)
+            r.raise_for_status()  # Check for HTTP request errors
 
-        response_data = r.json()
-        if "errors" in response_data:
-            # error_message = response_data["errors"][0]["message"]
-            # error_code = response_data["errors"][0]["extensions"]["code"]
-            st.error(f"Email already exists! Please use a different email or log in.")
-            # st.write(f"Error Code: {error_code}")
-        else:
-            st.success(f"Successfully registered User. Please login to Continue!")
-            if st.button("Login"):
-                st.switch_page("pages/2_Login.py")
-            if st.button("Successfully registered User. Please login to Continue!"):
-                # st.session_state.page = 'Login'
-                st.switch_page("pages/2_Login.py")
-        # except Exception as err:
-        #     st.write(f"Error occurred: {err}")
+            response_data = r.json()
+            if "errors" in response_data:
+                # error_message = response_data["errors"][0]["message"]
+                # error_code = response_data["errors"][0]["extensions"]["code"]
+                st.error(f"Email already exists! Please use a different email or log in.")
+                # st.write(f"Error Code: {error_code}")
+            else:
+                st.success(f"Successfully registered User. Please login to Continue!")
+                # if st.button("Login"):
+                #     st.switch_page("pages/2_Login.py")
+                # if st.button("Successfully registered User. Please login to Continue!"):
+                #     # st.session_state.page = 'Login'
+                #     st.switch_page("pages/2_Login.py")
+        except Exception as err:
+            st.write(f"Error occurred: {err}")
             
 signup()
