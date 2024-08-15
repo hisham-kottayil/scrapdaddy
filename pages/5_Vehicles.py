@@ -116,7 +116,7 @@ def main():
     for i, vehicle in enumerate(vehicles):
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
-        ChangeButtonAppearance(vehicle, logo_path, max_limit)
+        # ChangeButtonAppearance(vehicle, logo_path, max_limit)
         button_html = f"""
             <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
                 <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
