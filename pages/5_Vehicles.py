@@ -110,33 +110,38 @@ def main():
         """
         components.html(f"{htmlstr}", height=0, width=0)
 
+    # Layout in 2x2 grid
     cols = st.columns(2)
     selected = {}
     for i, vehicle in enumerate(vehicles):
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
         ChangeButtonAppearance(vehicle, logo_path, max_limit)
-        
         button_html = f"""
-        <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap; border: none; background: none;">
-            <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/>
-            {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
-        </button>
+            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
+                <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
+                {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
+            </button>
         """
-        
         with cols[i % 2]:
-            st.markdown(button_html, unsafe_allow_html=True)
+            selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
             
-            # Check for button click
-            if st.button(f"Select {vehicle}", key=f"{vehicle}_button"):
+            if selected_vehicle:
+                # st.text(vehicle)
+                # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
+                selected = {}
                 selected['vehicle'] = vehicle
-
+    
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
-        st.markdown(
-            f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
-            unsafe_allow_html=True
-        )
+        try:
+            st.markdown(
+                f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
+                unsafe_allow_html=True
+            )
+        except:
+            pass
+
 
     if st.button('Proceed to Add Address'):
         if st.session_state['time_slot_validity'] == False:
