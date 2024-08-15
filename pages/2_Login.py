@@ -95,8 +95,9 @@ def main():
         for i in range(len(data["user"])):
             if data["user"][i]["name"] == username:
                 # st.write(data["user"][i])
+                st.query_params['user_id'] = data["user"][i]["id"]
                 st.session_state['user_id'] = data["user"][i]["id"]
-                st.session_state['user_name'] = data["user"][i]["name"]
+                st.query_params['user_name'] = data["user"][i]["name"]
                 
                 # st.write(st.query_params['user_id'])
         # authenticator.logout()
