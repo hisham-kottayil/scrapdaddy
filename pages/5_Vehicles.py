@@ -103,7 +103,7 @@ def main():
                         elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
                         elements[i].style.display = 'flex';
                         elements[i].style.alignItems = 'center';
-                        elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
+                        elements[i].innerHTML = `{logo_img_tag} `;
                     }}
                 }}
             </script>
