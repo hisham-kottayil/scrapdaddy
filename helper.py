@@ -449,14 +449,14 @@ def about_us_html():
             }}
 
             .about-us-section {{
-                background-color: #E8F1DA; /* Light green background */
+                background-color: #F7F8FA ; /* Light green background */
                 width: 100%;
                 margin: 0;
                 padding: 50px 0; /* Padding to add space within the section */
                 text-align: center;
                 border-radius: 15px; 
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
-                border: 5px solid #F7F8FA; /* Thin border with color #F7F8FA */
+                border: 5px solid #E8F1DA; /* Thin border with color #F7F8FA */
             }}
             .about-us-section h2 {{
                 font-size: 36px;
