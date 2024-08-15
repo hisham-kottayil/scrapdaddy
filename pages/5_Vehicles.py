@@ -30,18 +30,36 @@ def main():
     saudi_tz = pytz.timezone('Asia/Riyadh')
     ist_tz = pytz.timezone('Asia/Kolkata')
     current_time = datetime.now(ist_tz).time()
-    st.write(current_time.hour)
+    current_hour = current_time.hour
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
     # if time_chosen and (date_chosen == today) and (time_chosen < current_time):
     #     st.error("Please select a valid time!")
     # else:
     #     st.success(f"Time selected: {time_chosen.hour}:{time_chosen.minute}")
+    # Define the mapping of options to IDs
+    options = {
+        '7 AM - 11 AM': 1,
+        '11 AM - 4 PM': 2,
+        '4 PM - 7 PM': 3
+    }
+
+    # Create a list of option texts for the selectbox
+    option_texts = list(options.keys())
+
+    # Create the selectbox with the option texts
     option = st.selectbox(
-            'Time slot',
-            ('7 AM - 11 AM', '11 AM - 4 PM', '4 PM - 7 PM'),
-            placeholder='7 AM - 11 AM')
+        'Time slot',
+        option_texts,
+        index=option_texts.index('7 AM - 11 AM'),  # Default selection
+        placeholder='7 AM - 11 AM'
+    )
+    
+    st.write(options[option])
+    
+    
     st.session_state['time_slot'] = option
+    
 
     st.subheader('Choose your vehicle')
     
