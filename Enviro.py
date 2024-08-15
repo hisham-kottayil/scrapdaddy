@@ -181,7 +181,7 @@ def main():
 
     st.markdown(mission_html_str, unsafe_allow_html=True)
     
-    about_us_str = mission_html(about_us_html, zero_waste_logo, recyclable_logo)
+    about_us_str = about_us_html()
 
     st.markdown(about_us_str, unsafe_allow_html=True)
 
