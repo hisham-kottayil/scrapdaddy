@@ -117,6 +117,7 @@ def main():
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
         ChangeButtonAppearance(vehicle, logo_path, max_limit)
+        st.write('here1')
         button_html = f"""
             <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
                 <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
@@ -124,7 +125,7 @@ def main():
             </button>
         """
         selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-        st.write('Here1')
+        st.write('Here2')
         if selected_vehicle:
             selected = {}
             selected['vehicle'] = vehicle
