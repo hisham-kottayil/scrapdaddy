@@ -61,7 +61,7 @@ def get_bill(order_id):
     total_price = df["price"].sum(skipna=True)
 
     st.write(df)
-    st.write(f"Total price: Rs.{total_price}")
+    st.write(f"Total price: SAR.{total_price}")
     
 def main():
     st.title("Orders")
