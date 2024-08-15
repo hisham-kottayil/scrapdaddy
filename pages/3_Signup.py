@@ -84,14 +84,13 @@ def signup():
             if "errors" in response_data:
                 error_message = response_data["errors"][0]["message"]
                 error_code = response_data["errors"][0]["extensions"]["code"]
-                st.write(f"GraphQL error occurred: {error_message}")
+                st.error(f"Email id already exists!")
                 st.write(f"Error Code: {error_code}")
             else:
-                st.write("Success!")
-                st.write(f"Response Data: {response_data}")
-        except requests.exceptions.HTTPError as http_err:
-            st.write(f"HTTP error occurred: {http_err}")
+                if st.button("Successfully registered User. Please login to Continue!"):
+                    # st.session_state.page = 'Login'
+                    st.switch_page("pages/2_Login.py")
         except Exception as err:
-            st.write(f"Other error occurred: {err}")
+            st.write(f"Error occurred: {err}")
             
 signup()
