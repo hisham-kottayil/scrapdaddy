@@ -145,6 +145,9 @@ def main():
     for _ in range(4):
         st.write("")
         
+    about_us_str = about_us_html()
+
+    st.markdown(about_us_str, unsafe_allow_html=True)
 
     # New section for "Our Services"
     services_html_str = services_html()
@@ -181,9 +184,7 @@ def main():
 
     st.markdown(mission_html_str, unsafe_allow_html=True)
     
-    about_us_str = about_us_html()
 
-    st.markdown(about_us_str, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
