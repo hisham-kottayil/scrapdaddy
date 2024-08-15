@@ -147,8 +147,8 @@ def main():
     # Function to create a button with a logo, name, and weight
     def create_vehicle_button(vehicle_name):
         col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image(vehicle_logos[vehicle_name], width=60)  # Adjust size as needed
+        # with col1:
+        #     st.image(vehicle_logos[vehicle_name], width=60)  # Adjust size as needed
         with col2:
             if st.button(f"{vehicle_name}\nMax Weight: {limits[vehicle_name]} kg"):
                 st.write(f"Selected: {vehicle_name}")
