@@ -139,24 +139,16 @@ def main():
     #     except:
     #         pass
 
-    # Function to create a button with a logo, name, and weight
+    # Function to create a button with an image, name, and weight
     def create_vehicle_button(vehicle_name):
         global vehicle_chosen
         
-        # HTML with inline CSS for styling within the button
-        button_label = f"""
-        <div style="display: flex; align-items: center;">
-            <img src="{vehicle_logos[vehicle_name]}" width="50" style="margin-right: 10px;">
-            <div>
-                <div>{vehicle_name}</div>
-                <div style="color: red; font-weight: bold;">Max Weight: {limits[vehicle_name]} kg</div>
-            </div>
-        </div>
-        """
-        
-        # Create the button with the custom label
-        if st.button(label=button_label, key=vehicle_name, unsafe_allow_html=True):
-            vehicle_chosen = vehicle_name
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            st.image(vehicle_logos[vehicle_name], width=50)  # Adjust size as needed
+        with col2:
+            if st.button(f"{vehicle_name}\n\nMax Weight: **{limits[vehicle_name]} kg**", key=vehicle_name):
+                vehicle_chosen = vehicle_name
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
