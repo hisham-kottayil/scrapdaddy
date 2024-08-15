@@ -90,29 +90,29 @@ def main():
         st.switch_page('Enviro.py')
 
 
-    def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None):
-        logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""
-        limit_text = f"&nbsp;<span style='color: grey;'>(max: {max_limit} kgs)</span>" if max_limit else ""
-        htmlstr = f"""
-            <script>
-                var elements = window.parent.document.querySelectorAll('button');
-                for (var i = 0; i < elements.length; ++i) {{ 
-                    if (elements[i].innerText.includes('{widget_label}')) {{ 
-                        elements[i].style.fontSize = '15px';  // Adjust size as needed
-                        elements[i].style.padding = '2px 65px';  // Adjust padding as needed
-                        elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
-                        elements[i].style.display = 'flex';
-                        elements[i].style.alignItems = 'center';
-                        elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
-                    }}
-                }}
-            </script>
-        """
-        components.html(f"{htmlstr}", height=0, width=0)
+    # def ChangeButtonAppearance(widget_label, logo_path=None, max_limit=None):
+    #     logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""
+    #     limit_text = f"&nbsp;<span style='color: grey;'>(max: {max_limit} kgs)</span>" if max_limit else ""
+    #     htmlstr = f"""
+    #         <script>
+    #             var elements = window.parent.document.querySelectorAll('button');
+    #             for (var i = 0; i < elements.length; ++i) {{ 
+    #                 if (elements[i].innerText.includes('{widget_label}')) {{ 
+    #                     elements[i].style.fontSize = '15px';  // Adjust size as needed
+    #                     elements[i].style.padding = '2px 65px';  // Adjust padding as needed
+    #                     elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
+    #                     elements[i].style.display = 'flex';
+    #                     elements[i].style.alignItems = 'center';
+    #                     elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
+    #                 }}
+    #             }}
+    #         </script>
+    #     """
+    #     components.html(f"{htmlstr}", height=0, width=0)
 
-    # Layout in 2x2 grid
-    cols = st.columns(2)
-    selected = {}
+    # # Layout in 2x2 grid
+    # cols = st.columns(2)
+    # selected = {}
     # for i, vehicle in enumerate(vehicles):
     #     logo_path = vehicle_logos[vehicle]
     #     max_limit = limits[vehicle]
@@ -139,7 +139,7 @@ def main():
     #     except:
     #         pass
 
-    # Function to create a button with an image, name, and weight
+    # Function to create a button with an image, name, and weight 
     st.session_state['selected_vehicle'] = None
     def create_vehicle_button(vehicle_name):
         global vehicle_chosen
