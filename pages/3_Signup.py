@@ -79,6 +79,8 @@ def signup():
         try:
             r = requests.post(url=url, json=json_data, headers=headers)
             r.raise_for_status()  # Check for HTTP request errors
+            st.write(r.json())
+            st.write(r)
         except requests.exceptions.HTTPError as http_err:
             st.write(f"HTTP error occurred: {http_err}")
             st.write(f"Status Code: {r.status_code}")
