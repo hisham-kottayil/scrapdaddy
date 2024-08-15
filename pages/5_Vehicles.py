@@ -125,7 +125,7 @@ def main():
         """
         with cols[i % 2]:
             selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-            
+            st.write('Here2')
             if selected_vehicle:
                 # st.text(vehicle)
                 # st.text(f'{vehicle} carries a weight up to {limits[vehicle]} kgs')
