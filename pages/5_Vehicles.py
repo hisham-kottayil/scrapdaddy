@@ -61,9 +61,9 @@ def main():
     else:
         if options[option] == 1 and current_hour > 11:
             st.error('Please choose a valid timeslot.')
-        if options[option] == 2 and current_hour > 16:
+        elif options[option] == 2 and current_hour > 16:
             st.error('Please choose a valid timeslot.')
-        if options[option] == 3 and current_hour > 19:
+        elif options[option] == 3 and current_hour > 19:
             st.error('Please choose a valid timeslot.')
     
     
