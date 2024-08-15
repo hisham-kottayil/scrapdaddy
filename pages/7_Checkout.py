@@ -102,7 +102,8 @@ def main():
                         st.success('Pickup scheduled! Go to Orders page to view the status.')
                     except Exception as err:
                         st.write(f"Error occurred: {err}")
-
+            else:
+                st.write('error')
 
                 
 if __name__ == "__main__":
