@@ -84,6 +84,7 @@ def signup():
             if "errors" in response_data:
                 # error_message = response_data["errors"][0]["message"]
                 # error_code = response_data["errors"][0]["extensions"]["code"]
+                st.write(response_data)
                 st.error(f"Email already exists! Please use a different email or log in.")
                 # st.write(f"Error Code: {error_code}")
             else:
