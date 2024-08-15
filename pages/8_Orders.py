@@ -128,7 +128,7 @@ def main():
 
     status_map = {
         'True': 'Completed',
-        'False': 'Pending'
+        'False': 'Scheduled'
     }
 
     st.markdown( """
