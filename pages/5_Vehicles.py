@@ -56,7 +56,7 @@ def main():
     )
     # st.write(current_hour)
     # st.write(options[option])
-    if date_chosen == today: 
+    if date_chosen != today: 
         pass
     else:
         if options[option] == 1 and current_hour > 11:
