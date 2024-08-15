@@ -87,7 +87,7 @@ def signup():
                 st.error(f"Email already exists! Please use a different email or log in.")
                 # st.write(f"Error Code: {error_code}")
             else:
-                st.error(f"Successfully registered User. Please login to Continue!")
+                st.success(f"Successfully registered User. Please login to Continue!")
                 # if st.button("Successfully registered User. Please login to Continue!"):
                 #     # st.session_state.page = 'Login'
                 #     st.switch_page("pages/2_Login.py")
