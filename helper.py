@@ -434,3 +434,41 @@ def load_image(image_path):
     with open(image_path, "rb") as image_file:
         encoded_image = base64.b64encode(image_file.read()).decode()
     return encoded_image
+
+def about_us_html():
+    return f"""
+        <div class="scroll-section">
+            <div class="about-us-section">
+                <h2>About Us</h2>
+                <p class="about-us-paragraph">At Enviro, we're committed to revolutionizing waste management and recycling. Our mission is to turn discarded materials into valuable resources, reducing the environmental impact of waste while providing businesses and individuals with a simple, profitable way to recycle. We specialize in managing metals, paper, plastic, wood, and electronic waste, offering sustainable solutions that contribute to a circular economy.</p>
+            </div>
+        </div>
+        <style>
+            .about-us-section, .about-us-section h2, .about-us-paragraph {{
+                font-family: 'CustomFont', sans-serif;
+            }}
+
+            .about-us-section {{
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
+                text-align: center;
+                border-radius: 15px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
+                border: 5px solid #F7F8FA; /* Thin border with color #F7F8FA */
+            }}
+            .about-us-section h2 {{
+                font-size: 36px;
+                color: #422c17; /* Dark brown */
+                margin-bottom: 20px;
+            }}
+            .about-us-paragraph {{
+                font-size: 20px;
+                color: #422c17;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
+            }}
+        </style>
+    """
