@@ -54,9 +54,9 @@ def main():
         st.session_state.selected_materials = set()
 
     # Create checkboxes
-    materials = ['Paper', 'Wood', 'Copper', 'Aluminium', 'Cardboard', 'Plastic', 'Other Metals']
+    materials = ['Paper','Electronics', 'Wood', 'Copper', 'Aluminium', 'Cardboard', 'Plastic', 'Other Metals']
     prices = {
-        'Metal': 'SAR.10/kg', 'Paper': 'SAR.1/kg', 'Wood': 'SAR.5/kg', 'Copper': 'SAR.5/kg',
+        'Electronics': 'SAR.10/kg', 'Metal': 'SAR.10/kg', 'Paper': 'SAR.1/kg', 'Wood': 'SAR.5/kg', 'Copper': 'SAR.5/kg',
         'Aluminium': 'SAR.5/kg', 'Cardboard': 'SAR.5/kg',  'Plastic': 'SAR.5/kg',  'Other Metals': 'SAR.5/kg'
         }
 
