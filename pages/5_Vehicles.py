@@ -28,7 +28,8 @@ def main():
     st.session_state['date_chosen'] = date_chosen
     
     saudi_tz = pytz.timezone('Asia/Riyadh')
-    current_time = datetime.now(saudi_tz).time()
+    ist_tz = pytz.timezone('Asia/Kolkata')
+    current_time = datetime.now(ist_tz).time()
     st.write(current_time.hour)
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
