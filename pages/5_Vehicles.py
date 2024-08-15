@@ -117,32 +117,32 @@ def main():
         logo_path = vehicle_logos[vehicle]
         max_limit = limits[vehicle]
         ChangeButtonAppearance(vehicle, logo_path, max_limit)
-        st.write('here1')
-        button_html = f"""
-            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
-                <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
-                {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
-            </button>
-        """
-        selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-        st.write('Here2')
-        if selected_vehicle:
-            selected = {}
-            selected['vehicle'] = vehicle
-        # with cols[i % 2]:
-        #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-        #     if selected_vehicle:
-        #         selected = {}
-        #         selected['vehicle'] = vehicle
-    if selected:
-        st.session_state['selected_vehicle'] = selected["vehicle"]
-        try:
-            st.markdown(
-                f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
-                unsafe_allow_html=True
-            )
-        except:
-            pass
+    #     st.write('here1')
+    #     button_html = f"""
+    #         <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
+    #             <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
+    #             {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
+    #         </button>
+    #     """
+    #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+    #     st.write('Here2')
+    #     if selected_vehicle:
+    #         selected = {}
+    #         selected['vehicle'] = vehicle
+    #     # with cols[i % 2]:
+    #     #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
+    #     #     if selected_vehicle:
+    #     #         selected = {}
+    #     #         selected['vehicle'] = vehicle
+    # if selected:
+    #     st.session_state['selected_vehicle'] = selected["vehicle"]
+    #     try:
+    #         st.markdown(
+    #             f'<span style="color:gray;">Vehicle: {selected["vehicle"]}, maximum load: {limits[selected["vehicle"]]} kgs ✔️</span>',
+    #             unsafe_allow_html=True
+    #         )
+    #     except:
+    #         pass
 
     # Function to create a button with a logo, name, and weight
     def create_vehicle_button(vehicle_name):
