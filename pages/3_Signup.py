@@ -66,6 +66,7 @@ def signup():
         r = requests.post(url=url, json=json_data, headers=headers)
         r.raise_for_status()  # Check for HTTP request errors
         response_data = r.json()
+        st.write(response_data)
         # st.write(response_data)
         if st.button("Successfully registered User. Please login to Continue!"):
             # st.session_state.page = 'Login'
