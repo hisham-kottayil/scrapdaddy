@@ -99,7 +99,6 @@ def main():
                         response_data = r.json()
                         if "errors" in response_data:
                             st.error('Error occured while scheduling the pickup. Please contact the team')
-                            st.write(response_data)
                         else:
                             st.success('Pickup scheduled! Go to Orders page to view the status.')
                     except Exception as err:
