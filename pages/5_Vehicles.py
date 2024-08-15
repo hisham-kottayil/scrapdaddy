@@ -125,12 +125,9 @@ def main():
         """
         with cols[i % 2]:
             selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-            st.write('Here2')
             if selected_vehicle:
                 selected = {}
                 selected['vehicle'] = vehicle
-        # st.write('here3')
-    st.write('Here')
     if selected:
         st.session_state['selected_vehicle'] = selected["vehicle"]
         try:
