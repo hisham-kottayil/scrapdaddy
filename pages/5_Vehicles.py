@@ -168,7 +168,7 @@ def main():
         if create_vehicle_button('Tata 407'):
             st.session_state['selected_vehicle'] = 'Tata 407'
 
-    st.write(st.session_state['selected_vehicle'])
+    # st.write(st.session_state['selected_vehicle'])
 
 
     
