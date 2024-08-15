@@ -63,8 +63,8 @@ def main():
                 st.error("Please choose pickup date to proceed.")
             if 'time_slot' not in st.session_state.keys():
                 st.error("Please chose time slot to proceed.")
-            if ('address' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
-                st.write('Yes')
+            # if ('address' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
+            else:
                 with st.spinner('Scheduling. Please wait a moment...'):
                     try:
                         secret_key = st.secrets['SECRET_KEY']
@@ -84,7 +84,7 @@ def main():
 
                         # Define the variables to pass to the mutation
                         variables = {
-                            'address_id': 1,
+                            'address_id': st.session_state['address'],
                             'user_id': st.session_state['user_id'],
                             'is_completed': False
                         }
@@ -97,13 +97,13 @@ def main():
                         r = requests.post(url=url, json=json_data, headers=headers)
                         r.raise_for_status()  # Check for HTTP request errors
                         response_data = r.json()
-                        st.write(response_data)
-
-                        st.success('Pickup scheduled! Go to Orders page to view the status.')
+                        if "errors" in response_data:
+                            st.error('Error occured while scheduling the pickup. Please contact the team')
+                            st.write(response_data)
+                        else:
+                            st.success('Pickup scheduled! Go to Orders page to view the status.')
                     except Exception as err:
                         st.write(f"Error occurred: {err}")
-            else:
-                st.write('error')
 
                 
 if __name__ == "__main__":
