@@ -180,7 +180,8 @@ def main():
                 """,
                 unsafe_allow_html=True
             )
-
+    if len(orders) == 0:
+        st.warning('No Orders yet.')
             
 if __name__ == "__main__":
     main()
