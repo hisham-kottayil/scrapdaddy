@@ -94,23 +94,15 @@ def main():
         logo_img_tag = f"<img src='data:image/png;base64,{load_image(logo_path)}' alt='{widget_label} logo' style='width: 50px; height: auto; margin-right: 5px;'>" if logo_path else ""
         limit_text = f"&nbsp;<span style='color: grey;'>(max: {max_limit} kgs)</span>" if max_limit else ""
         htmlstr = f"""
-            <style>
-                .vehicle-button {{
-                    margin: 0;  /* Reduce margin between buttons */
-                    padding: 2px 65px;  /* Adjust padding as needed */
-                    font-size: 15px;  /* Adjust font size as needed */
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    white-space: nowrap;
-                    border: none;  /* Remove default button border */
-                    background: none;  /* Remove default button background */
-                }}
-            </style>
             <script>
-                var elements = window.parent.document.querySelectorAll('button.vehicle-button');
+                var elements = window.parent.document.querySelectorAll('button');
                 for (var i = 0; i < elements.length; ++i) {{ 
                     if (elements[i].innerText.includes('{widget_label}')) {{ 
+                        elements[i].style.fontSize = '15px';  // Adjust size as needed
+                        elements[i].style.padding = '2px 65px';  // Adjust padding as needed
+                        elements[i].style.whiteSpace = 'nowrap';  // Ensure text is in one line
+                        elements[i].style.display = 'flex';
+                        elements[i].style.alignItems = 'center';
                         elements[i].innerHTML = `{logo_img_tag} {widget_label}  {limit_text}`;
                     }}
                 }}
@@ -126,7 +118,7 @@ def main():
         max_limit = limits[vehicle]
         ChangeButtonAppearance(vehicle, logo_path, max_limit)
         button_html = f"""
-            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'">
+            <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
                 <img src="data:image/png;base64,{load_image(logo_path)}" alt="{vehicle} logo" style="width: 50px; height: auto; margin-right: 5px;"/><br>
                 {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
             </button>
