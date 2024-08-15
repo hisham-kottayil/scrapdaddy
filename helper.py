@@ -204,6 +204,33 @@ def services_html():
     
 def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
     return f"""
+        <div class="scroll-section">
+            <div class="hiw-section">
+                <h2>How it works?</h2>
+                <div class="hiw-items">
+                    <div class="hiw-item">
+                        <img src="{signup_logo}" alt="Signup" class="hiw-logo">
+                        <p>Signup</p>
+                        <h7>Create an account in minutes through our website or app</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{materials_logo}" alt="Select Materials" class="hiw-logo">
+                        <p>Select Materials</p>                        
+                        <h7>Choose the types of materials you want to recycle to ensure proper processing</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{pickup_logo}" alt="Schedule Pickup" class="hiw-logo">
+                        <p>Schedule Pickup</p>                        
+                        <h7>Pick a date and time that suits you, and we'll handle the rest</h7>
+                    </div>
+                    <div class="hiw-item">
+                        <img src="{money_logo}" alt="Get Paid" class="hiw-logo">
+                        <p>Get Paid</p>                        
+                        <h7>Receive payment directly to your account once your materials are processed</h7>
+                    </div>
+                </div>
+            </div>
+        </div>
         <style>
             .hiw-section, .hiw-item, .hiw-item p, .hiw-section h2, .hiw-item h7 {{
                 font-family: 'CustomFont', sans-serif;
@@ -215,9 +242,8 @@ def hiw_html(signup_logo, materials_logo, pickup_logo, money_logo):
                 margin: 0;
                 padding: 50px 0; /* Padding to add space within the section */
                 text-align: center;
-                border-radius: 15px;
+                border-radius: 15px; 
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
-                border: 1px solid #F7F8FA; /* Add thin border */
             }}
             .hiw-section h2 {{
                 font-size: 36px;
