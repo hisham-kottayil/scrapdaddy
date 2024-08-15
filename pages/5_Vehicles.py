@@ -144,14 +144,20 @@ def main():
         except:
             pass
 
-    # Function to create a button with logo, name, and weight
+    # Function to create a button with a logo, name, and weight
     def create_vehicle_button(vehicle_name):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image(vehicle_logos[vehicle_name], width=100)
-        with col2:
-            if st.button(f"{vehicle_name}\nMax Weight: {limits[vehicle_name]} kg"):
-                st.write(f"Selected: {vehicle_name}")
+        logo = vehicle_logos[vehicle_name]
+        weight = limits[vehicle_name]
+        
+        button_html = f"""
+        <div style="display: flex; align-items: center; justify-content: center; border: 2px solid #ddd; border-radius: 8px; padding: 10px; cursor: pointer; width: 100%; background-color: #f9f9f9;">
+            <img src="{logo}" width="50" style="border-radius: 4px; margin-right: 10px;">
+            <span style="font-size: 16px; font-weight: bold;">{vehicle_name}<br>Max Weight: {weight} kg</span>
+        </div>
+        """
+        
+        if st.markdown(button_html, unsafe_allow_html=True):
+            st.write(f"Selected: {vehicle_name}")
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
