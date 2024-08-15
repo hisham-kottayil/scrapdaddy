@@ -143,61 +143,60 @@ def category_html():
 
 def services_html():
     return """
-        <div class="services-section">
-            <h2>Our Services</h2>
-            <div class="services-items">
-                <div class="service-item">
-                    <h3>Recycling and Waste Management</h3>
-                    <p>Our comprehensive recycling services cater to both residential and commercial clients, ensuring that your waste is collected, processed, and transformed into reusable materials efficiently and responsibly.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Pickup and Drop-off Services</h3>
-                    <p>Convenience is key. Schedule a pickup through our user-friendly app, or drop off your recyclable materials at one of our designated locations. We operate on your schedule, making recycling easier than ever.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Monetization of Scrap</h3>
-                    <p>Why throw it away when you can get paid for it? We offer competitive rates for a wide range of recyclable materials, including metals, paper, and electronics. Turn your waste into wealth with our seamless process.</p>
-                </div>
-            </div>
-        </div>
         <style>
-            .services-section h2,
-            .services-section h3,
-            .services-section p {
-                font-family: 'CustomFont', sans-serif; /* Apply custom font to h2, h3, and p */
+            .hiw-section, .hiw-item, .hiw-item p, .hiw-section h2, .hiw-item h7 {
+                font-family: 'CustomFont', sans-serif;
             }
-            .services-section {
-                padding: 50px 0;
-                background-color: #F7F8FA;
+
+            .hiw-section {
+                background-color: #E8F1DA; /* Light green background */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0; /* Padding to add space within the section */
                 text-align: center;
                 border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the section */
+                border: 1px solid #F7F8FA; /* Add thin border */
             }
-            .services-section h2 {
+            .hiw-section h2 {
                 font-size: 36px;
-                color: #2a5d2b;
+                color: #422c17; /* Dark green */
                 margin-bottom: 20px;
             }
-            .services-items {
+            .hiw-section h7 {
+                color: #2a5d2b; /* Dark green */
+            }
+            .hiw-items {
                 display: flex;
-                justify-content: space-around;
                 flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
             }
-            .service-item {
-                background-color: #DBF7F1;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                padding: 20px;
-                width: 30%;
-                margin: 10px;
+            .hiw-item {
+                text-align: center;
+                width: 45%;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each item */
+                border-radius: 8px; /* Add rounded corners to items */
+                padding: 20px; /* Add padding for better spacing */
+                background-color: #fff; /* White background for better contrast with shadow */
             }
-            .service-item h3 {
-                font-size: 24px;
-                color: #422c17;
+            .hiw-logo {
+                width: 100px;
+                height: 100px;
                 margin-bottom: 10px;
             }
-            .service-item p {
-                font-size: 18px;
-                color: #555555;
+            .hiw-item p {
+                font-size: 24px;
+                color: #2a5d2b;
+            }
+            .hiw-paragraph {
+                font-size: 20px;
+                color: #2a5d2b;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 0 20px; /* Adds padding to the left and right */
             }
         </style>
     """
