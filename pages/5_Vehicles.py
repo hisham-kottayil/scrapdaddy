@@ -149,21 +149,27 @@ def main():
             st.image(vehicle_logos[vehicle_name], width=50)  # Adjust size as needed
         with col2:
             if st.button(f"{vehicle_name}\n (Max Weight: **{limits[vehicle_name]} kg**)", key=vehicle_name):
-                st.session_state['selected_vehicle'] = vehicle_name
-                st.write(st.session_state['selected_vehicle'])
+                # st.session_state['selected_vehicle'] = vehicle_name
+                # st.write(st.session_state['selected_vehicle'])
+                return True
+            else:
+                return False
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
 
     with col1:
-        create_vehicle_button('3 Wheeler')
-        create_vehicle_button('14 ft Truck')
-
+        if create_vehicle_button('3 Wheeler'):
+            st.session_state['selected_vehicle'] = '3 Wheeler'
+        if create_vehicle_button('14 ft Truck'):
+            st.session_state['selected_vehicle'] = '14 ft Truck'
     with col2:
-        create_vehicle_button('Tata Ace')
-        create_vehicle_button('Tata 407')
+        if create_vehicle_button('Tata Ace'):
+            st.session_state['selected_vehicle'] = 'Tata Ace'
+        if create_vehicle_button('Tata 407'):
+            st.session_state['selected_vehicle'] = 'Tata 407'
 
-
+    st.write(st.session_state['selected_vehicle'])
 
 
     
