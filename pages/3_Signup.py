@@ -89,7 +89,7 @@ def signup():
             else:
                 st.success(f"Successfully registered User. Please login to Continue!")
                 if st.button("Login"):
-                    st.swicth_page("pages/2_Login.py")
+                    st.switch_page("pages/7_Checkout.py")
                 # if st.button("Successfully registered User. Please login to Continue!"):
                 #     # st.session_state.page = 'Login'
                 #     st.switch_page("pages/2_Login.py")
