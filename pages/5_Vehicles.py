@@ -143,6 +143,42 @@ def main():
             )
         except:
             pass
+
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.button(
+            label=f"3 Wheeler\nMax Weight: {limits['3 Wheeler']} kg",
+            key='button_3_wheeler',
+            help='3 Wheeler',
+            image=vehicle_logos['3 Wheeler']
+        )
+
+        st.button(
+            label=f"Tata Ace\nMax Weight: {limits['Tata Ace']} kg",
+            key='button_tata_ace',
+            help='Tata Ace',
+            image=vehicle_logos['Tata Ace']
+        )
+
+    with col2:
+        st.button(
+            label=f"14 ft Truck\nMax Weight: {limits['14 ft Truck']} kg",
+            key='button_14_ft_truck',
+            help='14 ft Truck',
+            image=vehicle_logos['14 ft Truck']
+        )
+
+        st.button(
+            label=f"Tata 407\nMax Weight: {limits['Tata 407']} kg",
+            key='button_tata_407',
+            help='Tata 407',
+            image=vehicle_logos['Tata 407']
+        )
+
+
+
     
     for _ in range(5):
         st.write('')
