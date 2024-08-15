@@ -63,17 +63,29 @@ def signup():
         }
 
         # try:
-        r = requests.post(url=url, json=json_data, headers=headers)
-        r.raise_for_status()  # Check for HTTP request errors
-        response_data = r.json()
-        st.write(response_data)
-        st.write(r.raise_for_status())
+        # r = requests.post(url=url, json=json_data, headers=headers)
+        # r.raise_for_status()  # Check for HTTP request errors
+        # response_data = r.json()
         # st.write(response_data)
-        if st.button("Successfully registered User. Please login to Continue!"):
-            # st.session_state.page = 'Login'
-            st.switch_page("pages/2_Login.py")
-        # except requests.exceptions.RequestException as e:
-        #     print(f"An error occurred: {e}")
-            
+        # st.write(r.raise_for_status())
+        # # st.write(response_data)
+        # if st.button("Successfully registered User. Please login to Continue!"):
+        #     # st.session_state.page = 'Login'
+        #     st.switch_page("pages/2_Login.py")
+        # # except requests.exceptions.RequestException as e:
+        # #     print(f"An error occurred: {e}")
+
+
+        try:
+            r = requests.post(url=url, json=json_data, headers=headers)
+            r.raise_for_status()  # Check for HTTP request errors
+        except requests.exceptions.HTTPError as http_err:
+            st.write(f"HTTP error occurred: {http_err}")
+            st.write(f"Status Code: {r.status_code}")
+        except Exception as err:
+            st.write(f"Other error occurred: {err}")
+        else:
+            st.write("Success!")
+            st.write(f"Response Code: {r.status_code}")
             
 signup()
