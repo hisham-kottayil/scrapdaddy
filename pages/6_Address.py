@@ -44,7 +44,7 @@ def main():
         if contact == '' or name == '' or address == '' or pincode == '':
             st.error("Please provide all the mandatory fields to proceed.")
         else:
-            st.session_state['addess'] = f"""
+            st.session_state['address'] = f"""
             Name: {name}\n
             Contact Number: {contact}\n
             Address: {address}\n

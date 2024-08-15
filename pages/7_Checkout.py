@@ -54,6 +54,7 @@ def main():
     # st.button('Checkout')
     col1, col2, col3 = st.columns(3)
     st.write(st.session_state['address'])
+    st.write('')
     with col3:
         if st.button('Schedule'):
             if 'selected_vehicle' not in st.session_state.keys():
