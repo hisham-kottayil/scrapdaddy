@@ -150,6 +150,7 @@ def main():
         with col2:
             if st.button(f"{vehicle_name}\n (Max Weight: **{limits[vehicle_name]} kg**)", key=vehicle_name):
                 st.session_state['selected_vehicle'] = vehicle_name
+                st.write(st.session_state['selected_vehicle'])
 
     # Create a 2x2 grid of vehicle buttons
     col1, col2 = st.columns(2)
