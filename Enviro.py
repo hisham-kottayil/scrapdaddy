@@ -149,6 +149,8 @@ def main():
 
     st.markdown(about_us_str, unsafe_allow_html=True)
 
+    for _ in range(2):
+        st.write("")
     # New section for "Our Services"
     services_html_str = services_html()
 
