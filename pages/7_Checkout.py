@@ -58,7 +58,7 @@ def main():
         if st.button('Schedule'):
             if 'selected_vehicle' not in st.session_state.keys():
                 st.error("Please choose vehicle to proceed.")
-            if 'address' not in st.session_state.keys():
+            if 'customer_details' not in st.session_state.keys():
                 st.error("Please add address to proceed.")
             if 'date_chosen' not in st.session_state.keys():
                 st.error("Please choose pickup date to proceed.")
