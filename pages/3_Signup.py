@@ -88,6 +88,8 @@ def signup():
                 # st.write(f"Error Code: {error_code}")
             else:
                 st.success(f"Successfully registered User. Please login to Continue!")
+                if st.button("Login"):
+                    st.swicth_page("pages/2_Login.py")
                 # if st.button("Successfully registered User. Please login to Continue!"):
                 #     # st.session_state.page = 'Login'
                 #     st.switch_page("pages/2_Login.py")
