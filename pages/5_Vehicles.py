@@ -25,7 +25,8 @@ def main():
     today = date.today()
     date_chosen = st.date_input('Pickup Date', min_value = today)
     st.session_state['date_chosen'] = date_chosen
-    # current_time = datetime.now().time()
+    current_time = datetime.now().time()
+    st.write(current_time)
     # time_chosen = st.time_input('Choose preferred Time', value = 'now')
     # # Check if chosen time is valid
     # if time_chosen and (date_chosen == today) and (time_chosen < current_time):
@@ -109,12 +110,6 @@ def main():
             )
         except:
             pass
-    #     st.text(f'{selected["vehicle"]} carries a weight up to {limits[selected["vehicle"]]} kgs')
-    #     st.query_params['selected_vehicle'] = selected["vehicle"]
-        
-    # Add a continue button
-    
-
 
 
     if st.button('Proceed to Add Address'):
