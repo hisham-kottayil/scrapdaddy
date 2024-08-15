@@ -149,7 +149,7 @@ def main():
         col1, col2 = st.columns([1, 4])
         # with col1:
         #     st.image(vehicle_logos[vehicle_name], width=60)  # Adjust size as needed
-        with col2:
+        with col1:
             if st.button(f"{vehicle_name}\nMax Weight: {limits[vehicle_name]} kg"):
                 st.write(f"Selected: {vehicle_name}")
 
