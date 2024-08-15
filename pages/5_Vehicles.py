@@ -113,10 +113,10 @@ def main():
     # Layout in 2x2 grid
     cols = st.columns(2)
     selected = {}
-    for i, vehicle in enumerate(vehicles):
-        logo_path = vehicle_logos[vehicle]
-        max_limit = limits[vehicle]
-        ChangeButtonAppearance(vehicle, logo_path, max_limit)
+    # for i, vehicle in enumerate(vehicles):
+    #     logo_path = vehicle_logos[vehicle]
+    #     max_limit = limits[vehicle]
+    #     ChangeButtonAppearance(vehicle, logo_path, max_limit)
     #     st.write('here1')
     #     button_html = f"""
     #         <button class="vehicle-button" onclick="window.location.href='/?vehicle={vehicle}'" style="display: flex; align-items: center; justify-content: center; white-space: nowrap;">
@@ -124,11 +124,6 @@ def main():
     #             {vehicle} <span style='color: grey;'>(max: {max_limit} kgs)</span>
     #         </button>
     #     """
-    #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
-    #     st.write('Here2')
-    #     if selected_vehicle:
-    #         selected = {}
-    #         selected['vehicle'] = vehicle
     #     # with cols[i % 2]:
     #     #     selected_vehicle = st.button(button_html, key=f"{vehicle}_button")
     #     #     if selected_vehicle:
