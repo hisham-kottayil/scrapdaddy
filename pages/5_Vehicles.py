@@ -175,8 +175,7 @@ def main():
     for _ in range(5):
         st.write('')
 
-    if st.session_state['selected_vehicle']:
-
+    if 'selected_vehicle' in st.session_state.keys():
         st.markdown(
             f'<span style="color:gray;">Vehicle: {st.session_state['selected_vehicle']}, maximum load: {limits[st.session_state['selected_vehicle']]} kgs ✔️</span>',
             unsafe_allow_html=True
