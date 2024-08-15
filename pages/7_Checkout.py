@@ -63,7 +63,7 @@ def main():
                 st.error("Please choose pickup date to proceed.")
             if 'time_slot' not in st.session_state.keys():
                 st.error("Please chose time slot to proceed.")
-            if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
+            if ('address' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
                 st.write('Yes')
                 with st.spinner('Scheduling. Please wait a moment...'):
                     try:
