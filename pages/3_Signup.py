@@ -82,13 +82,16 @@ def signup():
 
             response_data = r.json()
             if "errors" in response_data:
-                # error_message = response_data["errors"][0]["message"]
-                # error_code = response_data["errors"][0]["extensions"]["code"]
-                st.write(response_data)
-                st.error(f"Email already exists! Please use a different email or log in.")
-                # st.write(f"Error Code: {error_code}")
+                error_message = response_data["errors"][0]["message"]
+
+                if "user_name_key" in error_message:
+                    st.error("Username already exists! Please use a different username.")
+                elif "user_email_key" in error_message:
+                    st.error("Email already exists! Please use a different email or log in.")
+                else:
+                    st.error("An unknown error occurred. Please try again.")
             else:
-                st.success(f"Successfully registered User. Please login to Continue!")
+                st.success("Successfully registered User. Please log in to continue!")
                 # if st.button("Login"):
                 #     st.switch_page("pages/2_Login.py")
                 # if st.button("Successfully registered User. Please login to Continue!"):
