@@ -1,6 +1,7 @@
 import streamlit as st
 from constants import background_image_path, category_logos, clickable_image, link_url, image_css, logo, limits
 from helper import hide_pages_dynamically, hide_pages_extras, load_sidebar_styles, load_home_button_styles
+import requests
 
 def main():
 
@@ -63,10 +64,53 @@ def main():
             if 'time_slot' not in st.session_state.keys():
                 st.error("Please chose time slot to proceed.")
             if ('addess' in st.session_state.keys()) and ('selected_vehicle' in st.session_state.keys()):
+                
+                secret_key = st.secrets['SECRET_KEY']
+                api_url =  st.secrets['URL']
+                header =  st.secrets['HEADER']
+                
+                mutation = """
+                    mutation MyMutation {
+                    insert_order(objects: {address_id: 1, user_id: 32, is_completed: false}) {
+                        affected_rows
+                    }
+                    }
+                """
+                url = api_url
+                headers = {header: secret_key}
+
+                mutation = """
+                mutation InsertOrder($address_id: Int!, $user_id: Int!, $is_completed: Boolean!) {
+                insert_order(objects: {address_id: $address_id, user_id: $user_id, is_completed: $is_completed}) {
+                    affected_rows
+                }
+                }
+                """
+
+                # Define the variables to pass to the mutation
+                variables = {
+                    'address_id': 1,
+                    'user_id': st.session_state['user_id'],
+                    'is_completed': False
+                }
+
+                json_data = {
+                    "query": mutation,
+                    "variables": variables
+                }
+
+                try:
+                    r = requests.post(url=url, json=json_data, headers=headers)
+                    r.raise_for_status()  # Check for HTTP request errors
+                    response_data = r.json()
+                    st.write(response_data)
+                except Exception as err:
+                    st.write(f"Error occurred: {err}")
+
                 st.success('Pickup scheduled! Go to Orders page to view the status.')
                 # st.switch_page("pages/8_Orders.py")
-                
-            
+
+
                 
 if __name__ == "__main__":
     main()
