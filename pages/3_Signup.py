@@ -61,29 +61,30 @@ def signup():
             "query": mutation,
             "variables": variables
         }
+        with st.spinner('Scheduling. Please wait a moment...'):
 
-        try:
-            r = requests.post(url=url, json=json_data, headers=headers)
-            r.raise_for_status()  # Check for HTTP request errors
+            try:
+                r = requests.post(url=url, json=json_data, headers=headers)
+                r.raise_for_status()  # Check for HTTP request errors
 
-            response_data = r.json()
-            if "errors" in response_data:
-                error_message = response_data["errors"][0]["message"]
+                response_data = r.json()
+                if "errors" in response_data:
+                    error_message = response_data["errors"][0]["message"]
 
-                if "user_name_key" in error_message:
-                    st.error("Username already exists! Please use a different username or log in.")
-                elif "user_email_key" in error_message:
-                    st.error("Email already exists! Please use a different email or log in.")
+                    if "user_name_key" in error_message:
+                        st.error("Username already exists! Please use a different username or log in.")
+                    elif "user_email_key" in error_message:
+                        st.error("Email already exists! Please use a different email or log in.")
+                    else:
+                        st.error("An unknown error occurred. Please try again.")
                 else:
-                    st.error("An unknown error occurred. Please try again.")
-            else:
-                st.success("Successfully registered User. Please log in to continue!")
-                # if st.button("Login"):
-                #     st.switch_page("pages/2_Login.py")
-                # if st.button("Successfully registered User. Please login to Continue!"):
-                #     # st.session_state.page = 'Login'
-                #     st.switch_page("pages/2_Login.py")
-        except Exception as err:
-            st.write(f"Error occurred: {err}")
+                    st.success("Successfully registered User. Please log in to continue!")
+                    # if st.button("Login"):
+                    #     st.switch_page("pages/2_Login.py")
+                    # if st.button("Successfully registered User. Please login to Continue!"):
+                    #     # st.session_state.page = 'Login'
+                    #     st.switch_page("pages/2_Login.py")
+            except Exception as err:
+                st.write(f"Error occurred: {err}")
             
 signup()
