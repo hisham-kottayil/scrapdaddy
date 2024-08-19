@@ -61,7 +61,7 @@ def signup():
             "query": mutation,
             "variables": variables
         }
-        with st.spinner('Scheduling. Please wait a moment...'):
+        with st.spinner('Registering user. Please wait a moment...'):
 
             try:
                 r = requests.post(url=url, json=json_data, headers=headers)
